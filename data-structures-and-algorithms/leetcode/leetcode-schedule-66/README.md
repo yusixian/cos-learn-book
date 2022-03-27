@@ -80,3 +80,6 @@
 
 今日知识点：链表、递归、双指针，难度为简单、中等、中等
 
+### day20题目：[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)、[43. 字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)、[bytedance-002. 发下午茶](https://leetcode-cn.com/problems/OMrszv/)
+
+今日知识点： 数组、二分、模拟，难度为简单、中等、字节の简单

@@ -32,6 +32,7 @@
     * [day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II](data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.md)
     * [day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定](data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.md)
     * [day19：160. 相交链表、143. 重排链表、142. 环形链表 II](data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.md)
+    * [day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶](data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.md)
 * [数据结构](data-structures-and-algorithms/data-structure/README.md)
   * [1、线性表（List）](data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.md)
   * [2、堆栈（Stack）](data-structures-and-algorithms/data-structure/2-dui-zhan-stack.md)
