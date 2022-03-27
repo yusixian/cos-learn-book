@@ -1,0 +1,1204 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第七周：图（中）Floyd算法求最短路 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="di-ba-zhou-tu-xia.html" />
+    
+    
+    <link rel="prev" href="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../qian-duan-ji-chu/javascript/">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../leetcode/">
+            
+                <a href="../../leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                <a href="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day121.-he-bing-liang-ge-you-xu-lian-biao-146.-lru-huan-cun-25.k-ge-yi-zu-fan-zhuan-lian-biao.md">
+            
+                <span>
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day214.-zui-chang-gong-gong-qian-zhui-3.-wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-124.-er-cha-shu-zho.md">
+            
+                <span>
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day3206.-fan-zhuan-lian-biao-199.-er-cha-shu-de-you-shi-tu-bytedance016-zui-duan-yi-dong-ju-li.md">
+            
+                <span>
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day41.-liang-shu-zhi-he-15.-san-shu-zhi-he-42.-jie-yu-shui.md">
+            
+                <span>
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day57.-zheng-shu-fan-zhuan-215.-shu-zu-zhong-de-dikge-zui-da-yuan-su-23.-he-bingkge-sheng-xu-lian-bi.md">
+            
+                <span>
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day633.-sou-suo-xuan-zhuan-pai-xu-shu-zu-54.-luo-xuan-ju-zhen-bytedance006.-xia-ji-te-hui.md">
+            
+                <span>
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day753.-zui-da-zi-shu-zu-he-152.-cheng-ji-zui-da-zi-shu-zu-41.-que-shi-de-di-yi-ge-zheng-shu.md">
+            
+                <span>
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day820.-you-xiao-de-kuo-hao-200.-dao-yu-shu-liang-76.-zui-xiao-fu-gai-zi-chuan.md">
+            
+                <span>
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day9105.-cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-er-cha-shu-103.-er-cha-shu-de-ju-chi-xing-c.md">
+            
+                <span>
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1094.-er-cha-shu-de-zhong-xu-bian-li-102.-er-cha-shu-de-ceng-xu-bian-li-394.-zi-fu-chuan-jie-ma.md">
+            
+                <span>
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day11415.-zi-fu-chuan-xiang-jia-5.-zui-chang-hui-wen-zi-chuan-72.-bian-ji-ju-li.md">
+            
+                <span>
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1264.-zui-xiao-lu-jing-he-300.-zui-chang-di-zeng-zi-xu-lie-bytedance004.-ji-qi-ren-tiao-yue-wen-t.md">
+            
+                <span>
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1388.-he-bing-liang-ge-you-xu-shu-zu-31.-xia-yi-ge-pai-lie-4.-xun-zhao-liang-ge-zheng-xu-shu-zu-d.md">
+            
+                <span>
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day14121.-mai-mai-gu-piao-de-zui-jia-shi-ji-56.-he-bing-qu-jian-135.-fen-fa-tang-guo.md">
+            
+                <span>
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day15232.-yong-zhan-shi-xian-dui-lie-22.-kuo-hao-sheng-cheng-128.-zui-chang-lian-xu-xu-lie.md">
+            
+                <span>
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day16bytedance007.-hua-xue-gong-shi-jie-xi-129.-qiu-gen-jie-dian-dao-ye-jie-dian-shu-zi-zhi-he-239..md">
+            
+                <span>
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day17141.-huan-xing-lian-biao-236.-er-cha-shu-de-zui-jin-gong-gong-zu-xian-92.-fan-zhuan-lian-biao-i.md">
+            
+                <span>
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day18322.-ling-qian-dui-huan-198.-da-jia-jie-she-bytedance003.-gu-sheng-wu-xie-yuan-yuan-jin-pan-din.md">
+            
+                <span>
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day19160.-xiang-jiao-lian-biao-143.-zhong-pai-lian-biao-142.-huan-xing-lian-biao-ii.md">
+            
+                <span>
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../1-xian-xing-biao-list.html">
+            
+                <a href="../1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../2-dui-zhan-stack.html">
+            
+                <a href="../2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../3-dui-lie-queue.html">
+            
+                <a href="../3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../4-er-cha-shu-binary-tree.html">
+            
+                <a href="../4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../7-tu-graph/">
+            
+                <a href="../7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../8-pai-xu-sort.html">
+            
+                <a href="../8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../9-san-lie-biao-hash.html">
+            
+                <a href="../9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.10.7" data-path="di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="di-ba-zhou-tu-xia.html">
+            
+                <a href="di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >第七周：图（中）Floyd算法求最短路</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E03;&#x5468;&#xFF1A;&#x56FE;&#xFF08;&#x4E2D;&#xFF09;floyd&#x7B97;&#x6CD5;&#x6C42;&#x6700;&#x77ED;&#x8DEF;">&#x7B2C;&#x4E03;&#x5468;&#xFF1A;&#x56FE;&#xFF08;&#x4E2D;&#xFF09;Floyd&#x7B97;&#x6CD5;&#x6C42;&#x6700;&#x77ED;&#x8DEF;</h1>
+<p><a href="https://blog.csdn.net/qq\_45890533/article/details/107131440" target="_blank">&#x9898;&#x76EE;&#x96C6;&#x603B;&#x76EE;&#x5F55;</a> &#x5B66;&#x4E60;&#x6307;&#x8DEF;&#x535A;&#x5BA2; <a href="https://blog.csdn.net/qq\_45890533/article/details/105475331" target="_blank">&#x56FE;&#x8BBA;</a></p>
+<h2 id="07-&#x56FE;4-&#x54C8;&#x5229;&#xB7;&#x6CE2;&#x7279;&#x7684;&#x8003;&#x8BD5;-25&#x5206;">07-&#x56FE;4 &#x54C8;&#x5229;&#xB7;&#x6CE2;&#x7279;&#x7684;&#x8003;&#x8BD5; (25&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1284061680916697088" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>&#x662F;&#x5F88;&#x57FA;&#x672C;&#x7684;&#x7B97;&#x6CD5;&#x5E94;&#x7528;&#xFF0C;<strong>&#x4E00;&#x5B9A;&#x8981;&#x505A;</strong>&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4F1A;&#xFF0C;&#x90A3;&#x4E48;&#x770B;&#x770B;&#x5C0F;&#x767D;&#x4E13;&#x573A;&#xFF0C;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;C&#x8BED;&#x8A00;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x7ED9;&#x51FA;&#x6BCF;&#x4E24;&#x4E2A;&#x52A8;&#x7269;&#x4E4B;&#x95F4;&#x6240;&#x9700;&#x9B54;&#x5492;&#x957F;&#x5EA6; &#x54C8;&#x5229;&#xB7;&#x6CE2;&#x7279;&#x6700;&#x540E;&#x5E94;&#x8BE5;&#x5E26;&#x53BB;&#x8003;&#x573A;&#x7684;&#x52A8;&#x7269;&#x8981;&#x4F7F;&#x5F97;&#x6700;&#x96BE;&#x53D8;&#x7684;&#x52A8;&#x7269;&#x6240;&#x9700;&#x603B;&#x9B54;&#x5492;&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x3002; &#x8F93;&#x51FA;&#x54C8;&#x5229;&#xB7;&#x6CE2;&#x7279;&#x6700;&#x540E;&#x5E94;&#x8BE5;&#x5E26;&#x53BB;&#x8003;&#x573A;&#x7684;&#x52A8;&#x7269;&#x7684;&#x7F16;&#x53F7;&#x3001;&#x4EE5;&#x53CA;&#x6700;&#x957F;&#x7684;&#x53D8;&#x5F62;&#x9B54;&#x5492;&#x7684;&#x957F;&#x5EA6;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<p>&#x7528;Floyd&#x7B97;&#x6CD5;&#x5F97;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x77E9;&#x9635;dist(dist[i][j]&#x8868;&#x793A;i&#x5230;j&#x6240;&#x9700;&#x6700;&#x77ED;&#x957F;&#x5EA6;&#xFF0C;&#x5728;&#x6BCF;&#x884C;&#x91CC;&#x627E;&#x6700;&#x96BE;&#x53D8;(&#x5373;dist[i][j]&#x6700;&#x5927;)&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5728;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x4E2D;&#x627E;&#x6700;&#x5C0F;&#x7684;&#xFF0C;&#x8F93;&#x51FA;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x4E0B;&#x6807;i&#x548C;&#x6700;&#x5C0F;&#x503C;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">1005</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> inf  = <span class="hljs-number">0x3f3f3f</span>;
+<span class="hljs-keyword">int</span> N,M,x,y,z;
+<span class="hljs-keyword">bool</span> visited[maxn];
+<span class="hljs-keyword">int</span> dist[maxn][maxn];
+<span class="hljs-comment">//&#x7528;Floyd&#x7B97;&#x6CD5;&#x5F97;&#x5230;&#x6700;&#x77ED;&#x8DEF;&#x77E9;&#x9635;</span>
+<span class="hljs-comment">//&#x8BA9;&#x6700;&#x96BE;&#x53D8;&#x7684;&#x52A8;&#x7269;&#x5492;&#x8BED;&#x957F;&#x5EA6;&#x6700;&#x5C0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+       <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+            dist[i][j] = inf;
+        } 
+        dist[i][i] = <span class="hljs-number">0</span>;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Floyd</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k = <span class="hljs-number">1</span>; k &lt;= N; ++k) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
+            }
+        }
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> num,ans,hardest;
+    ans = inf+<span class="hljs-number">1</span>;
+    Floyd();
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+        hardest = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+            <span class="hljs-keyword">if</span>(dist[i][j] &gt; hardest) {
+                hardest = dist[i][j];
+            }
+        }
+        <span class="hljs-keyword">if</span>(hardest == inf) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;0&quot;</span>);
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span>(hardest &lt; ans) {
+            num = i;
+            ans = hardest;
+        }
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, num, ans);
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d&quot;</span>, &amp;N, &amp;M);
+    init();
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= M; ++i) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d %d&quot;</span>, &amp;x, &amp;y, &amp;z);
+        dist[x][y] = dist[y][x] = z;
+    }
+    solve();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B; <img src="https://img-blog.csdnimg.cn/20200720184504862.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="07-&#x56FE;5-saving-james-bond---hard-version-30&#x5206;">07-&#x56FE;5 Saving James Bond - Hard Version (30&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1284061680920891392" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>&#x6709;&#x4F59;&#x529B;&#x7684;&#x8BDD;&#xFF0C;&#x597D;&#x4EBA;&#x505A;&#x5230;&#x5E95;&#xFF0C;&#x5982;&#x679C;&#x4E0A;&#x5468;&#x5DF2;&#x7ECF;&#x5C1D;&#x8BD5;&#x7740;&#x6551;&#x8FC7;007&#x4E86;&#xFF0C;&#x8FD9;&#x5468;&#x5C31;&#x7EE7;&#x7EED;&#x7ED9;&#x4ED6;&#x5EFA;&#x8BAE;&#x5427;&#xFF1B;</p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x8F93;&#x51FA;&#x6700;&#x5C11;&#x7684;&#x8DF3;&#x8F6C;&#x6B21;&#x6570;&#x4EE5;&#x53CA;&#x6CBF;&#x9014;&#x8DF3;&#x8F6C;&#x7684;&#x9CC4;&#x9C7C;&#x7684;xy&#x5750;&#x6807;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<p>&#x7528;Floyd&#x7B97;&#x6CD5;&#x5F97;&#x51FA;&#x6700;&#x77ED;&#x8DEF;&#x77E9;&#x9635;edge(edge[i][j]&#x8868;&#x793A;&#x9CC4;&#x9C7C;i&#x5230;&#x9CC4;&#x9C7C;j&#x6240;&#x9700;&#x6700;&#x5C11;&#x8DF3;&#x8F6C;&#x6B21;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x80FD;&#x8DF3;&#x8F6C;&#x5219;&#x7F6E;&#x4E3A;1&#xFF0C;&#x4E0D;&#x80FD;&#x5219;&#x7F6E;&#x4E3A;0&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x7528;path&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#x3002; &#x6CE8;&#x610F;&#x4E00;&#x70B9;&#xFF1A;&#x5982;&#x679C;&#x6709;&#x8BB8;&#x591A;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#xFF0C;&#x53EA;&#x9700;&#x8F93;&#x51FA;&#x5177;&#x6709;&#x6700;&#x5C0F;&#x7B2C;&#x4E00;&#x8DF3;&#x8F6C;&#x7684;&#x8DEF;&#x5F84;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 07-&#x56FE;5 Saving James Bond - Hard Version (30&#x5206;)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">105</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> inf = <span class="hljs-number">0x3f3f3f</span>;
+<span class="hljs-keyword">int</span> N,D;
+<span class="hljs-keyword">bool</span> vis[maxn];
+<span class="hljs-keyword">int</span> edge[maxn][maxn];
+<span class="hljs-keyword">int</span> path[maxn][maxn];
+<span class="hljs-keyword">struct</span> Point {
+    <span class="hljs-keyword">int</span> x, y;
+    <span class="hljs-keyword">bool</span> visited;
+} v[maxn],s;
+<span class="hljs-keyword">struct</span> Fjump{
+    <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">double</span> d;
+    <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-keyword">const</span> Fjump&amp; f) {
+        <span class="hljs-keyword">return</span> d &lt; f.d;
+    }
+};
+<span class="hljs-built_in">vector</span>&lt;Fjump&gt; fj;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= N+<span class="hljs-number">1</span>; ++i) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt;= N+<span class="hljs-number">1</span>; ++j) {
+            edge[i][j] = inf;
+            path[i][j] = <span class="hljs-number">-1</span>;
+        }
+        edge[i][i] = <span class="hljs-number">0</span>;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">countDist</span><span class="hljs-params">(Point a, Point b)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(<span class="hljs-built_in">pow</span>((a.x-b.x),<span class="hljs-number">2</span>) + <span class="hljs-built_in">pow</span>((a.y-b.y),<span class="hljs-number">2</span>));
+}
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(Point a)</span> </span>{
+    <span class="hljs-keyword">int</span> s = <span class="hljs-number">50</span> - D;
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(a.x) &gt;= s || <span class="hljs-built_in">abs</span>(a.y) &gt;= s) 
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Floyd</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k = <span class="hljs-number">1</span>; k &lt;= N; ++k) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+                <span class="hljs-keyword">if</span>(edge[i][k] + edge[k][j] &lt; edge[i][j]) {
+                    edge[i][j] = edge[i][k] + edge[k][j];
+                    path[i][j] = k;
+                }
+            }
+        }
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">firstJump</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+    <span class="hljs-keyword">double</span> d = countDist(s,v[i]);
+    d -= <span class="hljs-number">7.5</span>;
+    <span class="hljs-keyword">return</span> d &lt;= D;
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrintPath</span><span class="hljs-params">(<span class="hljs-keyword">int</span> S, <span class="hljs-keyword">int</span> E)</span> </span>{
+    <span class="hljs-keyword">if</span>(path[S][E] != <span class="hljs-number">-1</span>) {
+        <span class="hljs-keyword">int</span> k = path[S][E];
+        PrintPath(S,k);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, v[k].x, v[k].y);
+        PrintPath(k,E);
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    ios::sync_with_stdio(<span class="hljs-literal">false</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d&quot;</span>, &amp;N, &amp;D);
+    init();
+    v[<span class="hljs-number">0</span>].visited = <span class="hljs-literal">false</span>;
+    v[<span class="hljs-number">0</span>].x = v[<span class="hljs-number">0</span>].y = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d&quot;</span>, &amp;v[i].x, &amp;v[i].y);
+        v[i].visited = <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+            <span class="hljs-keyword">if</span>(countDist(v[i],v[j]) &lt;= D)
+                edge[i][j] = edge[j][i] = <span class="hljs-number">1</span>;
+        }
+    }
+    Floyd();
+    <span class="hljs-keyword">int</span> mind,temp;
+    <span class="hljs-keyword">int</span> S,E;
+    mind = inf;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+        <span class="hljs-keyword">if</span>(firstJump(i)) {
+            Fjump f;
+            f.d = countDist(s, v[i]);
+            f.id = i;
+            fj.push_back(f);
+        }
+    }
+    sort(fj.begin(), fj.end());
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; fj.size(); ++i) {
+        <span class="hljs-keyword">int</span> sa = fj[i].id;
+        <span class="hljs-keyword">if</span>(check(v[sa])) {
+                S = sa;
+                E = sa;
+                mind = <span class="hljs-number">2</span>;
+                <span class="hljs-keyword">break</span>;
+         }
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= N; ++j) {
+            <span class="hljs-keyword">if</span>(sa == j) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span>(check(v[j])) {
+                temp = <span class="hljs-number">2</span> + edge[sa][j];
+                <span class="hljs-keyword">if</span> (temp &lt; mind) {
+                    S = sa;
+                    E = j;
+                    mind = temp;
+                }
+            }
+        }
+    }
+    <span class="hljs-keyword">if</span>(D &gt;= <span class="hljs-number">42.5</span>) { <span class="hljs-comment">//&#x4E00;&#x6B65;&#x4E0A;&#x5CB8;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1\n&quot;</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (mind != inf) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, mind);
+        <span class="hljs-keyword">if</span>(S == E) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, v[S].x, v[S].y);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, v[S].x, v[S].y);
+            PrintPath(S,E);
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, v[E].x, v[E].y);
+        }
+    }  <span class="hljs-keyword">else</span> 
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;0\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B; <img src="https://img-blog.csdnimg.cn/20200729190645667.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="07-&#x56FE;6-&#x65C5;&#x6E38;&#x89C4;&#x5212;-25&#x5206;">07-&#x56FE;6 &#x65C5;&#x6E38;&#x89C4;&#x5212; (25&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1284061680920891393" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>Dijkstra&#x7B97;&#x6CD5;&#x7684;&#x53D8;&#x5F62;&#x2014;&#x2014;&#x59E5;&#x59E5;&#x53EA;&#x80FD;&#x5E2E;&#x4F60;&#x5230;&#x8FD9;&#x91CC;&#x4E86;&#xFF0C;&#x81EA;&#x5DF1;&#x52A8;&#x8111;&#x7B4B;&#x60F3;&#x4E00;&#x4E0B;&#x600E;&#x4E48;&#x6539;&#x9020;&#x7ECF;&#x5178;&#x53BB;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1F;&#x5B9E;&#x5728;&#x4E0D;&#x4F1A;&#x4E5F;&#x4E0D;&#x8981;&#x6025;&#xFF0C;&#x518D;&#x4E0B;&#x5468;&#x4F1A;&#x8BB2;&#x7B97;&#x6CD5;&#x7684;&#x3002;</p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x7ED9;&#x4F60;&#x6240;&#x6709;&#x6751;&#x5E84;&#x4E4B;&#x95F4;&#x7684;&#x9AD8;&#x901F;&#x516C;&#x8DEF;&#x8DDD;&#x79BB;&#x53CA;&#x5176;&#x6240;&#x9700;&#x82B1;&#x8D39;&#xFF0C;&#x8BA1;&#x7B97;&#x5E76;&#x8F93;&#x51FA;&#x7ED9;&#x5B9A;&#x7684;&#x4E24;&#x6751;&#x5E84;&#x4E4B;&#x95F4;&#x6240;&#x9700;&#x6700;&#x5C0F;&#x8DDD;&#x79BB;&#x53CA;&#x5176;&#x82B1;&#x8D39;&#xFF0C;&#x82E5;&#x6709;&#x591A;&#x6761;&#x6700;&#x5C0F;&#x8DEF;&#x5F84;&#x5219;&#x8F93;&#x51FA;&#x82B1;&#x8D39;&#x6700;&#x5C11;&#x7684;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<p>Dijkstra&#x7B97;&#x6CD5;&#x7684;&#x53D8;&#x5F62;&#xFF0C;&#x53EA;&#x9700;&#x5B58;&#x8FB9;&#x7684;&#x65F6;&#x5019;&#x540C;&#x65F6;&#x5B58;&#x50A8;&#x8DDD;&#x79BB;&#x53CA;&#x82B1;&#x8D39;&#xFF0C;&#x591A;&#x52A0;&#x4E00;&#x4E2A;cost&#x6570;&#x7EC4;&#xFF0C;&#x66F4;&#x65B0;dist&#x65F6;&#x7684;&#x540C;&#x65F6;&#x66F4;&#x65B0;cost&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">505</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> inf  = <span class="hljs-number">0x3f3f3f</span>;
+<span class="hljs-keyword">int</span> N,M,S,D,u,v,len,p;
+<span class="hljs-keyword">struct</span> Edge {
+    <span class="hljs-keyword">int</span> len, pay;
+}e[maxn][maxn];
+<span class="hljs-keyword">int</span> dist[maxn];
+<span class="hljs-keyword">int</span> cost[maxn];
+<span class="hljs-keyword">bool</span> vis[maxn];
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= N; ++i) {
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt;= N; ++j) {
+            e[i][j].pay = e[i][j].len = inf;
+        }
+        e[i][i].pay = e[i][i].len = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(vis));
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dijstra</span><span class="hljs-params">(<span class="hljs-keyword">int</span> u)</span> </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; ++i) {
+        dist[i] = e[u][i].len;
+        cost[i] = e[u][i].pay;
+    }
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; ++i) {
+        <span class="hljs-keyword">int</span> t, mindis = inf;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; N; ++j) {
+            <span class="hljs-keyword">if</span>(!vis[j] &amp;&amp; dist[j] &lt;= mindis) {
+                mindis = dist[j];
+                t = j;
+            }
+        }
+        vis[t] = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; N; ++j) {
+            <span class="hljs-keyword">if</span>(vis[j] || e[t][j].len == inf) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span>(dist[j] &gt; e[t][j].len + dist[t]) {
+                dist[j] = e[t][j].len + dist[t];
+                cost[j] = e[t][j].pay + cost[t];
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(dist[j] == e[t][j].len + dist[t]) {
+                <span class="hljs-keyword">if</span>(cost[j] &gt; e[t][j].pay + cost[t]) {
+                    cost[j] = e[t][j].pay + cost[t];
+                }
+            }
+        }
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d %d %d&quot;</span>, &amp;N, &amp;M, &amp;S, &amp;D);
+    init();
+    <span class="hljs-keyword">while</span>(M--) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d %d %d&quot;</span>, &amp;u, &amp;v, &amp;len, &amp;p);
+        e[u][v].len = e[v][u].len = len;
+        e[u][v].pay = e[v][u].pay = p;
+    }
+    Dijstra(S);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d\n&quot;</span>, dist[D], cost[D]);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B; <img src="https://img-blog.csdnimg.cn/20200808183438199.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html" class="navigation navigation-prev " aria-label="Previous page: 第六周：图（上）连通集 、DFS\&BFS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="di-ba-zhou-tu-xia.html" class="navigation navigation-next " aria-label="Next page: 第八周：图（下）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第七周：图（中）Floyd算法求最短路","level":"3.2.10.7","depth":3,"next":{"title":"第八周：图（下）","level":"3.2.10.8","depth":3,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.md","articles":[]},"previous":{"title":"第六周：图（上）连通集 、DFS\\&BFS","level":"3.2.10.6","depth":3,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.md","mtime":"2022-03-27T05:13:52.165Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T05:20:02.285Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

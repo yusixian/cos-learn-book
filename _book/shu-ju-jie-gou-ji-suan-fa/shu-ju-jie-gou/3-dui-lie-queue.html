@@ -1,0 +1,1029 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3、队列（Queue） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4-er-cha-shu-binary-tree.html" />
+    
+    
+    <link rel="prev" href="2-dui-zhan-stack.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../qian-duan-ji-chu/javascript/">
+            
+                <a href="../../qian-duan-ji-chu/javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                <a href="../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../leetcode/">
+            
+                <a href="../leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                <a href="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day121.-he-bing-liang-ge-you-xu-lian-biao-146.-lru-huan-cun-25.k-ge-yi-zu-fan-zhuan-lian-biao.md">
+            
+                <span>
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day214.-zui-chang-gong-gong-qian-zhui-3.-wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-124.-er-cha-shu-zho.md">
+            
+                <span>
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day3206.-fan-zhuan-lian-biao-199.-er-cha-shu-de-you-shi-tu-bytedance016-zui-duan-yi-dong-ju-li.md">
+            
+                <span>
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day41.-liang-shu-zhi-he-15.-san-shu-zhi-he-42.-jie-yu-shui.md">
+            
+                <span>
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day57.-zheng-shu-fan-zhuan-215.-shu-zu-zhong-de-dikge-zui-da-yuan-su-23.-he-bingkge-sheng-xu-lian-bi.md">
+            
+                <span>
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day633.-sou-suo-xuan-zhuan-pai-xu-shu-zu-54.-luo-xuan-ju-zhen-bytedance006.-xia-ji-te-hui.md">
+            
+                <span>
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day753.-zui-da-zi-shu-zu-he-152.-cheng-ji-zui-da-zi-shu-zu-41.-que-shi-de-di-yi-ge-zheng-shu.md">
+            
+                <span>
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day820.-you-xiao-de-kuo-hao-200.-dao-yu-shu-liang-76.-zui-xiao-fu-gai-zi-chuan.md">
+            
+                <span>
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day9105.-cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-er-cha-shu-103.-er-cha-shu-de-ju-chi-xing-c.md">
+            
+                <span>
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1094.-er-cha-shu-de-zhong-xu-bian-li-102.-er-cha-shu-de-ceng-xu-bian-li-394.-zi-fu-chuan-jie-ma.md">
+            
+                <span>
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day11415.-zi-fu-chuan-xiang-jia-5.-zui-chang-hui-wen-zi-chuan-72.-bian-ji-ju-li.md">
+            
+                <span>
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1264.-zui-xiao-lu-jing-he-300.-zui-chang-di-zeng-zi-xu-lie-bytedance004.-ji-qi-ren-tiao-yue-wen-t.md">
+            
+                <span>
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1388.-he-bing-liang-ge-you-xu-shu-zu-31.-xia-yi-ge-pai-lie-4.-xun-zhao-liang-ge-zheng-xu-shu-zu-d.md">
+            
+                <span>
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day14121.-mai-mai-gu-piao-de-zui-jia-shi-ji-56.-he-bing-qu-jian-135.-fen-fa-tang-guo.md">
+            
+                <span>
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day15232.-yong-zhan-shi-xian-dui-lie-22.-kuo-hao-sheng-cheng-128.-zui-chang-lian-xu-xu-lie.md">
+            
+                <span>
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day16bytedance007.-hua-xue-gong-shi-jie-xi-129.-qiu-gen-jie-dian-dao-ye-jie-dian-shu-zi-zhi-he-239..md">
+            
+                <span>
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day17141.-huan-xing-lian-biao-236.-er-cha-shu-de-zui-jin-gong-gong-zu-xian-92.-fan-zhuan-lian-biao-i.md">
+            
+                <span>
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day18322.-ling-qian-dui-huan-198.-da-jia-jie-she-bytedance003.-gu-sheng-wu-xie-yuan-yuan-jin-pan-din.md">
+            
+                <span>
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day19160.-xiang-jiao-lian-biao-143.-zhong-pai-lian-biao-142.-huan-xing-lian-biao-ii.md">
+            
+                <span>
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="1-xian-xing-biao-list.html">
+            
+                <a href="1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="2-dui-zhan-stack.html">
+            
+                <a href="2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.3" data-path="3-dui-lie-queue.html">
+            
+                <a href="3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="4-er-cha-shu-binary-tree.html">
+            
+                <a href="4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="7-tu-graph/">
+            
+                <a href="7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="8-pai-xu-sort.html">
+            
+                <a href="8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="9-san-lie-biao-hash.html">
+            
+                <a href="9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="shu-ju-jie-gou-xi-ti/">
+            
+                <a href="shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >3、队列（Queue）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3&#x3001;&#x961F;&#x5217;&#xFF08;queue&#xFF09;">3&#x3001;&#x961F;&#x5217;&#xFF08;Queue&#xFF09;</h1>
+<h3 id="&#x4E00;&#x3001;&#x961F;&#x5217;&#x7684;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;">&#x4E00;&#x3001;&#x961F;&#x5217;&#x7684;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;</h3>
+<p>&#x7C7B;&#x578B;&#x540D;&#xFF1A;&#x961F;&#x5217;&#xFF08;Queue&#xFF09; &#x6570;&#x636E;&#x5BF9;&#x8C61;&#x96C6;&#xFF1A;&#x4E00;&#x4E2A;&#x6709;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6709;&#x7A77;&#x7EBF;&#x6027;&#x8868; &#x64CD;&#x4F5C;&#x96C6;&#xFF1A;&#x957F;&#x5EA6;&#x4E3A;MaxSize&#x7684;&#x5806;&#x6808;Q&#x2208;Queue, &#x961F;&#x5217;&#x5143;&#x7D20;item&#x2208;ElementType</p>
+<blockquote>
+<p><strong>1.&#x751F;&#x6210;&#x957F;&#x5EA6;&#x4E3A;MaxSize&#x7684;&#x7A7A;&#x961F;&#x5217; Queue CreatQueue(int MaxSize); 2.&#x5224;&#x65AD;&#x961F;&#x5217;Q&#x662F;&#x5426;&#x5DF2;&#x6EE1; bool IsFullQ(Queue Q, int MaxSize); 3.&#x5C06;&#x6570;&#x636E;&#x5143;&#x7D20;item&#x63D2;&#x5165;&#x961F;&#x5217;Q&#x4E2D; bool AddQ(Queue Q, ElementType item); 4.&#x5224;&#x65AD;&#x961F;&#x5217;Q&#x662F;&#x5426;&#x5DF2;&#x7A7A; bool IsEmptyQ(Queue Q); 5.&#x5220;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x961F;&#x9996;&#x5143;&#x7D20; ElementType DeleteQ(Queue Q);</strong></p>
+</blockquote>
+<h3 id="&#x4E8C;&#x3001;&#x961F;&#x5217;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;">&#x4E8C;&#x3001;&#x961F;&#x5217;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;</h3>
+<h4 id="1&#x5B9A;&#x4E49;">1.&#x5B9A;&#x4E49;</h4>
+<p>&#x961F;&#x5217;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x901A;&#x5E38;&#x7531;&#x4E00;&#x4E2A;<strong>&#x4E00;&#x7EF4;&#x6570;&#x7EC4;</strong>&#x548C;&#x4E00;&#x4E2A;<strong>&#x8BB0;&#x5F55;&#x961F;&#x5217;&#x5934;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x91CF;front</strong>&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;<strong>&#x8BB0;&#x5F55;&#x961F;&#x5217;&#x5C3E;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x91CF;rear</strong>&#x7EC4;&#x6210;&#x3002; &#x5F62;&#x6210;&#x7684;&#x6570;&#x7EC4;&#x642C;&#x8FC7;&#x6765;&#xFF0C;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x4FBF;&#x4E3A;&#x5FAA;&#x73AF;&#x961F;&#x5217;&#x3002; &#x4E3A;&#x4E86;&#x5224;&#x65AD;&#x961F;&#x5217;&#x7684;&#x7A7A;&#x4E0E;&#x6EE1;&#xFF0C;&#x5FAA;&#x73AF;&#x961F;&#x5217;&#x4EC5;&#x4F7F;&#x7528;n-1&#x4E2A;&#x6570;&#x7EC4;&#x7A7A;&#x95F4; <img src="https://img-blog.csdnimg.cn/20200301221006633.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt=""> &#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> QNode *Queue;
+<span class="hljs-keyword">struct</span> QNode {
+    ElementType Data[MaxSize];<span class="hljs-comment">//&#x4E00;&#x7EF4;&#x6570;&#x7EC4;</span>
+    <span class="hljs-keyword">int</span> rear;<span class="hljs-comment">//&#x8BB0;&#x5F55;&#x961F;&#x5217;&#x5C3E;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">int</span> front;<span class="hljs-comment">//&#x8BB0;&#x5F55;&#x961F;&#x5217;&#x5934;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;  </span>
+    <span class="hljs-keyword">int</span> MaxSize;
+    <span class="hljs-comment">//&#x5B9E;&#x9645;&#x4E0A;front&#x6307;&#x5411;&#x7684;&#x662F;&#x961F;&#x5217;&#x5934;&#x5143;&#x7D20;&#x4E0B;&#x6807;&#x7684;&#x524D;&#x4E00;&#x4E2A;</span>
+};
+</code></pre>
+<h4 id="2&#x64CD;&#x4F5C;">2.&#x64CD;&#x4F5C;</h4>
+<p><strong>(1)&#x521B;&#x5EFA;&#x5FAA;&#x73AF;&#x961F;&#x5217;(CreateQueue)</strong></p>
+<pre><code class="lang-cpp">Queue CreateQueue( int MaxSize ) {
+    Queue Q = (Queue)malloc(sizeof(struct QNode));
+    Q-&gt;Data = (ElementType *)malloc(MaxSize * sizeof(ElementType));
+    Q-&gt;front = Q-&gt;rear = 0;
+    Q-&gt;MaxSize = MaxSize;
+    return Q;
+}
+</code></pre>
+<p><strong>(2)&#x5224;&#x65AD;&#x961F;&#x5217;&#x662F;&#x5426;&#x5DF2;&#x6EE1;(IsFull)</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsFull</span><span class="hljs-params">( Queue PtrQ )</span> </span>{<span class="hljs-comment">//front&#x548C;rear+1&#x7684;&#x53D6;&#x4F59;&#x76F8;&#x7B49;&#x65F6;&#x961F;&#x5217;&#x6EE1;</span>
+    <span class="hljs-keyword">return</span> ((PtrQ-&gt;rear+<span class="hljs-number">1</span>) % PtrQ-&gt;MaxSize == PtrQ-&gt;front);
+}
+</code></pre>
+<p><strong>(3)&#x5165;&#x961F;&#x5217;(AddQ)</strong></p>
+<p>&#x5165;&#x961F;&#x65F6;&#x8981;&#x5224;&#x65AD;&#x961F;&#x5217;&#x662F;&#x5426;&#x5DF2;&#x6EE1;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">AddQ</span><span class="hljs-params">(Queue PtrQ, ElementType item)</span> </span>{
+    <span class="hljs-keyword">if</span> ( IsFull(PtrQ) ) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x961F;&#x5217;&#x6EE1;&quot;</span>);<span class="hljs-comment">//front&#x548C;rear+1&#x7684;&#x53D6;&#x4F59;&#x76F8;&#x7B49;&#x65F6;&#x961F;&#x5217;&#x6EE1;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    } <span class="hljs-keyword">else</span> {
+        PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="hljs-number">1</span>) % PtrQ-&gt;MaxSize; 
+        <span class="hljs-comment">//&#x79FB;&#x52A8;&#x961F;&#x5C3E;rear &#x4EE5;&#x53D6;&#x4F59;&#x8FD0;&#x7B97;&#x6765;&#x5B9E;&#x73B0;&#x5FAA;&#x73AF;</span>
+        PtrQ-&gt;Data[PtrQ-&gt;rear] = item;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+}
+</code></pre>
+<p><strong>(4)&#x5224;&#x65AD;&#x961F;&#x5217;&#x662F;&#x5426;&#x5DF2;&#x7A7A;(IsEmpty)</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsEmpty</span><span class="hljs-params">(Queue PtrQ)</span> </span>{
+    <span class="hljs-keyword">return</span> ( PtrQ-&gt;front == PtrQ-&gt;rear );
+}
+</code></pre>
+<p><strong>(5)&#x51FA;&#x961F;&#x5217;(DeleteQ)</strong></p>
+<p>&#x51FA;&#x961F;&#x65F6;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x961F;&#x5217;&#x662F;&#x5426;&#x4E3A;&#x7A7A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">ElementType <span class="hljs-title">DeleteQ</span><span class="hljs-params">(Queue PtrQ)</span> </span>{
+    <span class="hljs-keyword">if</span>(IsEmpty(PtrQ)) {<span class="hljs-comment">//rear&#x548C;front&#x76F8;&#x7B49;&#x65F6;&#x961F;&#x5217;&#x7A7A;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x961F;&#x5217;&#x7A7A;&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    } <span class="hljs-keyword">else</span> {
+        PtrQ-&gt;front = (PtrQ-&gt;front+<span class="hljs-number">1</span>) % PtrQ-&gt;MaxSize;<span class="hljs-comment">//&#x79FB;&#x52A8;&#x961F;&#x9996;front</span>
+        <span class="hljs-keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];
+    }
+}
+</code></pre>
+<h3 id="&#x4E09;&#x3001;&#x961F;&#x5217;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;">&#x4E09;&#x3001;&#x961F;&#x5217;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;</h3>
+<h4 id="1&#x5B9A;&#x4E49;">1.&#x5B9A;&#x4E49;</h4>
+<p>&#x961F;&#x5217;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;<strong>&#x5355;&#x94FE;&#x8868;</strong>&#x5B9E;&#x73B0;&#xFF0C;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5206;&#x522B;&#x5728;&#x94FE;&#x8868;&#x7684;&#x4E24;&#x5934;&#x8FDB;&#x884C;&#x3002;&#x961F;&#x5217;&#x6307;&#x9488;front&#x5E94;&#x8BE5;&#x6307;&#x5411;&#x94FE;&#x8868;&#x5934;</p>
+<p><img src="https://img-blog.csdnimg.cn/20200301223536717.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> Node {
+    ElementType Data;
+    <span class="hljs-keyword">struct</span> Node * Next;
+}
+<span class="hljs-keyword">struct</span> QNode {<span class="hljs-comment">//&#x94FE;&#x961F;&#x5217;&#x7ED3;&#x6784;</span>
+    <span class="hljs-keyword">struct</span> Node *rear;  <span class="hljs-comment">//&#x6307;&#x5411;&#x961F;&#x5C3E;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">struct</span> Node *front;  <span class="hljs-comment">//&#x6307;&#x5411;&#x961F;&#x5934;&#x7ED3;&#x70B9;</span>
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> QNode *Queue;
+Queue PtrQ;
+</code></pre>
+<h4 id="2&#x64CD;&#x4F5C;">2.&#x64CD;&#x4F5C;</h4>
+<p><strong>(1)&#x4E0D;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x5F0F;&#x961F;&#x5217;&#x521D;&#x59CB;&#x5316;&#xFF08; CreateQueue&#xFF09;</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function">Queue <span class="hljs-title">CreateQueue</span><span class="hljs-params">()</span> </span>{
+    Queue Q;
+    Q = (Queue)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> QNode));
+    Q-&gt;front = Q-&gt;rear = <span class="hljs-literal">NULL</span>;<span class="hljs-comment">//&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x90FD;&#x4E3A;&#x7A7A;</span>
+    <span class="hljs-keyword">return</span> Q;
+}
+</code></pre>
+<p><strong>(2)&#x4E0D;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x5F0F;&#x961F;&#x5217;&#x5165;&#x961F;&#x64CD;&#x4F5C;</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">AddQ</span><span class="hljs-params">(Queue PtrQ, ElementType item)</span> </span>{
+    <span class="hljs-keyword">struct</span> Node *RearCell = PtrQ-&gt;rear;<span class="hljs-comment">//&#x6307;&#x5411;&#x961F;&#x5C3E;&#x5143;&#x7D20;&#x7684;&#x6307;&#x9488;</span>
+    <span class="hljs-keyword">struct</span> Node *Temp = (<span class="hljs-keyword">struct</span> Node *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> Node));
+    Tmp-&gt;Data = X;
+    Tmp-&gt;Next = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">if</span> ( PtrQ-&gt;front == <span class="hljs-literal">NULL</span> ) {<span class="hljs-comment">//&#x961F;&#x5217;&#x4E3A;&#x7A7A; &#x8FDB;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+        PtrQ-&gt;rear = PtrQ-&gt;front = Tmp;
+    } <span class="hljs-keyword">else</span> {
+        RearCell-&gt;Next = Tmp;
+        PtrQ-&gt;rear = Tmp;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<p><strong>(3)&#x4E0D;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x5F0F;&#x961F;&#x5217;&#x51FA;&#x961F;&#x64CD;&#x4F5C;</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function">ElementType <span class="hljs-title">DeleteQ</span><span class="hljs-params">(Queue PtrQ)</span> </span>{
+    <span class="hljs-keyword">struct</span> Node * FrontCell;
+    ElementType FrontElem;<span class="hljs-comment">//&#x961F;&#x9996;&#x5143;&#x7D20;&#x7684;&#x503C;</span>
+
+    <span class="hljs-keyword">if</span> (PtrQ-&gt;front == <span class="hljs-literal">NULL</span>) {<span class="hljs-comment">//1.&#x5148;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7A7A; &#x4E3A;&#x7A7A;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x51FA;&#x961F;&#x64CD;&#x4F5C;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x961F;&#x5217;&#x7A7A;&quot;</span>);
+        <span class="hljs-keyword">return</span> ERROR;
+    }
+    FrontCell = PtrQ-&gt;front;
+    <span class="hljs-keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear) <span class="hljs-comment">//&#x82E5;&#x961F;&#x5217;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20; &#x5219;&#x5220;&#x9664;&#x540E;&#x961F;&#x5217;&#x7F6E;&#x4E3A;&#x7A7A;</span>
+        PtrQ-&gt;front = PtrQ-&gt;rear = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">else</span>
+        PtrQ-&gt;front = FrontCell-&gt;Next;
+    FrontElem = FrontCell-&gt;Data;
+    <span class="hljs-built_in">free</span>(FrontCell);    <span class="hljs-comment">//&#x91CA;&#x653E;&#x88AB;&#x5220;&#x9664;&#x7ED3;&#x70B9;&#x7684;&#x7A7A;&#x95F4;</span>
+    <span class="hljs-keyword">return</span> FrontElem;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2-dui-zhan-stack.html" class="navigation navigation-prev " aria-label="Previous page: 2、堆栈（Stack）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4-er-cha-shu-binary-tree.html" class="navigation navigation-next " aria-label="Next page: 4、二叉树（Binary Tree）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3、队列（Queue）","level":"3.2.3","depth":2,"next":{"title":"4、二叉树（Binary Tree）","level":"3.2.4","depth":2,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/4-er-cha-shu-binary-tree.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/4-er-cha-shu-binary-tree.md","articles":[]},"previous":{"title":"2、堆栈（Stack）","level":"3.2.2","depth":2,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/2-dui-zhan-stack.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/2-dui-zhan-stack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/3-dui-lie-queue.md","mtime":"2022-03-27T05:13:52.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T05:20:02.285Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

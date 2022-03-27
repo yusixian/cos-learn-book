@@ -1,0 +1,1329 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四周：二叉搜索树&二叉平衡树 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html" />
+    
+    
+    <link rel="prev" href="di-san-zhou-zai-shu-er-cha-shu-deng.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../qian-duan-ji-chu/javascript/">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/javascript-zhi-dui-xiang-yuan-xing-lian-ji-ji-cheng.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../../../qian-duan-ji-chu/javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../leetcode/">
+            
+                <a href="../../leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                <a href="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day121.-he-bing-liang-ge-you-xu-lian-biao-146.-lru-huan-cun-25.k-ge-yi-zu-fan-zhuan-lian-biao.md">
+            
+                <span>
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day214.-zui-chang-gong-gong-qian-zhui-3.-wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-124.-er-cha-shu-zho.md">
+            
+                <span>
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day3206.-fan-zhuan-lian-biao-199.-er-cha-shu-de-you-shi-tu-bytedance016-zui-duan-yi-dong-ju-li.md">
+            
+                <span>
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day41.-liang-shu-zhi-he-15.-san-shu-zhi-he-42.-jie-yu-shui.md">
+            
+                <span>
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day57.-zheng-shu-fan-zhuan-215.-shu-zu-zhong-de-dikge-zui-da-yuan-su-23.-he-bingkge-sheng-xu-lian-bi.md">
+            
+                <span>
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day633.-sou-suo-xuan-zhuan-pai-xu-shu-zu-54.-luo-xuan-ju-zhen-bytedance006.-xia-ji-te-hui.md">
+            
+                <span>
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day753.-zui-da-zi-shu-zu-he-152.-cheng-ji-zui-da-zi-shu-zu-41.-que-shi-de-di-yi-ge-zheng-shu.md">
+            
+                <span>
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day820.-you-xiao-de-kuo-hao-200.-dao-yu-shu-liang-76.-zui-xiao-fu-gai-zi-chuan.md">
+            
+                <span>
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day9105.-cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-er-cha-shu-103.-er-cha-shu-de-ju-chi-xing-c.md">
+            
+                <span>
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1094.-er-cha-shu-de-zhong-xu-bian-li-102.-er-cha-shu-de-ceng-xu-bian-li-394.-zi-fu-chuan-jie-ma.md">
+            
+                <span>
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day11415.-zi-fu-chuan-xiang-jia-5.-zui-chang-hui-wen-zi-chuan-72.-bian-ji-ju-li.md">
+            
+                <span>
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1264.-zui-xiao-lu-jing-he-300.-zui-chang-di-zeng-zi-xu-lie-bytedance004.-ji-qi-ren-tiao-yue-wen-t.md">
+            
+                <span>
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day1388.-he-bing-liang-ge-you-xu-shu-zu-31.-xia-yi-ge-pai-lie-4.-xun-zhao-liang-ge-zheng-xu-shu-zu-d.md">
+            
+                <span>
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day14121.-mai-mai-gu-piao-de-zui-jia-shi-ji-56.-he-bing-qu-jian-135.-fen-fa-tang-guo.md">
+            
+                <span>
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day15232.-yong-zhan-shi-xian-dui-lie-22.-kuo-hao-sheng-cheng-128.-zui-chang-lian-xu-xu-lie.md">
+            
+                <span>
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day16bytedance007.-hua-xue-gong-shi-jie-xi-129.-qiu-gen-jie-dian-dao-ye-jie-dian-shu-zi-zhi-he-239..md">
+            
+                <span>
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day17141.-huan-xing-lian-biao-236.-er-cha-shu-de-zui-jin-gong-gong-zu-xian-92.-fan-zhuan-lian-biao-i.md">
+            
+                <span>
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day18322.-ling-qian-dui-huan-198.-da-jia-jie-she-bytedance003.-gu-sheng-wu-xie-yuan-yuan-jin-pan-din.md">
+            
+                <span>
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../leetcode/chong-ci-chun-zhao-jing-xuan-bi-mian-shi-66-ti-da-tong-guan/day19160.-xiang-jiao-lian-biao-143.-zhong-pai-lian-biao-142.-huan-xing-lian-biao-ii.md">
+            
+                <span>
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../1-xian-xing-biao-list.html">
+            
+                <a href="../1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../2-dui-zhan-stack.html">
+            
+                <a href="../2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../3-dui-lie-queue.html">
+            
+                <a href="../3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../4-er-cha-shu-binary-tree.html">
+            
+                <a href="../4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../7-tu-graph/">
+            
+                <a href="../7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../8-pai-xu-sort.html">
+            
+                <a href="../8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../9-san-lie-biao-hash.html">
+            
+                <a href="../9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.10.4" data-path="di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="di-ba-zhou-tu-xia.html">
+            
+                <a href="di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >第四周：二叉搜索树&二叉平衡树</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x56DB;&#x5468;&#xFF1A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E8C;&#x53C9;&#x5E73;&#x8861;&#x6811;">&#x7B2C;&#x56DB;&#x5468;&#xFF1A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&amp;&#x4E8C;&#x53C9;&#x5E73;&#x8861;&#x6811;</h1>
+<p><a href="https://blog.csdn.net/qq\_45890533/article/details/107131440" target="_blank">&#x9898;&#x76EE;&#x96C6;&#x603B;&#x76EE;&#x5F55;</a> &#x5B66;&#x4E60;&#x6307;&#x8DEF;&#x535A;&#x5BA2; <a href="https://blog.csdn.net/qq\_45890533/article/details/105189507" target="_blank">&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E0E;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</a></p>
+<h2 id="04-&#x6811;4-&#x662F;&#x5426;&#x540C;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;-25&#x5206;">04-&#x6811;4 &#x662F;&#x5426;&#x540C;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811; (25&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1276814005115539456" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>&#x5C0F;&#x767D;&#x4E13;&#x573A;&#x5C06;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;C&#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF0C;&#x5C5E;&#x4E8E;&#x57FA;&#x672C;&#x8BAD;&#x7EC3;&#xFF0C;<strong>&#x4E00;&#x5B9A;&#x8981;&#x505A;</strong></p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x7684;&#x5404;&#x79CD;&#x63D2;&#x5165;&#x5E8F;&#x5217;&#xFF0C;&#x5224;&#x65AD;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x80FD;&#x751F;&#x6210;&#x4E00;&#x6837;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<p>1.&#x5206;&#x522B;&#x5EFA;&#x4E24;&#x68F5;&#x6811;&#x7684;&#x5224;&#x522B;&#x65B9;&#x6CD5; 2.&#x4E0D;&#x5EFA;&#x6811;&#x76F4;&#x63A5;&#x5224;&#x65AD;&#x5E8F;&#x5217; 3.&#x5EFA;&#x4E00;&#x68F5;&#x6811;&#x518D;&#x5224;&#x522B;&#x5176;&#x4ED6;&#x5E8F;&#x5217;&#x662F;&#x5426;&#x4E0E;&#x8BE5;&#x6811;&#x4E00;&#x81F4; &#x8FD9;&#x91CC;&#x91C7;&#x7528;&#x7684;&#x662F;&#x601D;&#x8DEF;3</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> maxsize 11</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> TNode* Tree;
+<span class="hljs-keyword">struct</span> TNode {
+    <span class="hljs-keyword">int</span> data;
+    Tree left,right;
+    <span class="hljs-keyword">int</span> flag;   <span class="hljs-comment">//&#x5224;&#x65AD;&#x662F;&#x5426;&#x8BBF;&#x95EE;&#x8FC7;</span>
+};
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Clear</span><span class="hljs-params">(Tree R)</span> </span>{    <span class="hljs-comment">//&#x6E05;&#x9664;&#x6807;&#x8BB0;</span>
+    <span class="hljs-keyword">if</span>(!R) <span class="hljs-keyword">return</span>;
+    R-&gt;flag = <span class="hljs-number">0</span>;
+    Clear(R-&gt;left);
+    Clear(R-&gt;right);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FreeTree</span><span class="hljs-params">(Tree R)</span> </span>{ <span class="hljs-comment">//&#x6E05;&#x7A7A;&#x8BE5;&#x6811;</span>
+    <span class="hljs-keyword">if</span>(!R) <span class="hljs-keyword">return</span>;
+    FreeTree(R-&gt;left);
+    FreeTree(R-&gt;right);
+    <span class="hljs-keyword">delete</span> R;
+}
+<span class="hljs-function">Tree <span class="hljs-title">NewNode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data)</span> </span>{<span class="hljs-comment">//</span>
+    Tree R = <span class="hljs-keyword">new</span> TNode;
+    R-&gt;data = data;
+    R-&gt;left = R-&gt;right = <span class="hljs-literal">NULL</span>;
+    R-&gt;flag = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function">Tree <span class="hljs-title">BST_Insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data, Tree R)</span> </span>{
+    <span class="hljs-keyword">if</span> (!R) R = NewNode(data);
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span>(data &gt; R-&gt;data)  <span class="hljs-comment">//&#x5927;&#x4E8E;&#x8BE5;&#x7ED3;&#x70B9;&#xFF0C;&#x63D2;&#x5165;&#x5230;&#x53F3;&#x5B50;&#x6811;</span>
+            R-&gt;right = BST_Insert(data, R-&gt;right);
+        <span class="hljs-keyword">else</span>                <span class="hljs-comment">//&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x8BE5;&#x7ED3;&#x70B9;&#xFF0C;&#x63D2;&#x5165;&#x5230;&#x5DE6;&#x5B50;&#x6811;</span>
+            R-&gt;left = BST_Insert(data, R-&gt;left);
+    }
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function">Tree <span class="hljs-title">Build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> N)</span> </span>{
+    Tree R = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">int</span> x;
+    <span class="hljs-built_in">cin</span> &gt;&gt; x;
+    R = NewNode(x);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; N; ++i) {
+        <span class="hljs-built_in">cin</span> &gt;&gt; x;
+        R = BST_Insert(x, R);
+    }
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data, Tree R)</span> </span>{
+    <span class="hljs-keyword">if</span>(R-&gt;flag) {<span class="hljs-comment">//&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;&#x4E86;</span>
+        <span class="hljs-keyword">if</span>(data &lt; R-&gt;data) 
+            <span class="hljs-keyword">return</span> check(data, R-&gt;left);
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(data &gt; R-&gt;data) 
+            <span class="hljs-keyword">return</span> check(data, R-&gt;right);
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span>(data == R-&gt;data) {
+            R-&gt;flag = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">judge</span><span class="hljs-params">(Tree R1, <span class="hljs-keyword">int</span> N)</span> </span>{
+    <span class="hljs-keyword">int</span> x;
+    <span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span>(N &amp;&amp; R1) {
+        <span class="hljs-built_in">cin</span> &gt;&gt; x;
+        <span class="hljs-keyword">if</span>(x != R1-&gt;data) flag = <span class="hljs-literal">false</span>;
+        R1-&gt;flag = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; N; ++i) {
+            <span class="hljs-built_in">cin</span> &gt;&gt; x;
+            <span class="hljs-keyword">if</span>(flag &amp;&amp; (!check(x,R1))) flag = <span class="hljs-literal">false</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> flag;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    
+    <span class="hljs-keyword">int</span> N, L;
+    <span class="hljs-built_in">cin</span> &gt;&gt; N;
+    <span class="hljs-keyword">while</span>(N) {
+        <span class="hljs-built_in">cin</span> &gt;&gt; L;
+        Tree R1;
+        R1 = Build(N);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; L; ++i) {
+            <span class="hljs-keyword">if</span>(judge(R1, N)) 
+                <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Yes&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;No&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+            Clear(R1);  <span class="hljs-comment">//&#x6E05;&#x9664;&#x6807;&#x8BB0;</span>
+        }   
+        FreeTree(R1);
+        <span class="hljs-built_in">cin</span> &gt;&gt; N;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B;</p>
+<p> <img src="https://img-blog.csdnimg.cn/20200707144549932.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="04-&#x6811;5-root-of-avl-tree-25&#x5206;">04-&#x6811;5 Root of AVL Tree (25&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1276814005115539457" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>2013&#x5E74;&#x6D59;&#x6C5F;&#x5927;&#x5B66;&#x8BA1;&#x7B97;&#x673A;&#x5B66;&#x9662;&#x514D;&#x8BD5;&#x7814;&#x7A76;&#x751F;&#x4E0A;&#x673A;&#x8003;&#x8BD5;&#x771F;&#x9898;&#xFF0C;&#x662F;&#x5173;&#x4E8E;AVL&#x6811;&#x7684;&#x57FA;&#x672C;&#x8BAD;&#x7EC3;&#xFF0C;<strong>&#x4E00;&#x5B9A;&#x8981;&#x505A;</strong></p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x73B0;&#x5728;&#x7ED9;&#x5B9A;&#x4E00;&#x63D2;&#x5165;&#x5E8F;&#x5217;&#xFF0C;&#x8F93;&#x51FA;&#x751F;&#x6210;&#x7684; AVL &#x6811;&#x7684;&#x6839;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> maxsize 11</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> AVLNode* AVLTree;
+<span class="hljs-keyword">struct</span> AVLNode {
+    <span class="hljs-keyword">int</span> data;
+    AVLTree left,right;
+    <span class="hljs-keyword">int</span> Height;   
+};
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FreeTree</span><span class="hljs-params">(AVLTree R)</span> </span>{ <span class="hljs-comment">//&#x6E05;&#x7A7A;&#x8BE5;&#x6811;</span>
+    <span class="hljs-keyword">if</span>(!R) <span class="hljs-keyword">return</span>;
+    FreeTree(R-&gt;left);
+    FreeTree(R-&gt;right);
+    <span class="hljs-keyword">delete</span> R;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">GetHeight</span><span class="hljs-params">(AVLTree R)</span> </span>{
+    <span class="hljs-keyword">if</span>(R) 
+        <span class="hljs-keyword">return</span> R-&gt;Height;
+    <span class="hljs-keyword">else</span> 
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">SingleLeftRotate</span><span class="hljs-params">(AVLTree R)</span> </span>{   <span class="hljs-comment">//LL&#x5355;&#x65CB;</span>
+    AVLTree RL = R-&gt;left;
+    R-&gt;left = RL-&gt;right;
+    RL-&gt;right = R;
+    R-&gt;Height = max( GetHeight(R-&gt;left), GetHeight(R-&gt;right) ) + <span class="hljs-number">1</span>;
+    RL-&gt;Height = max( GetHeight(RL-&gt;left), R-&gt;Height) + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> RL;
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">SingleRightRotate</span><span class="hljs-params">(AVLTree R)</span> </span>{  <span class="hljs-comment">//RR&#x5355;&#x65CB;</span>
+    AVLTree RR = R-&gt;right;
+    R-&gt;right = RR-&gt;left;
+    RR-&gt;left = R;
+    R-&gt;Height = max( GetHeight(R-&gt;left), GetHeight(R-&gt;right) ) + <span class="hljs-number">1</span>;
+    RR-&gt;Height = max( R-&gt;Height, GetHeight(RR-&gt;right) ) + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> RR;
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">DoubleLeftRightRotate</span><span class="hljs-params">(AVLTree R)</span> </span>{    <span class="hljs-comment">//LR&#x65CB;&#x8F6C;</span>
+    R-&gt;left = SingleRightRotate(R-&gt;left);
+    <span class="hljs-keyword">return</span> SingleLeftRotate(R);
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">DoubleRightLeftRotate</span><span class="hljs-params">(AVLTree R)</span> </span>{    <span class="hljs-comment">//RL&#x65CB;&#x8F6C;</span>
+    R-&gt;right = SingleLeftRotate(R-&gt;right);
+    <span class="hljs-keyword">return</span> SingleRightRotate(R);
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">NewNode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data)</span> </span>{<span class="hljs-comment">//</span>
+    AVLTree R = <span class="hljs-keyword">new</span> AVLNode;
+    R-&gt;data = data;
+    R-&gt;left = R-&gt;right = <span class="hljs-literal">NULL</span>;
+    R-&gt;Height = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">AVL_Insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data, AVLTree R)</span> </span>{
+    <span class="hljs-keyword">if</span> (!R) R = NewNode(data);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(data &lt; R-&gt;data) {   <span class="hljs-comment">//&#x63D2;&#x5165;&#x5230;&#x5DE6;&#x5B50;&#x6811;</span>
+        R-&gt;left = AVL_Insert(data, R-&gt;left);
+        <span class="hljs-keyword">if</span>(GetHeight(R-&gt;left) - GetHeight(R-&gt;right) == <span class="hljs-number">2</span>) { <span class="hljs-comment">//&#x9700;&#x8981;&#x5DE6;&#x65CB;</span>
+           <span class="hljs-keyword">if</span> (data &lt; R-&gt;left-&gt;data)
+                R = SingleLeftRotate(R);    <span class="hljs-comment">//&#x9700;&#x8981;&#x5DE6;&#x5355;&#x65CB;</span>
+            <span class="hljs-keyword">else</span> 
+                R = DoubleLeftRightRotate(R);<span class="hljs-comment">//&#x5DE6;-&#x53F3;&#x53CC;&#x65CB;</span>
+        }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(data &gt; R-&gt;data) { <span class="hljs-comment">//&#x63D2;&#x5165;&#x5230;&#x53F3;&#x5B50;&#x6811;</span>
+        R-&gt;right = AVL_Insert(data, R-&gt;right);
+        <span class="hljs-keyword">if</span>(GetHeight(R-&gt;left) - GetHeight(R-&gt;right) == <span class="hljs-number">-2</span>) { <span class="hljs-comment">//&#x9700;&#x8981;&#x53F3;&#x65CB;</span>
+           <span class="hljs-keyword">if</span> (data &gt; R-&gt;right-&gt;data)
+                R = SingleRightRotate(R);    <span class="hljs-comment">//&#x9700;&#x8981;&#x53F3;&#x5355;&#x65CB;</span>
+            <span class="hljs-keyword">else</span> 
+                R = DoubleRightLeftRotate(R);<span class="hljs-comment">//&#x53F3;-&#x5DE6;&#x53CC;&#x65CB;</span>
+        }
+    }
+    R-&gt;Height = max(GetHeight(R-&gt;left), GetHeight(R-&gt;right)) + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function">AVLTree <span class="hljs-title">Build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> N)</span> </span>{
+    AVLTree R = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">int</span> x;
+    <span class="hljs-built_in">cin</span> &gt;&gt; x;
+    R = NewNode(x);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; N; ++i) {
+        <span class="hljs-built_in">cin</span> &gt;&gt; x;
+        R = AVL_Insert(x, R);
+    }
+    <span class="hljs-keyword">return</span> R;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    
+    <span class="hljs-keyword">int</span> N, L;
+    AVLTree R;
+    <span class="hljs-built_in">cin</span> &gt;&gt; N;
+    R = Build(N);
+    <span class="hljs-built_in">cout</span> &lt;&lt; R-&gt;data &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B;</p>
+<p><img src="https://img-blog.csdnimg.cn/20200707230011125.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt=""></p>
+<h2 id="04-&#x6811;6-complete-binary-search-tree-30&#x5206;">04-&#x6811;6 Complete Binary Search Tree (30&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1276814005115539458" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<blockquote>
+<p>2013&#x5E74;&#x79CB;&#x5B63;PAT&#x7532;&#x7EA7;&#x771F;&#x9898;&#xFF0C;&#x7565;&#x6709;&#x96BE;&#x5EA6;&#xFF0C;&#x91CF;&#x529B;&#x800C;&#x884C;&#x3002;&#x7B2C;7&#x5468;&#x5C06;&#x7ED9;&#x51FA;&#x8BB2;&#x89E3;&#x3002;</p>
+</blockquote>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x73B0;&#x5728;&#x7ED9;&#x5B9A;&#x4E00;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x63D2;&#x5165;&#x5E8F;&#x5217;&#xFF0C;&#x8F93;&#x51FA;&#x751F;&#x6210;&#x7684;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5C42;&#x6B21;&#x904D;&#x5386;&#x5E8F;&#x5217;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<p>&#x56E0;&#x4E3A;&#x662F;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x7531;<strong>&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x70B9;&#x503C; &gt; &#x6839;&#x7ED3;&#x70B9;&#x7ED3;&#x70B9;&#x503C; &gt; &#x53F3;&#x5B50;&#x6811;&#x7ED3;&#x70B9;&#x503C;</strong>&#x8FD9;&#x4E2A;&#x6027;&#x8D28;&#xFF0C;&#x53EF;&#x5C06;&#x7ED9;&#x5B9A;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x597D;&#x5E8F;&#x540E;&#x5373;&#x4E3A;&#x8BE5;&#x6811;&#x7684;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217;&#xFF0C;&#x7136;&#x540E;<strong>&#x6839;&#x636E;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x679C;&#x9012;&#x5F52;&#x6784;&#x9020;&#x5C42;&#x6B21;&#x904D;&#x5386;&#x5E8F;&#x5217;</strong>&#x3002; &#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217;&#x4E2D;&#xFF0C;&#x603B;&#x7ED3;&#x70B9;&#x6570;&#x4E3A;n&#x65F6;&#xFF0C;&#x82E5;&#x5DE6;&#x5B50;&#x6811;&#x7684;&#x8282;&#x70B9;&#x6570;&#x4E3A;x&#x7684;&#xFF0C;&#x5219;&#x6839;&#x8282;&#x70B9;&#x5373;&#x4E3A;&#x7B2C;x+1&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x800C;&#x5982;&#x4F55;&#x77E5;&#x9053;&#x5DE6;&#x5B50;&#x6811;&#x7684;&#x7ED3;&#x70B9;&#x6811;&#x5462;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x7531;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6027;&#x8D28;&#x51B3;&#x5B9A;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;n&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5B83;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x70B9;&#x6570;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6839;&#x636E;&#x603B;&#x7ED3;&#x70B9;&#x6570;&#x6C42;&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x70B9;&#x6811;&#x7684;&#x51FD;&#x6570;&#x3002;&#x53EF;&#x7528;&#x5230;&#x4E8C;&#x53C9;&#x6811;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6027;&#x8D28;&#xFF1A;</p>
+<ol>
+<li>n&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5176;&#x6DF1;&#x5EA6;&#x4E3A;log<del>2</del>(n) + 1</li>
+<li>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x7B2C;i&#x5C42;&#xFF0C;&#x6700;&#x591A;&#x6709;2^i-1^&#x4E2A;&#x7ED3;&#x70B9;</li>
+<li>&#x6DF1;&#x5EA6;&#x4E3A;k&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x6700;&#x591A;&#x6709;2^k^-1&#x4E2A;&#x7ED3;&#x70B9;</li>
+</ol>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> maxsize 2002</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> Null -1</span>
+<span class="hljs-keyword">int</span> a[maxsize],b[maxsize];<span class="hljs-comment">//&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x679C; &#x5C42;&#x6B21;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x679C;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">GetLeftSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{ <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5DE6;&#x5B50;&#x6811;&#x603B;&#x7ED3;&#x70B9;&#x6570;  n&#x4E3A;&#x7ED3;&#x70B9;&#x603B;&#x6570;</span>
+    <span class="hljs-keyword">if</span>(n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> h = log2(n);<span class="hljs-comment">//&#x9664;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x7684;&#x6DF1;&#x5EA6;</span>
+    <span class="hljs-keyword">int</span> Lsum = <span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>, h<span class="hljs-number">-1</span>) - <span class="hljs-number">1</span>; <span class="hljs-comment">//&#x9664;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x4E4B;&#x5916;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;</span>
+    <span class="hljs-comment">//&#x5373;&#x4E3A;(2^h-1-1)/2</span>
+    <span class="hljs-keyword">int</span> last = n - (<span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>, h) - <span class="hljs-number">1</span>); <span class="hljs-comment">//&#x6700;&#x540E;&#x4E00;&#x5C42;&#x7ED3;&#x70B9;&#x6570;</span>
+    <span class="hljs-keyword">if</span>(last &lt;= <span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>, h<span class="hljs-number">-1</span>)) 
+        Lsum += last;
+    <span class="hljs-keyword">else</span> Lsum += <span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>, h<span class="hljs-number">-1</span>);
+    <span class="hljs-keyword">return</span> Lsum;
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">LevelOrderRebuild</span><span class="hljs-params">(<span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right,<span class="hljs-keyword">int</span> bR)</span> </span>{
+    <span class="hljs-keyword">int</span> n = right - left + <span class="hljs-number">1</span>;<span class="hljs-comment">//&#x603B;&#x7ED3;&#x70B9;&#x6570;</span>
+    <span class="hljs-keyword">if</span>(n == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">int</span> leftlen = GetLeftSum(n);
+    <span class="hljs-keyword">int</span> aR = left + leftlen;
+    b[bR] = a[aR]; 
+    <span class="hljs-keyword">int</span> nl = bR * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> nr = nl + <span class="hljs-number">1</span>;
+    LevelOrderRebuild(left, aR<span class="hljs-number">-1</span>, nl);
+    LevelOrderRebuild(aR+<span class="hljs-number">1</span>, right, nr); 
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{   
+    <span class="hljs-keyword">int</span> N;
+    <span class="hljs-built_in">cin</span> &gt;&gt; N;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; ++i) 
+        <span class="hljs-built_in">cin</span> &gt;&gt; a[i];
+    sort(a, a+N);
+    LevelOrderRebuild(<span class="hljs-number">0</span>, N<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; ++i) {
+        <span class="hljs-keyword">if</span>(i) {
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; b[i];
+        } <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span> &lt;&lt; b[i];
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://img-blog.csdnimg.cn/20200711171619118.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt=""></p>
+<h2 id="04-&#x6811;7-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x64CD;&#x4F5C;&#x96C6;-30&#x5206;">04-&#x6811;7 &#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x64CD;&#x4F5C;&#x96C6; (30&#x5206;)</h2>
+<p><a href="https://pintia.cn/problem-sets/1268384564738605056/problems/1276814005115539458" target="_blank">&#x672C;&#x9898;&#x94FE;&#x63A5;</a></p>
+<h3 id="&#x9898;&#x76EE;&#x5927;&#x610F;">&#x9898;&#x76EE;&#x5927;&#x610F;</h3>
+<p>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x64CD;&#x4F5C;&#x96C6;&#x5B9E;&#x73B0;</p>
+<p><img src="https://img-blog.csdnimg.cn/20200711172212109.png" alt=""></p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> ElementType;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> TNode *Position;
+<span class="hljs-keyword">typedef</span> Position BinTree;
+<span class="hljs-keyword">struct</span> TNode{
+    ElementType Data;
+    BinTree Left;
+    BinTree Right;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PreorderTraversal</span><span class="hljs-params">( BinTree BT )</span> </span>{ <span class="hljs-comment">/* &#x5148;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x7531;&#x88C1;&#x5224;&#x5B9E;&#x73B0;&#xFF0C;&#x7EC6;&#x8282;&#x4E0D;&#x8868; */</span>
+    <span class="hljs-keyword">if</span>(BT) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, BT-&gt;Data);
+        PreorderTraversal( BT-&gt;Left);
+        PreorderTraversal( BT-&gt;Right);
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">InorderTraversal</span><span class="hljs-params">( BinTree BT )</span> </span>{  <span class="hljs-comment">/* &#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x7531;&#x88C1;&#x5224;&#x5B9E;&#x73B0;&#xFF0C;&#x7EC6;&#x8282;&#x4E0D;&#x8868; */</span>
+    <span class="hljs-keyword">if</span>(BT) {
+        InorderTraversal( BT-&gt;Left);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, BT-&gt;Data);
+        InorderTraversal( BT-&gt;Right);
+    }
+}
+<span class="hljs-function">BinTree <span class="hljs-title">Insert</span><span class="hljs-params">( BinTree BST, ElementType X )</span></span>;
+<span class="hljs-function">BinTree <span class="hljs-title">Delete</span><span class="hljs-params">( BinTree BST, ElementType X )</span></span>;
+<span class="hljs-function">Position <span class="hljs-title">Find</span><span class="hljs-params">( BinTree BST, ElementType X )</span></span>;
+<span class="hljs-function">Position <span class="hljs-title">FindMin</span><span class="hljs-params">( BinTree BST )</span></span>;
+<span class="hljs-function">Position <span class="hljs-title">FindMax</span><span class="hljs-params">( BinTree BST )</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    BinTree BST, MinP, MaxP, Tmp;
+    ElementType X;
+    <span class="hljs-keyword">int</span> N, i;
+
+    BST = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;N);
+    <span class="hljs-keyword">for</span> ( i=<span class="hljs-number">0</span>; i&lt;N; i++ ) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;X);
+        BST = Insert(BST, X);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Preorder:&quot;</span>); PreorderTraversal(BST); <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);
+    MinP = FindMin(BST);
+    MaxP = FindMax(BST);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;N);
+    <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; i&lt;N; i++ ) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;X);
+        Tmp = Find(BST, X);
+        <span class="hljs-keyword">if</span> (Tmp == <span class="hljs-literal">NULL</span>) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d is not found\n&quot;</span>, X);
+        <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d is found\n&quot;</span>, Tmp-&gt;Data);
+            <span class="hljs-keyword">if</span> (Tmp==MinP) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d is the smallest key\n&quot;</span>, Tmp-&gt;Data);
+            <span class="hljs-keyword">if</span> (Tmp==MaxP) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d is the largest key\n&quot;</span>, Tmp-&gt;Data);
+        }
+    }
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;N);
+    <span class="hljs-keyword">for</span>( i=<span class="hljs-number">0</span>; i&lt;N; i++ ) {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;X);
+        BST = Delete(BST, X);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Inorder:&quot;</span>); InorderTraversal(BST); <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/* &#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x88AB;&#x5D4C;&#x5728;&#x8FD9;&#x91CC; */</span>
+<span class="hljs-function">BinTree <span class="hljs-title">Insert</span><span class="hljs-params">( BinTree BST, ElementType X )</span> </span>{
+    <span class="hljs-keyword">if</span>(!BST) {
+        BST = (BinTree) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> TNode));
+        BST-&gt;Data = X;
+        BST-&gt;Left = BST-&gt;Right = <span class="hljs-literal">NULL</span>;
+        <span class="hljs-keyword">return</span> BST;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span>(X &lt; BST-&gt;Data)
+            BST-&gt;Left = Insert(BST-&gt;Left, X);
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(X &gt; BST-&gt;Data)
+            BST-&gt;Right = Insert(BST-&gt;Right, X);
+    }
+    <span class="hljs-keyword">return</span> BST;
+}
+<span class="hljs-function">BinTree <span class="hljs-title">Delete</span><span class="hljs-params">( BinTree BST, ElementType X )</span> </span>{
+    Position tmp;
+    <span class="hljs-keyword">if</span>(!BST) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not Found\n&quot;</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (X &lt; BST-&gt;Data) 
+        BST-&gt;Left = Delete(BST-&gt;Left, X);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (X &gt; BST-&gt;Data) 
+        BST-&gt;Right = Delete(BST-&gt;Right, X);
+    <span class="hljs-keyword">else</span> {    <span class="hljs-comment">//&#x627E;&#x5230;&#x4E86;&#x8981;&#x5220;&#x9664;&#x7684;&#x7ED3;&#x70B9;</span>
+        <span class="hljs-keyword">if</span> (BST-&gt;Left &amp;&amp; BST-&gt;Right) {    <span class="hljs-comment">//&#x5F85;&#x5220;&#x9664;&#x7ED3;&#x70B9;&#x6709;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B69;&#x5B50;</span>
+            tmp = FindMin(BST-&gt;Right);    <span class="hljs-comment">//&#x5728;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x627E;&#x6700;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x586B;&#x5145;&#x5220;&#x9664;&#x8282;&#x70B9;</span>
+            BST-&gt;Data = tmp-&gt;Data;
+            BST-&gt;Right = Delete(BST-&gt;Right, tmp-&gt;Data);
+            <span class="hljs-comment">//&#x586B;&#x5145;&#x5B8C;&#x540E;&#xFF0C;&#x5728;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x5220;&#x9664;&#x8BE5;&#x6700;&#x5C0F;&#x5143;&#x7D20;</span>
+        }
+        <span class="hljs-keyword">else</span> {    <span class="hljs-comment">//&#x5F85;&#x5220;&#x9664;&#x7ED3;&#x70B9;&#x6709;1&#x4E2A;&#x6216;&#x65E0;&#x5B50;&#x7ED3;&#x70B9;</span>
+            tmp = BST;
+            <span class="hljs-keyword">if</span> (!BST-&gt;Left) <span class="hljs-comment">//&#x6709;&#x6709;&#x5B69;&#x5B50;&#x6216;&#x65E0;&#x5B50;&#x8282;&#x70B9;</span>
+                BST = BST-&gt;Right;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!BST-&gt;Right)
+                BST = BST-&gt;Left;
+            <span class="hljs-built_in">free</span>(tmp);
+        }
+    }
+    <span class="hljs-keyword">return</span> BST;
+}
+<span class="hljs-function">Position <span class="hljs-title">Find</span><span class="hljs-params">( BinTree BST, ElementType X )</span> </span>{
+    <span class="hljs-keyword">while</span> (BST) {
+        <span class="hljs-keyword">if</span>(X &lt; BST-&gt;Data)
+            BST = BST-&gt;Left;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(X &gt; BST-&gt;Data)
+            BST = BST-&gt;Right;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> BST;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+}
+<span class="hljs-function">Position <span class="hljs-title">FindMin</span><span class="hljs-params">( BinTree BST )</span> </span>{
+    <span class="hljs-keyword">if</span>(BST) {
+        <span class="hljs-keyword">while</span>(BST-&gt;Left) 
+            BST = BST-&gt;Left;
+    }
+    <span class="hljs-keyword">return</span> BST;
+}
+<span class="hljs-function">Position <span class="hljs-title">FindMax</span><span class="hljs-params">( BinTree BST )</span> </span>{
+    <span class="hljs-keyword">if</span>(BST) {
+        <span class="hljs-keyword">while</span>(BST-&gt;Right) 
+            BST = BST-&gt;Right;
+    }
+    <span class="hljs-keyword">return</span> BST;
+}
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x70B9;">&#x6D4B;&#x8BD5;&#x70B9;</h3>
+<p>&#x6D4B;&#x8BD5;&#x70B9;&#x5982;&#x4E0B; </p>
+<p><img src="https://img-blog.csdnimg.cn/20200711225706283.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="di-san-zhou-zai-shu-er-cha-shu-deng.html" class="navigation navigation-prev " aria-label="Previous page: 第三周：栽树（二叉树等）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html" class="navigation navigation-next " aria-label="Next page: 第五周：堆&哈夫曼树&并查集">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四周：二叉搜索树&二叉平衡树","level":"3.2.10.4","depth":3,"next":{"title":"第五周：堆&哈夫曼树&并查集","level":"3.2.10.5","depth":3,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.md","articles":[]},"previous":{"title":"第三周：栽树（二叉树等）","level":"3.2.10.3","depth":3,"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.md","ref":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shu-ju-jie-gou-ji-suan-fa/shu-ju-jie-gou/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.md","mtime":"2022-03-27T05:13:52.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T05:20:02.285Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
