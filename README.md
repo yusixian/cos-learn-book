@@ -36,8 +36,8 @@
 
 ## 前端进阶​
 
-{% content-ref url="morelearning/react/" %}
-[react](morelearning/react/)
+{% content-ref url="morelearning/qian-duan-jin-jie.md" %}
+[qian-duan-jin-jie.md](morelearning/qian-duan-jin-jie.md)
 {% endcontent-ref %}
 
 {% content-ref url="morelearning/typescript/" %}

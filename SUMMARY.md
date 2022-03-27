@@ -69,7 +69,7 @@
 
 ## 前端进阶 <a href="#morelearning" id="morelearning"></a>
 
-* [React](morelearning/react/README.md)
+* [React](morelearning/qian-duan-jin-jie.md)
   * [响应式系统与 React](morelearning/react/xiang-ying-shi-xi-tong-yu-react.md)
   * [React学习小记](morelearning/react/react-xue-xi-xiao-ji.md)
   * [Redux学习之Redux三原则、createSore原理及实现](morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.md)
