@@ -4,13 +4,14 @@
 
 ## 前端基础 <a href="#front-end-basics" id="front-end-basics"></a>
 
+* [HTML](front-end-basics/html.md)
+* [CSS](front-end-basics/css/README.md)
+  * [CSS学习之布局](front-end-basics/css/css-xue-xi-zhi-bu-ju.md)
 * [JavaScript](front-end-basics/javascript/README.md)
   * [跟着月影学JavaScript](front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.md)
   * [JavaScript之对象、原型链及继承](front-end-basics/javascript/prototype-and-inherit.md)
   * [JavaScript中的类](front-end-basics/javascript/javascript-zhong-de-lei.md)
-* [HTML](front-end-basics/html.md)
-* [CSS](front-end-basics/css/README.md)
-  * [CSS学习之布局](front-end-basics/css/css-xue-xi-zhi-bu-ju.md)
+  * [JS手撕题](front-end-basics/javascript/javascript-code.md)
 * [HTTP与浏览器](front-end-basics/http-yu-liu-lan-qi/README.md)
   * [HTTP实用指南](front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md)
   * [Web开发的安全之旅](front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.md)
@@ -73,6 +74,8 @@
   * [响应式系统与 React](morelearning/react/xiang-ying-shi-xi-tong-yu-react.md)
   * [React学习小记](morelearning/react/react-xue-xi-xiao-ji.md)
   * [Redux学习之Redux三原则、createSore原理及实现](morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.md)
+* [Vue](morelearning/vue.md)
+* [Node](morelearning/node.md)
 * [TypeScript](morelearning/typescript/README.md)
   * [TypeScript入门](morelearning/typescript/typescript-ru-men.md)
 * [Webpack](morelearning/webpack/README.md)
@@ -80,6 +83,7 @@
 * [前端动画与绘图](morelearning/animation/README.md)
   * [WebGL基础](morelearning/animation/webgl-ji-chu.md)
   * [前端动画简介](morelearning/animation/qian-duan-dong-hua-jian-jie.md)
+* [前端性能优化](morelearning/performance-optimization.md)
 
 ## 笔面试记录 <a href="#interview-record" id="interview-record"></a>
 

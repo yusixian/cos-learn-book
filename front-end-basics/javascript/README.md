@@ -1,23 +1,23 @@
 ---
-description: JS学习之路
+description: JavaScript操控网页的行为，让其不再是静态的
 ---
 
 # JavaScript
 
 ## 学习进度
 
-* [ ] 语言基础与基本类型
-* [ ] 变量、作用域与内存
-* [ ] 基本引用类型与集合引用类型
-* [ ] 迭代器与生成器
+* [x] 语言基础与基本类型
+* [x] 变量、作用域与内存
+* [x] 基本引用类型与集合引用类型
+* [x] 迭代器与生成器
 * [x] [对象、原型链及继承](prototype-and-inherit.md)
 * [x] [JavaScript中的类](javascript-zhong-de-lei.md)
-* [ ] 代理与反射
+* [x] 代理与反射
 * [ ] 基本函数、闭包与箭头函数
 * [ ] 期约（Promise）与异步函数
 * [ ] BOM与DOM
-* [ ] 事件与事件循环
-* [ ] 各种手写题
+* [x] 事件与事件循环
+* [ ] 手写题
 
 ## 学习资料
 
@@ -43,3 +43,21 @@ description: JS学习之路
 | [事件循环机制](https://zhuanlan.zhihu.com/p/33058983)                      |
 | [promise原理](https://juejin.cn/post/6844904063570542599)              |
 | [generator原理](http://www.alloyteam.com/2016/02/generators-in-depth/) |
+
+再次强推大森哥的博客：
+
+* [x] [JavaScript学习笔记（1）：语言基础](https://sadose.github.io/2021/12/04/js001/)
+* [x] [JavaScript学习笔记（2）：值、作用域与内存](https://sadose.github.io/2021/12/07/js002/)
+* [x] [JavaScript学习笔记（3）：基本引用类型](https://sadose.github.io/2021/12/08/js003/)
+* [x] [JavaScript学习笔记（4）：集合引用类型](https://sadose.github.io/2021/12/10/js004/)
+* [x] [JavaScript学习笔记（5）：迭代器与生成器](https://sadose.github.io/2021/12/13/js005/)
+* [x] [JavaScript学习笔记（6）：面向对象](https://sadose.github.io/2021/12/15/js006/)
+* [x] [JavaScript学习笔记（7）：代理与反射](https://sadose.github.io/2021/12/17/js007/)
+* [x] [JavaScript学习笔记（8）：函数](https://sadose.github.io/2021/12/23/js008/)
+* [x] [JavaScript学习笔记（9）：异步编程](https://sadose.github.io/2021/12/24/js009/)
+* [x] [JavaScript学习笔记（10）：BOM](https://sadose.github.io/2022/01/16/js010/)
+* [ ] [JavaScript学习笔记（11）：客户端检测](https://sadose.github.io/2022/02/02/js011/)
+* [x] [JavaScript学习笔记（12）：DOM基础](https://sadose.github.io/2022/02/13/js012/)
+* [ ] [JavaScript学习笔记（13）：DOM扩展](https://sadose.github.io/2022/03/01/js013/)
+* [ ] [JavaScript学习笔记（14）：DOM2和DOM3](https://sadose.github.io/2022/03/07/js014/)
+* [x] [JavaScript学习笔记（15）：事件](https://sadose.github.io/2022/03/11/js015/)
