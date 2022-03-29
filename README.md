@@ -4,16 +4,16 @@
 
 ## 前端基础
 
-{% content-ref url="front-end-basics/javascript/" %}
-[javascript](front-end-basics/javascript/)
-{% endcontent-ref %}
-
 {% content-ref url="front-end-basics/html.md" %}
 [html.md](front-end-basics/html.md)
 {% endcontent-ref %}
 
 {% content-ref url="front-end-basics/css/" %}
 [css](front-end-basics/css/)
+{% endcontent-ref %}
+
+{% content-ref url="front-end-basics/javascript/" %}
+[javascript](front-end-basics/javascript/)
 {% endcontent-ref %}
 
 {% content-ref url="front-end-basics/http-yu-liu-lan-qi/" %}
@@ -40,6 +40,14 @@
 [qian-duan-jin-jie.md](morelearning/qian-duan-jin-jie.md)
 {% endcontent-ref %}
 
+{% content-ref url="morelearning/vue.md" %}
+[vue.md](morelearning/vue.md)
+{% endcontent-ref %}
+
+{% content-ref url="morelearning/node.md" %}
+[node.md](morelearning/node.md)
+{% endcontent-ref %}
+
 {% content-ref url="morelearning/typescript/" %}
 [typescript](morelearning/typescript/)
 {% endcontent-ref %}
@@ -50,6 +58,10 @@
 
 {% content-ref url="morelearning/animation/" %}
 [animation](morelearning/animation/)
+{% endcontent-ref %}
+
+{% content-ref url="morelearning/performance-optimization.md" %}
+[performance-optimization.md](morelearning/performance-optimization.md)
 {% endcontent-ref %}
 
 ## 笔面试记录
