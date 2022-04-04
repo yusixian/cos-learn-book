@@ -11,6 +11,7 @@
   * [跟着月影学JavaScript](front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.md)
   * [JavaScript之对象、原型链及继承](front-end-basics/javascript/prototype-and-inherit.md)
   * [JavaScript中的类](front-end-basics/javascript/javascript-zhong-de-lei.md)
+  * [前端面试之onclick与addEventListener区别](front-end-basics/javascript/qian-duan-mian-shi-zhi-onclick-yu-addeventlistener-qu-bie.md)
   * [JS手撕题](front-end-basics/javascript/javascript-code.md)
 * [HTTP与浏览器](front-end-basics/http-yu-liu-lan-qi/README.md)
   * [HTTP实用指南](front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md)

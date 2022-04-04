@@ -13,9 +13,9 @@ description: JavaScript操控网页的行为，让其不再是静态的
 * [x] [对象、原型链及继承](prototype-and-inherit.md)
 * [x] [JavaScript中的类](javascript-zhong-de-lei.md)
 * [x] 代理与反射
-* [ ] 基本函数、闭包与箭头函数
-* [ ] 期约（Promise）与异步函数
-* [ ] BOM与DOM
+* [x] 基本函数、闭包与箭头函数
+* [x] 期约（Promise）与异步函数
+* [x] BOM与DOM
 * [x] 事件与事件循环
 * [ ] 手写题
 
