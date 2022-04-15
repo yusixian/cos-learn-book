@@ -16,7 +16,7 @@ description: 【第二届青训营-寒假前端场】- 「HTTP实用指南」
 * 简单**可扩展**（可以自定义请求头，只要客户端服务端之间可以理解）
 *   **无状态**
 
-    ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71a3574b7e6543d09c08554cafabdbbc\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71a3574b7e6543d09c08554cafabdbbc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 ### 协议分析
 
@@ -149,12 +149,12 @@ HTTP/2概述：**更快**、更**稳定**、更**简单**
 * 帧(frame)
   * HTTP/2通信的最小单位，每个帧都包含**帧头**，至少也会标识出当前帧所属的数据流。
   * 1.0传输的是文本，而2中传的则是二进制数据，效率更高。并有新的压缩算法。
-  * ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/877080ecc022407f98696529903fbfb9\~tplv-k3u1fbpfcp-watermark.image?)
+  * <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/877080ecc022407f98696529903fbfb9~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * **消息**：与逻辑请求或响应消息对应的完整的一系列帧。
 * **数据流**：已建立的连接内的双向字节流，可以承载一条或多条消息。
   *   **交错发送**，接受方**重组织**。
 
-      ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8f4367cce8a442082ea52011ff2a9af\~tplv-k3u1fbpfcp-watermark.image?)
+      <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8f4367cce8a442082ea52011ff2a9af~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * HTTP/2连接都是**永久**的，而且仅需要每个来源一个连接
 * **流控制**：阻止发送方向接收方发送大量数据的机制
 * 服务器推送
@@ -331,7 +331,7 @@ axios( {
 
 *   [HTTP/2 - A Real-World Performance Test and Analysis | CSS-Tricks - CSS-Tricks](https://css-tricks.com/http2-real-world-performance-test-analysis/)
 
-    ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a15399deba94753848a5a4f8dcdb5b1\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a15399deba94753848a5a4f8dcdb5b1~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * 预解析、预连接等
 * 重试是保证稳定的有效手段，但要防止其加剧恶劣情况（比如网络连接就是断开了）。
 * 缓存合理使用，作为最后一道防线。
