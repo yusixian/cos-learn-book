@@ -1,6 +1,6 @@
 # day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
 
-day2题目：[14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)、[3. 无重复字符的最长子串](https://leetcode-cn.com/problems/lru-cache/)、[124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
+day2题目：[14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)、[3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)、[124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
 
 学习计划链接：[冲刺春招-精选笔面试 66 题大通关](https://leetcode-cn.com/study-plan/bytedancecampus/?progress=dcmyjb3)
 
