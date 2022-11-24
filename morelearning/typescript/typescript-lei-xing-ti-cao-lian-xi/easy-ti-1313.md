@@ -1,0 +1,191 @@
+---
+description: Easy 题共13道，是真的都很easy
+---
+
+# Easy题（13/13）
+
+## 题单
+
+* [x] [4・实现 Pick](https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.zh-CN.md)
+* [x] [7・实现 Readonly](https://github.com/type-challenges/type-challenges/blob/main/questions/00007-easy-readonly/README.zh-CN.md)
+* [x] [11・元组转换为对象](https://github.com/type-challenges/type-challenges/blob/main/questions/00011-easy-tuple-to-object/README.zh-CN.md)
+* [x] [14・第一个元素](https://github.com/type-challenges/type-challenges/blob/main/questions/00014-easy-first/README.zh-CN.md)
+* [x] [18・获取元组长度](https://github.com/type-challenges/type-challenges/blob/main/questions/00018-easy-tuple-length/README.zh-CN.md)
+* [x] [43・Exclude](https://github.com/type-challenges/type-challenges/blob/main/questions/00043-easy-exclude/README.zh-CN.md)
+* [x] [189・Awaited](https://github.com/type-challenges/type-challenges/blob/main/questions/00189-easy-awaited/README.zh-CN.md)
+* [x] [268・If](https://github.com/type-challenges/type-challenges/blob/main/questions/00268-easy-if/README.zh-CN.md)
+* [x] [533・Concat](https://github.com/type-challenges/type-challenges/blob/main/questions/00533-easy-concat/README.zh-CN.md)
+* [x] [898・Includes](https://github.com/type-challenges/type-challenges/blob/main/questions/00898-easy-includes/README.zh-CN.md)
+* [x] [3057・Push](https://github.com/type-challenges/type-challenges/blob/main/questions/03057-easy-push/README.zh-CN.md)
+* [x] [3060・Unshift](https://github.com/type-challenges/type-challenges/blob/main/questions/03060-easy-unshift/README.zh-CN.md)
+* [x] [3312・Parameters](https://github.com/type-challenges/type-challenges/blob/main/questions/03312-easy-parameters/README.zh-CN.md)
+
+## 解答
+
+### 4・实现 Pick
+
+* [接受挑战](https://tsch.js.org/4/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBAsELQUHnagG5wgBQJYGMDWl5yFH4BGAnhAIIB2ALgBYD21FAYgK4QAUAAgIZ0AZuwCUEAMSAA70CqyhPbUMzCSXYYANrTgZq+fOP0RAGRmA7t11QAfBEBE1oDn49ACUIgTlNA2-GBv-0CL0YApYwPOJgIAYzJFQAFQBlCEBQxUA7f0AQtwgAA0xcAB5ggBoIAGlzeMAYf8AxeUBYOUB75UBTuUB-eUAKV0Bg7QCofBAQQDm5QG8fQGj1BOD4iEBaOUBIBMBLo0AvxUA9HUByAwTMvMAQ80ACBMAEI0AAOUAqOUAG0xj2xrqIfEBo+UAgzUAsf8D409oAZ3xtWgBTACdBPiwbiGDGABNGCABvfChaDC0NQ3ABcEHOtDu2gA5n8IO8bucsFCAA4A5hgiFQ6iwqBQLCMAC2KOBt3eYJIjEYwIE+AAvoFaGQUS83p80HcbgA3DA3ADuEAAvBAALJkJI4VIfRgZADkAKBN1lEAAPhBZQTiaSbu9ZeZAgTqBCILRpWC2YwOdzeQLhb88XiFcCwbKAMI06gQO5UwmytJw-FEkk3Mlgx5qc43f1QBlQU7xQKWQAU6hAAOKA+jsEgQQBQcoBT80A0O6Hei0Wgo84g4DAC5YegAOgAVuc64w7tDgNBgAAvehwV0AOTAIGAYFHoAgAH0p9OZ9OIIADeRigGO5QCAHpPZxuJxBh6OmSzReLsJL0lkIDcAB63ajvc4QHA3MiMQSvSx2-AAbUyD4g2iyAF1zU-B8-zAOkdjHEB103GcIEAaVtAFXoypdig6Cp23EcMGJVtaBNZkXm+CAAFEAEd2D4NQMkI88WSwHCwMEb1CXVHg9xuOBa3I4EcURYB2ABCNZV3PCICwPhI1vYV33wKiaNoZISLItR5Oom5aJ1ABGDIxQlKVPjlJ0lXMIzoyIlTaPk0jyOU2SdQAJi0w8UgtfTAWBZU1Q1INtV1IzzBMqsIBY844AvWSQrub07nwbSj10mV1QM9z1U1YMySS2VtC5ciMB8-0QLAa57keZ5XmlH58AMzFIRhfAESRVF0WoKrsVxESvJDHUKSpD1QNHQqHieF4ZNUsl1PK-5XNBcFqpxXqCroIrBtMmz3ls8aTUm5qasDLUOvJCBKWpG5aQZUcwHHVCYMAaDlFkAU2sUNQ9DzvACwIEAMCVAGq5RdAGPIwAVb2LUty0raskXrJsWzbDtgAEc4+XubtewHfBLELP6AbLCsqxrMHm1bdtO3Oak+MUI1kYgQAXs0ALE0THRoGsdBxtcchns+0HHcwCAA)
+
+```typescript
+type MyPick<T, K extends keyof T> = {
+  [Key in K]: T[Key]
+}
+```
+
+通过 keyof 取出 T 类型的所有键，如果只是 MyPick\<T, K>的话，会报错如下
+
+```bash
+Type 'K' is not assignable to type 'string | number | symbol'.
+Type 'key' cannot be used to index type 'T'.
+```
+
+### 7・实现 Readonly
+
+* [接受挑战](https://tsch.js.org/7/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBDsELQUHnagG5wgJQKYEMAmB7AOwBsBPSeOSq8gIxIgEECAXAC0PoDEBXCACgACWFgDNuASggBiQAHegVWVpNbgEsizOMoLSATtnzF6UvDQBWGAMbqA1hhIBncuSnOIgDIzAd26OoAPgiAia0A5+IgABTQIQE5TQG34wG--QEXowApYwHnEwCAGLwhAWDlAQMjAf3lACldAUMVAO39AELcAA0xcQlIAHgAVb1LAGH-AK8DAR90UQAA5QCo5VKhyQFPoiHK9KpJSiEAseUBS40A2U26IAH1AbZtAaPVAIeVAB1MFxsA3PUAV+MA9tW7AGO1AC0UOwHYLYsBvHxXGwCvlQHozQAEjQEhzQD0dQHIDQF+EicBqiKGukqBnGz0Ad-KAB0zehByIB9OUAjDqPdKAe+VAKdygFjFQCf2v1MYBDGOKX0A0rGAHgVoeRANHygCDNQBY-2lSvTmA4oJpmBhtCIsOYMBBanh8BAAN7kKDMZTMIgYABcEDszG0mgA5sKIDgMHZzPKAA6iwjS2XyghKqAAXzS5kIsogzD5eGlAFkSBV9DVefhfABeQXK0XiqUQABEAAlbP6ADTK1XqrU6gjS-0iPDGLDaf3kU19EU2gB0PolEE9QYwRCIeH9EGAwAgAFFtNo8NppeZhAQ8MwIEC7HZlAqtFh2yMDBBNXXNWzmGRM-gs5GNcptcpCPmAzRk5xE2WK9Xa-XG83W-2sJ3u72D876MO8KPtOPyPTSmlfIAKdQgAHExaxuDQIIAoOUAp+aAaHdqVYZhmE1OxJQrRlzFYLMTDsLN6wVYBoGAAAvVg4AAYQAOTAEBgDAQjQEWBZSLI8jSIgQADeWKQBjuUAQA8SIo5iIHwwjx1HCAHSdUY6g9L0oCBM8IAAbQAaVsCBNAgGwSDwEQeQAXQgaVanE2xFLAU0iJAJjmPIiBAGlbQBV6Nyck9P0yi2OUABbTV6zbDjuQFasAEduCwIhQ2rAAPUdLAgY0IBEOsbIgAByAQnLgaDPIlQ01WAbhRSIOxwvYkhOKbOw1SXETyCrPyLGYaoq3czzqm4gcXRtABGbxvJ4gw6jq7w2vDTSwBZNkOS5Hk6oEq0xQlPU5UVcgZ2jBdYxlMbDXIc07IlVkcGlGhEwlYRyBsjBmCwaUhSgKAsGS9gG1mg0jUCrTCJ0izLIgQBoOQ6QBTa3u-TWII0ByF8QAwJUAarkaMAY8jABVvICQLAiDgCgmC4IQ7QkJQ4Q7AAdzZNCMJwn6IAA0HwdA8DIPVWH4MQ5DgDsPAiGS6amQgXxABezQAsTQ8fHIaJ6DYNJhGMaw3C2LAIA)
+
+```typescript
+type MyReadonly<T> = {
+  readonly [Key in keyof T]: T[Key]
+}
+```
+
+https://tsch.js.org/11/play/zh-CN
+
+### 11・元组转换为对象
+
+* [接受挑战](https://tsch.js.org/11/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBCM0QtBQwoqBG-QNvGCNjQXHKE-tQhjGQLzEmEBGAnhAM4CWAdgPaP0QAUAAnUywJQQBiQAHegVWVBjMgCsApgGMALvADW0itUKEBWiIAyMwHduGqAD4IgImtAc-EQACgCUIgTlNA2-GBv-0CL0YApYwPOJgIAZDEQATygKaKgABygFRyqIDePoDR6oAw-4BgOoCb8eEo0Zi4eNExSfjRgCFugHSpwIA8CoC-CYD0ZoBzcqiAtHKAsgmAYcqAX4qApua+UISA0fKAQZqAWP9+AAaD8upQsizU8hDyAK4ADgA20hAAvBAA2gDk8tLU8wCGGwA0EBsAtowAJtLzEADMRyfnVzcAGg9nl9cQAJobALoQPbUCBjegTPzyCizJYAJx203mk1WABU5otkYwAPJSOTyAA8kOhjAAZlM0dITMBgBBpAAPaEKaQXCAAbymO32AC4Tttdgdjh9nncNtzBV97gKnl83qKpa93nKfiLHp8br8AL6EQb9PwmQAU6hAAOK0eQAC2mZAggCg5QCn5oBodx6pvk8lm1E5VOGslNADpJNRvYwYQBzYCwYAAL1N8AAwgA5MAgYBgZOgCAAfQzmazmYggAN5XKAY7lAIAe6ezZbTEETycJS1RC2kGOxMgUeORNNp23oF2BcL2FxY8yoe3oFDWfxMqxZhHWAGlVBAGBBkWt6NNTmRpDC-n9uXOKGBNSmQKXy1mIIBpW0Aq9GAClcOifTxnK0naKdZoHJjXWRAAKIAR2mezzMc370riEDqhAxIwowpwnBwNbwF6gGLPQQY7MA0zyLQ8zUBsyaghMZL1is6xbBy-IqkKEqUdKCqqkqAJAiC4zyGABEfuSsZrhuMIkWs0DHAATMctzHAALIxwLsWxLFEYsACytC0nxAknIJDyiScYn-ICUksdWUJLLIQI7HxhAgQy+J-gB8ytuSjY4i2NYknJFLHGyvJcjy5EbAA3DRNz3LK9H3P5YrysFQpvGFiq-JFXy-OBRhGIc5mgS21mAXZ9YOc2+LOaSMz1lx66bilX7QNy0D+YJ3KCf5tzcrc-lidyYlJSlaWWXimW2XW6JYo5+WGS5RUKUp5VspVMBheporqQ1TVhdporaR1qV-Cm1LwdQ8B0pZe0wtBMJgJ+m7HSR-UNoNeV4ms-FCX87nquOyZHveD4QIA0HLBIAptYfaeT5gKAhAmIAYEqANVy+aAMeRgAq3o6zquu6wCej6foBsGobQMAw7UAA7puEZRnGoMQPacMIy6boetQXq+v6gYhmG1CMPMmG0OMpOAC9mgBYmvolNIzTdPo4zRMxvGVZgEAA)
+
+```typescript
+type TupleToObject<T extends readonly any[]> = {
+  [Key in T[number]]: Key
+}
+```
+
+### 14・第一个元素
+
+* [接受挑战](https://tsch.js.org/14/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBCMAsEFoKBpvQAHKCo5QwoqAJfSiEGF4BGAnhAIIB2ALgBYD2V5AYgK4QAUAAgIa0AzNgEoIAYkAB3oFVlcbwBOc3qTx4xaiIAyMwHduKqAD4IgImtAc-EQACgCUIgTlNA2-GBv-0CL0YApYwPOJgIAZdEQHnagBucMgFgJgBSuAAYsAJZyAM40ADwAKnohgDD-gMHagKXGgOvKGIAOpoAjfiHxIYBueoAr8YB7aqmAIW5oWNhVgN4+gNHqnlB4gNHygEGagFj-XiH9NFF4NKQADgCmEPJy0BAAvBAA2gDkvMsANBDLxBtbAMbLALrDY5PTAEzzSwDMm+eb0MdtUCMTEHTjvAAmswsR0XFptADMBgBBxgAPCZ7GjjL4QGgMCDESarZYnN4fb6XP6RGKxC4gsGQ6Gw+GI5GTa54fohLwGQAU6hAAOLhehsYgQQBQcoBT80A0O7dOg0GijKIALlBgz2dAAdAArKIyhhyADmwDgwAAXnQEABhAByYBAwDAptAEAA+lbrTbrRBAAbyVUAx3KAQA9LbaPRaIMbTa9Jv98fFwRDYVQvlEpsxFocDAsg5DQ+GluEqAJxnIICxNjKc-xSNHDhAAPyZiBiiBUcYAN3TZpA7s9NoggGlbQCr0UF2g3G1bvSbwgBbUbKmgI04QADeEAAogBHNi8AA2mynUPGMIgAF8IAI5Ax+1tuH6ENLFwvxlQVeMosA2DRwguouiwH6IHteFEr1dFngV6TYrP5wXWIAziRZbgge4YBjTZrj0PR1h-VcYX-OdF2AvFQM4UQ5gMaBznAydeHLGI5BTFVN2grhsNw-C4IQqBfzXOIALQkDYmjeCK2rdM6MQv8WKAtjFjYMNxgEFM4UokSvjEiSvl445nzHdNd2iL88FBCBDyiBASSY3SFGVPA2OWKgGBoCgFCUZZ4I0sFtN0pCaAM1TjIw2JJwABnLVYrNIAAZcIAGtxmWTdbMUusu27CBAGg5VBAFNraLG17MBQDwAxADAlQBquUdQBjyMAFW9BWFUUJWAKVZQVJVVXVWBgH4KIAHd0y1HUDQyiB+UK4qRXFSUomleVFWVNUNSiBgF1vcImCGfQIEAF7NACxNbQetK-rBqqkbWr1Q0fTAIA)
+
+```typescript
+type First<T extends any[]> = T extends [infer F, ...any[]] ? F : never
+```
+
+符合小册中模式匹配做提取套路，通过 extends 对类型参数做匹配，结果保存到通过 infer 声明的局部类型变量里，若匹配就能从该局部变量里拿到提取出的类型。
+
+### 18・获取元组长度
+
+* [接受挑战](https://tsch.js.org/18/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBCMAcEFoKHbgwa8qGFFQI36H9UwZXqUQSOIICMBPCAZwEsA7AewbogAoABWx5gSggGJAAd6BVZQEAXAK4AHADYBTAgX7KIgDIzAd26KoAPgiAia0Bz8RAAKAJQiBOU0Db8YG--QIvRgCljA84mAgBi0RA2EqAvvUAAcoCo5QCwEwApXQBC3AAMAGTk6AHMxAAswwBh-wFLjQHXlfzCAJzkAQwATZhlyMJDAB1NMJMAV+MA9tUBN+L8KkLw3KAJAaPlAIM1ALH-3MP6xKgIxcik5CDE5KhlciABeCABtAHJJ6dzlgBoIZYBbBny5GQgAZi2d-cPjgA1zvYOjiABNZYBdYdHxqilcgGM5a7zJbLABiAEEIgBhADyADkIABOO7gqFwiAACQAomCAGovbbLAAipjBAHE4XcAMoAFTBpkp6IAksY7uiAKoAWTB8MpxjBkMxIIijNJ6Opb3cIzGEymMyisQSQPlcXiAB41jNdMBgBA5AAPMa-Sb5CAAFg+0u+fwBysVC1taqt-2uWp1+sNxogAFYCP0wu5dIAKdQgpJoCQkpAggCg5QCn5oBod268TEYikVAAXNrBr94gA6ABWVBzDCyMWAcGAAC94ghIbCwCBgGAm6AIAB9dsdzsdiCAA3kQoBjuUAgB5truj1sQBtNqXjB2q6m6vWTOj5KgQHIFIqUCR0ADWjAA7nRFq9dAtqSt5Ar4hLmyAR2POxBANK2gFXooLte8P9sTxs0XZSYsxAmT4IAAbwgTEAEcJFyGRtkxA05CNCAAF8IAAMyyBhdh2dhpwQbNYMvGIpmACQxBoGQqGWJtfmYKggI1WYFhWJi7kuR4zgJDibnYh5jheV4IFyVc6LoBiwDEhjqB+Z0gRWFEYXhJECUUtEsVxfEdmJMkKQJGk6QZZlWU5bkIF5flBWFUVxSEkSICksQpxA34RKmeSCAQj1VSgmCZFVWdpwYdCZXWbRtlNbRws8xCjR86DYIC6IVXVT5gpk60XW2L0os2AhtQgPCqAQd0kLEEqsiwrICFnHK8qgAqipK2LyrkSrixq5KElVZZ4iOGQGAgfdixkfJlmi94mzAFsv0fQBoOR8QBTa0-L8f2m8AdAgQAwJUAark+0AY8jABVvRNk1TDNgCzXMCyLEsy1gYBcnE-c2sratawIXR4yOk6U3TTMqGzfNC2LUtyyoBgZHImh6I+iBABezQAsTQ0H6zv+wHrpB16azrScwCAA)
+
+```typescript
+type Length<T extends readonly unknown[]> = T['length']
+```
+
+会抛出 Error 说明得限制传入的类型
+
+### 43・Exclude
+
+* [接受挑战](https://tsch.js.org/43/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?ssl=26\&ssc=1\&pln=27\&pc=1#code/PQKgUABBAsDMEFoIFEAeBjANgVwCYFNJEETSiAjATwgC0ALfRgOwHMIAKAAQC8HmWAlBADEgAO9Aqsojy2AJaYALghlMR2JjID2TIkWF6IgDIzAd246oAPgiAia0Bz8RAAKAJQiBOU0Db8YG--QIvRgCljA84mAgBlMIQDztQAbnQFDFQDt-QBC3NCw8fAgAHgAVABoIAFUzQG8fQGj1QBh-wDF5QFg5QF+AwBe3QFLjQH95QApXQGDtQBpzQGq4wKgiC0A5uUAVAMAIFXyUwFo5QCTjQBM0zOj8wAQjQA0VAsBTc0AQ80ACBMAAOUAqOUAG0ym89ogiQGj5QCDNQCx-oIADK-kAZyJ5SgAHRId8G+wFCABeCABZSjiOAISQA5ABDEEQAA+EBB5EhMJB6BBGXBIIswGAsPh0NhyKIVwuQQsgAp1CAAcRk8jo2HIEEAUHKAU-NANDupzo8nkjxuAC5Mbd0HQAHQAKxugo0ACcWMA4MBeAgAMIAOTAIGAYA1oAgAH1dXr9XqIIADeWigGO5QCAHjqDdbtRA1RqHs8-gCMED8KkMtlvlAUhB8Kh5PgmLgblkIAB+CBMfAAN3wEu5EBSmpAVpt+oggGlbQCr0XVDmn07q7eqZABbR6S+QQR2JADeKAAjtgwZgMmhnugqwBfCAAMwlGlLsM4NYQApbmCDLDewGw8jkNxBDqeiXQYJub29AG0iO38J2ksgmy2kv9AQlQRDcXCEXiUbCIWZUTjEcizE-d6gO-JD8fMKeXXiYE0WvF871RK9EXhJ873fNJP2-X9m3-M9XQvG55AlZQ2BhJhsFLch41xdh2CEL4LBjDQZFwAQMgAMTUTtNCYGCMKw1hcTwgj4zgsAAF0NRTAtCwgQBoOTWQBTa2E9NizAUBOggQAwJUAarkTUAY8jABVvNkOS5XlgH5IVRXFKUZVgYAwSYG4AHd4zlOhFRVcwIBZTTtM5Hk+RuAURTFSVpVlG4NBwectDuJzABezQAsTWMNzdM87yjL8uyHNVdUwCAA)
+
+```typescript
+type MyExclude<T, U> = T extends U ? never : T
+```
+
+这题可能看的人一头雾水，但是可以看看这里：[Distributive Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types)
+
+```typescript
+type ToArray<Type> = Type extends any ? Type[] : never
+// 如果我们将联合类型插入 ToArray，则条件类型将应用于该联合的每个成员。
+type StrArrOrNumArr = ToArray<string | number>
+//   ^type StrArrOrNumArr = string[] | number[]
+```
+
+也就是分别判断 T 中的每个联合类型，是否 extends U
+
+### 189・Awaited
+
+* [接受挑战](https://tsch.js.org/189/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBCMAcCcEC0ECCB3AhgSwC4FMATSZJM8kgIwE8IBZTAY23wCsIBlbAawHsAnTBAAUAAQC2TFqwDOPAZgCUEAMSAA70CqyqoAO-XuOwz8qygFdsAG1xJsAOxIkVTiIAyMwHduDqIHEFQEGagRCNAG7lASHNAADlAKjkIAAU9AyMIQE-tQEMYwBh-wE34iOj9Q2MkwCx5QBX4wD21cMBvH0Bo9UAgBkAKdQgAFQ4IQFo5ZMDAClcomOyAHlqAPibAELc6iEBTc0B540AH+PSOrLiigfKKwHfowAN5QDztQAbnUrLkwHvlQFO5QHbgwDXldMXPCEBo+R9ALH+AA0zY-C6AUQAPTHFtC3xa6m18L07slVkUIO9Pt9fv9jOcoCQ7ojcDISLgYeCPl8fn8ARAALwzJ5dGS4fh2ADmvQuaNxACV8DJTFZ8fRqBgcARCK9MVCcYCIMBgBASWTbOSEYiLv10oBEY0AGEYjQBXgYA4uQgAG0JFI2HI+IIALrCAAWuFw2hkAC5BeS8IbTJQAHSMfTASTMbXyQTKAaAcNNAAdeNzVAmw1tsmAsEEw-Fw2EYPwNxtNFsFhHwADd7bheC6mDqFMBMIRU5hbIwiEgaQzGGTtNZ8G98PxmEYZEgAI6mBnR3i2JDQJAAFgArNx+4opRAagBxG12iCAKDlAKfmgGh3G4Js2W4DIxiG+2ye0CcnAODwYAAL0NSAAwgA5MAgYBgR+gCAAfTf74-74gKwGgGO5QCAHq+n7AS+ED3o+FasuyeBED0EB1gQtiEDIhLZAAMjwzzFtQvT9AStTwW8iHIahRgYdwzx2AAZg2EAAGpUlAAD89GEcRKGPOhmFdNhjFQBALF0GyWAwVyDEkFA5r0SQUm2GmDZPiAQEgR+ECANK2gCr0a0lzKSpb5gQ+2BfAIuAQJBADe4LtmGAA0GIAowpkAL4QFRMQQAA5KIFZINuYY-GKDLAKY0YWDIHkQeiAAaLKcUYxKkhSVKQQAmrFnTxZZVEsBYhCyaY4iULRTnJeiABa6WzM8cXPCKFIQAAPhAtgFUV-C4WAkFldAlVEjVXT9XVYqNRAlC8LwPzFrhpW4gRBKWbghr4LYUnCN2VFMtlFg-HlIiRuS+WFQ2yh4v02EnWdti0E5kW4owmDNiyaokO8Dm4K81kWF0QnQZyXRRb0dlDZSgMvW8b0faYYbfcJHKwSlgMQFlOW7S1R38BAJWg1Ar34I5kPQz9Il-WViPAyNaNtbhNlgxDLyfTDv2wd1ZOJcNTVjRN+BTdj9l4+99NQ19RNw1yfR2ZTDbU2AepPkK3ktnWb1IA2ej8J16KqwILIi6JXSS+1j6KbpekQIA0HIhIAptYmypBlgKAJD9IAYEqANVyP6AMeRgAq3quJrroKW47nuB5Hgg+a2DI6ANmeF43o7EDLl7PuJhuAe7jI+78Iex7ADIE0hdg3YolA-SAC9mgBYmu4Sd+5uMjbmnGeHueV63uBYBAA)
+
+```typescript
+type MyAwaited<T extends PromiseLike<any>> = T extends PromiseLike<infer V>
+  ? V extends PromiseLike<any>
+    ? MyAwaited<V>
+    : V
+  : never
+```
+
+这里用到了 [PromiseLike](https://microsoft.github.io/PowerBI-JavaScript/interfaces/\_node\_modules\_typedoc\_node\_modules\_typescript\_lib\_lib\_es5\_d\_.promiselike.html) 这个类型
+
+### 268・If
+
+* [接受挑战](https://tsch.js.org/268/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBBMBsAcEC0ECSAzSyk91gRgJ4QAKAhgG4CmANhAOI0CuAzgBYDWA9hRABQABAA5l2TAC4cAlBADEgAO9AqspyJASxossWWToiAMjMB3blqiA87UANzoAA5QFRyEAAaoAYrYiBvH0DR6oBh-wMHagUuNAbKbWgIbmgG9y7nYAws4e1oAkSoC1poBccoD47oBvpoAhboAr8YB7amG2ACpRgKdygFPKsYmA4grp2blOgEAMEc6AV8qAvwGA9GZ24gBOTFTOgGhGgKABduhkGr0edgUQgDEqdk4QgPfKha2A33KA8IbutcYQgNHygEGagFj-27Yn4ppQ4oRCVBAAghAAvGjoADxdPQA0EADkZN9f33w3wAfFBgMAIFQAB7XADG4ioABMIOIuBB8Ddft8sJdrhAAEKPZ4vEZjAF-AFA0HgyEwqjwpEotEYn5ArAnWzbUGACnUGKpxGwmPgIIAoOUAp+aAaHcDmxxOIhCwAFzgs6wtgAOgAViw1VxOgBzYBweDAABebCQ4QAcmAQMAwPbQBAAPou11u10QQAG8mlAMdygEAPZ3uoNOiC2+24m4YF7hWkIgB2iJY6K4XBoVDIca+eS+DlBTxj0PjiZR3RuAH4IHkIAqIA57WBHcGgxBANK2gFXowAUrjtA02PWHVABbIS68Qoq43ADeEAAogBHJijL7TunwiAAXwg6E6XAHPwEEaQqtGabjeqoLGAag02LAEYgsNE56JAG0sMu4eIXnOFzQXlH3lQ5L-KyIJAcCwIfG+K6ft+ox-q8pIsIBPwUjAEFoRBYAALoOhC+4sEg0IfoRnTbp0t7jpCpG6kSUZxkwNA0EBlIgvWDYgD2vYhoA0HIWIAptacb2oZ2qAWCgoAYEqANVy3qAMeRgAq3tKsrykqwAquqWo6vqhoIMAGYsAA7lQnSmuaVpiRAkryYpcqKsqLCqpq2q6gaRrACwqZqFwcbnBAoKAC9mgBYmoY1nKXZDkac5JkWtaYZgEAA)
+
+```typescript
+type If<C extends boolean, T, F> = C extends true ? T : F
+```
+
+这题也比较基础，考的就是 extends
+
+### 533・Concat
+
+在类型系统里实现 JavaScript 内置的 `Array.concat` 方法，这个类型接受两个参数，返回的新数组类型应该按照输入参数从左到右的顺序合并为一个新的数组。
+
+* [接受挑战](https://tsch.js.org/533/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBCsDMsQLQQMIHsB2BjAhgF0iUWJMICMBPCAQQwBMAnAUyoGkGcBnNAN04GsqACgACZZrAAM-DgDYAnFk4BKCAGJAAd6BVZXU4GHCoUJqTEQBkZgO7cjUQBTqgbx9A0eqBvn0D7foBnEwHnagBucIAKRw8OADKWAwAlgAOeBCAoYqAdv6AIW4QAAbU+jgUAHRYmLh4yRCAnaaAqzaAMP+Am-GAVHKOgKXGgOvKgCRylYBDyoAOpqWAK-GAe2oJgA2mrYAjfo6AKXqAp9GAkMaA5o6AyfGApoptgHNygGe6gAxKgM-KCYBeGYDxeoAQKoBueoBccoAAcpW9CYOAQAzWEIDR8oBBmoBY-zfJr3ichHgUEUwQAEpMTgAVwANtEALyoXL4AA8AG0AIwAXQANBA4QAmJEAPggwGAECYAA8flg8Ew6BA8GgIGRfoi0VjCK9kjdcTYIABxMJ4AAWQLIEEAUHKAU-NANDuj15eDwEU4AC58e8sLzMgArTiZNAMADmwDgsGAAC9eYgUAA5MAgYBgG2gCAAfUdTudToggAN5BKAY7lAIAeDpd-vtECtNq+Pyh2FhABVCUTyfROBAgRh+Bg0AB3DBw1EQACqUGJcboCaTKfTmZxEEhcMyNcjaJrmRzSJtYDtAf9EEA0raAVejABSutz97ddwbCAFsIlroqHfgBvCAAUQAjkCcCC0fOSUwyRAAL4QABmDDQo4gAHIRNPEMrVyCmBhtYDgEC8GEQZxTyHvr9cJxAZX0YQG6kngMJLiuIIwugEYgVmaJZticE4ghgGbmSoHLqukHQjB2aIjicHItiyFQEBW4gWBmFQXk8IIoyuGwGiAAs+HorREAYmiDEQMxREoihwHoeBWHQfCp4IqejJoqesCnrh+6rr+aJkGgaC3jgGBSYxskIeiYkSexUkyWi8lvkwSkqWpGlnlpSF8c2LZtkOrqANByxyAKbWg5OUG1qgIQuKAGBKgDVch6gDHkYAKt6StKsoKsASoquqmo6nq8DAOpnBpkwDBGia5p+RA4rhZFMryoqnDKmqGparq+rANwILPmEmAfFAuKAC9mgBYmpYRXRaV5UJVV2WmhawZgEAA)
+
+```typescript
+type Concat<T extends unknown[], U extends unknown[]> = [...T, ...U]
+```
+
+### 898・Includes
+
+在类型系统里实现 JavaScript 的 `Array.includes` 方法，这个类型接受两个参数（左边参数是否 include 右边参数），返回的类型要么是 `true` 要么是 `false`。
+
+* [接受挑战](https://tsch.js.org/898/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBAcCc0QLQQJIDsDGAbArgEwFMBnSJRci0gIwE8I0cssIAKAAQGsa0CAzHDgEoIAYkAB3oFVlUQEMATrOk1SpEaoiAMjMB3bsqiAKdUDePoGj1QN8+gfb9AM4mA87UANzhABS0gG7SAyhlkBLAA4AXCIBC3CAADAEF5RQA6D0xcQiIgiEBO00BVm0AYf8BN+MAqOSNAUuNAdeVAEjlMwCHlQAdTVMAV+MA9tX8jQEDIwAk5QHozYJ9ZHAIExpag3mksIk7AIAYdCEBo+UAgzUAsf9GguZ8SKB8aLwIIDyIABQ8mOQBZAjQIAF5UGPxiAB4AbQByAGk5IluAGghbgFEiDzwNj1f3gB1aQAWxwOABtxc0jQPhh0luAF03rcACIeAD2twAfBBgMAIAQAB6rDA+Ah4CA+DEQKhrXr9QZBUhzZlQUi43QQADiHh8AAscFQIIAoOUAp+aAaHcpvyfD4vEQAFz4hYYfkRABWRAiGNkAHNgHBoMAAF78xAAYQAcmAQMAwPbQBAAPou11u10QQAG8v5AMdygEAPZ3uoNOiC2sDLVaoIgfACOOH6lxCbwAQrjTiwQoSieS0HgiBBkxAAPxU9prBUQPoDAjCABkrELxJzeYgmZLbQ6EArVcGgnDKzW6GwFyIlwAKlnm-nZARpHgMWgsHQYTRrsiIABVNMQCdNw4t67RXgEWQQABibwiV6PJ4gACViD5EaQSyho3GExfN7i97n8x2CFIKB2zLICuzOYc4kuB8iB8N4t1IbtGUAsBHWDIMIEAaVtAFXowAKVzGQN0I9MMPBBLwdT8CM1gAbwgWN4ywN4PhJAgyQgABfStZAxEF3jYKjEFVfosEOXViGAHAfB2Z57SoiAMGkQZ81Oa5SGY0kfEueiEyHWIrjuR5ZGeFEvh+P5IWBMEIRRaFYXhJEUUM55sTeADsRctSWLJLSPywS5dJHG4HieSFTN+b4LNBcFIVsuE0ARdc0UxHE3h7Ah3JeTyNJ8hj-POKDrgARjeAAmN4AGY3gAVjeAA2N4AHZ1walzSw6DKstYzTtL8gKCuKiAyogSqIBqiB6ogJq3gAFlatKOqgdSupynT8v0gahvK9cStatyPMWrzut8vLIPW0qKvXQrdrLBa6MOlberW0drmo9j11o6QK1uEJbg4ubkNupbvJ6k69OeqgMQxESYXO4bqrqxr13m1KAf2u7spBvr9IA2GRrGiaptpSHobQf7q0B+7Maem40tx+HxsRlHydcm60aBo7cqx56Pq+n6OPeiAZznBclwgT73j59iycGCmMeOrmblooX50XZded+t63h5iWNel9K2cp+XqaKy6IAAH0GvXZeWqnTuewrzcGy6rYNuXOeNhgmHXHBcz4aIKRdzKDrd1a7ZuH3CF4f28HXT2sEDsBn3tVCQEIoiQ0AaDlAAA5QBTazTojQztUAOQgQAwJUAarlvUAY8jABVvaVZXlJVgBVNVNW1PUDXgYAYSIAB3E8TTNK0S8lWv67lRVlSIVUNS1HV9UNYAiChyTMTQRYIFxQAXs0ALE0tHHxup5ntv58Hi1rTDMAgA)
+
+```typescript
+type IsEqual<A, B> = (A extends B ? true : false) & (B extends A ? true : false)
+type Includes<T extends readonly any[], U> = T extends [infer F, ...infer Rest]
+  ? IsEqual<F, U> extends true
+    ? true
+    : Includes<Rest, U>
+  : false
+```
+
+运用了小册中的套路三：递归复用做循环，
+
+### 3057・Push
+
+* [接受挑战](https://tsch.js.org/7/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBDMAMCsB2CBaCAFArgZwBaVRSOIICMBPCAKwEsBDAOwHM9GIAKAAVsZd0YC2AUwAudAJQQAxIADvQKrK0ugCcldcgQJStEQBkZgO7cNUQBTqgbx9A0eqBvn0D7foBnEwHnagBudAWAmAKV0AhbhAAG3gIIq1AHQADji43p4QgEAMhhCA0fKAQZqAWP8x4SLkQULYAMZKNEEiBGkZEABKmZgANiIQALwYoQA8ANoAjAA0EABMALodAOTQfQB8EMDAEK0dnf2D3QThMSNGEADiNCK4mKQQgFBygKfmgNDuibgiIkHYAFxjItm4AVTYAQD2SkzAcEjAAF64KADCADkwCBgGAwaAIAB9aEw2EwiCAA3k3IBjuUAgB5QuGYyEQEFgopCep4BoAFQ6AFURnViRAhAAPERCBgAE2wEwC7JoDAAZkIlKVMiJuhAAPxs9llbAicndC4QBhCABuvLBYAhWMxEEA0raAVeiXLEMer4biaAIgi9qviIABvCAAUQAjpg6BUOrbaRkstUAL4QLlKJ4CCB9Tj4lBZfgVCqMpiZYCYEQ0CrYPp49IErJ0bCZWoTAhuj0iBoOp0VBpYIlNXoQFpDDqtbpDWt591CT1Fx3OsuNSZdKsDYZ19pdGZ9BtNqD51uF4ud8u4Zp9Fp9KYjqukJ5PKOMWsTRfL4dBwYddeboSMMdtMBzFVqw3wwDQcoAAOUAptYGu840GgAgjQBgSoBquSRQBjyMAFW9jlOc4rmAG5w3uR4XjeD5EGARhsAAd15b5fkBb8IEOECwLOS5rluWDnled4ECQ7BN3jGgngYbAcMAF7NACxNfQCIg4iYIeMi3h+f4gVxMAgA)
+
+```typescript
+type Push<T, U> = T extends [...infer Rest] ? [...Rest, U] : never
+```
+
+### 3060・Unshift
+
+* [接受挑战](https://tsch.js.org/3060/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBDMAMBssIFoIFUB2BnAFgSwDMAXSFZci0gIwE8IArPAQwwHNcWIAKAAUZfY4WAWwCmRJgEoIAYkAB3oFVlWUwBOKpjVKkZOiIAyMwHduWqIDztQA3Ogbx9A0eqAJJ0A05oBC3CAANXAQTUaAdAFds+YldnQCAGYwhAaPlAIM1ALH+woKIaAAdRLABjFTxEkigE5IgAJRSfABsiCABedH9CIgAeAG0ARgAaCAAmAF1W2AA+CGBgCHrYVpb25o7SILC+wAp1CABxPCIcHyoIQCg5QFPzQGh3aJwiIkSsAC4BojScL3osLwB7FVZgOERgAC8cZABhADkwEGAYCBoAgAH1wRDIRCIIADeQcgGO5QCAHmCoajQRAAUDcqIqrgarUACqtNB9SoEiCiAAeRFEGAAJlghl5mXgMARRCoCikiB0IAB+IZoVrMryFLA8iAnCAYUQANw5QLAILRqIggGlbQCr0YAKV3CKJV0MxeGEiQeZWxEAA3hAAKIARx8TGKrWtlOSqTKAF8IAQVHdhBAAOQ8bHIVJCYrFWmsFLAHxEPDFLABrFJHGpJhYFIVIakF1uup2h3FWqYPHEBpdCCNHqtJodHo13Ou0Tu2qFx0l6rlpqtTrdGtDEZV3v1xtQPMtgv2julgJ1eoBxoB3utAPQAOVqh3O6RlgD+pbneiFirpcrwPr0fNMCTRXK-XQwDQcoAAOUAptZ6h8YwGgUh9QBgSoA1XJwoAx5GACre+yHMcZzABcYbXLcDxPC8sDACwWAAO4cu8ny-L+EC7GBEFHKc5yXPB9yPM8CAoVgO5xngdzYHhgAvZoAWJqGERUGkXBNwUU8HzfH8mJgEAA)
+
+```typescript
+type Unshift<T, U> = T extends [...infer Rest] ? [U, ...Rest] : never
+```
+
+### 3312・Parameters
+
+* [接受挑战](https://tsch.js.org/3312/play/zh-CN)
+* [我的解答](https://www.typescriptlang.org/play?#code/PQKgUABBDM0IwCYIFoIAUCGAnDBbApgC75YDOkKyV1FARgJ4S4CWAJgPZbMBe+LEACgACLDl14sAlBADEgAO9AqsqzmAOwBmJWYQCuABwA2+WbW3N9hZKooUZtiIAyMwHdu1qIDztQA3OgUMVAdv6AQt3TYeEQkpAA8ACoAfBCA3j6A0eqAMP+AMAGAsHKA9GaAL26ApcaA-vKAFK6AwdoJgPfKgEPKgMABANrh9Lr4AMoAxly6hIAZ2oCdpoDhpoDGFgC6AgAWhIS6pABcwMAA7rMAdIS1+KTNzK36GCoA5nOcW8AcjaTAg5ustOzsANbA2oRmzIvIi3Wkc8O4+jK6gQTEZC98JJAEAMLgggGj5QBBmoAsf7BAAMEYRyFBGuwVKRCBA1JcIABeQTYLZwcYQDFcbYAGgghIQJJU2lwtBIkhJADd2Gw8dEAN4AXzBgIgADFtCpGvc0ZgcLhSDU6niIABZehSoL-MKA9hqLGXaJTCCVQnE0mEclbKk0ukMplYPoUBFwsHRQAU6hAAOKPQbaWgQQBQcoBT80A0O7Q4ajCZTJGNQZzABWbz2wFgiGA3EGyAAwgA5MAgYBgfOgCAAfRLpbLpYggAN5XyAY7lAIAexfLTaLEFz+cFytVfxCEQg+AAHsQVKxSII5uPCRNqSp6JU+tJcdFNvRovjwn3B-hh6OBOO5pOSaoNFgIABBBdLmcQAD8Z4gdPwrJIBZAjebZYggGlbQCr0XlwW-3xLVs82YXBdE4TFBW5CAAFEAEdtAwfQqRg-s6nFCBeSxLB2FwCAAHIhEBZAoyQwxtmWW57n0Uh8PzVF0UxbF2AVAQjRJMlVHNaksC2WkIHpRlmTZDlWC5CA+TABiMQgWhsFY9jZMuQxNgtXj+OgjASXw098MwlkIHZTlFwk-lpMxOTuFYgyjLEkzJLAQVGgwUhlgVSoKFQ9DCFCeDEP0UJO1+YIyFCTVtWYyIqUqTjKQE60SD6SIos8tD8HFXyEKQwKVWC9UwqWLVZOwKKDQudgVJUKlNO03TMKSlKoC89KfL87KgulEKNUK7VLNKudkopMA7XzMBC0Aj9AGg5QAAOUAU2sAMA4CxvAKBokAMCVAGq5atAGPIwAVbxDEYxkmYBI2jONdl4xN4AQYBNlIaYSBTNMswoaIgz2g6w2O07Y3jS6kxu0gKruZg0WRCBokAF7NACxNJxPqOiMVjOv79lTDNszbMAgA)
+
+{% code overflow="wrap" lineNumbers="true" %}
+```typescript
+type MyParameters<T extends (...args: any[]) => any> = T extends (...args: infer A) => any ? A : never
+```
+{% endcode %}
