@@ -167,7 +167,7 @@ HuffmanTree Huffman(MinHeap H) {
 
 ## 三、集合
 
-关于集合这一块主要就是并查集，之前有学过这篇博客写的超棒：[超有爱的并查集\~(原博挂了，转载)](https://blog.csdn.net/shensiback/article/details/80089461?spm=1001.2101.3001.6650.1\&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-1.no\_search\_link) 所以在这儿就不多说啦\~ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200412195059228.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70) ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020041219504180.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70)
+关于集合这一块主要就是并查集，之前有学过这篇博客写的超棒：[超有爱的并查集\~(原博挂了，转载)](https://blog.csdn.net/shensiback/article/details/80089461?spm=1001.2101.3001.6650.1\&utm\_medium=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-1.no\_search\_link\&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-1.no\_search\_link) 所以在这儿就不多说啦\~ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200412195059228.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70) ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020041219504180.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70)
 
 #### \~ 并查集板子 \~
 

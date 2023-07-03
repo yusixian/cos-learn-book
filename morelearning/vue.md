@@ -4,6 +4,10 @@ description: 作为一名合格的前端工程师，Vue也得学习！
 
 # Vue
 
+Vue 相对 React 学习更容易一些，国内教程也很多，建议直接学习 Vue3
+
+{% embed url="https://vuejs.org/guide/introduction.html" %}
+
 ## 学习进度
 
 ### Vue基础

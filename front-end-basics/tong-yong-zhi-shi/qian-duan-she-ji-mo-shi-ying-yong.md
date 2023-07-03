@@ -57,7 +57,7 @@ export class Request {
 
 实际中使用如下：利用getInstance静态方法创建该单例对象，并测试起执行时间进行对比。
 
-> ps: 这里的测试是使用[Jest ](https://www.jestjs.cn)进行的，其中用到了部分[expect](https://www.jestjs.cn/docs/expect)的api，可以通过文档了解其用途
+> ps: 这里的测试是使用[Jest ](https://www.jestjs.cn/)进行的，其中用到了部分[expect](https://www.jestjs.cn/docs/expect)的api，可以通过文档了解其用途
 
 ```ts
 // 不预先进行请求，测试其时间。

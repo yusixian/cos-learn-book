@@ -65,14 +65,14 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 * 不涉及数据库
 *   从 **URL** 上攻击，在URL上带上脚本
 
-    ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88c27e79158645c1a293249378d971a6\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88c27e79158645c1a293249378d971a6~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 **DOM-based XSS**
 
 * 不需要服务器的参与
 *   恶意攻击的发起+执行，全在浏览器完成
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f120875727634ff7abeb41a2174c616e\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f120875727634ff7abeb41a2174c616e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * 完成注入脚本的地方，是由浏览器来的，这是它与Reflected XSS的不同之处
 
 **Mutation-based XSS**
@@ -90,7 +90,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 * **利用用户权限**(cookie)
 *   **构造**指定HTTP **请求**，进而窃取或修改用户敏感信息
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d29931c3bf24265bf503f964401c6e7\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d29931c3bf24265bf503f964401c6e7~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
     一个用户访问了一个恶意的页面，这个页面向银行发送一个转账请求，ServerA为银行的服务器，发现这个请求带有用户的cookie，成功
 
@@ -100,7 +100,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 
 *   SQL注入：通过SQL参数进行注入
 
-    ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e0499bba56f4dc69093fb38c4fa06a8\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e0499bba56f4dc69093fb38c4fa06a8~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
     案例：读取请求字段，直接以字符串的形式拼接SQL语句
 
@@ -120,7 +120,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 * 命令行注入等![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e3d42c1f4754e648fc9bf793c315e02\~tplv-k3u1fbpfcp-watermark.image?)
 *   读取+改进行流量攻击
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53c32ca224314a3394d709b9b08e3717\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53c32ca224314a3394d709b9b08e3717~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 #### Denial of Service（DOS）攻击
 
@@ -131,7 +131,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 * 例子：ReDoS:基于正则表达式的DoS
 *   贪婪：n次不行 ? n-1次再试试?——回溯
 
-    ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff22b364393045b99c3139a97e5c29ba\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff22b364393045b99c3139a97e5c29ba~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * Distributed Dos （DDOS）
   * 短时间内，来自大量**僵尸设备**的请求流量，服务器不能及时完成全部请求，导致请求堆积，进而雪崩效应，无法响应新请求。（量大就完事儿了）
   * 特点：
@@ -139,7 +139,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
     * 任意API
     *   消耗大量带宽（耗尽）
 
-        ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f866aa26f1a346e08b8f646137e0189b\~tplv-k3u1fbpfcp-watermark.image?)
+        <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f866aa26f1a346e08b8f646137e0189b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 #### 中间人攻击（传输层）
 
@@ -147,7 +147,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 * **信息篡改不可知**
 *   **对方身份未验证**
 
-    ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/910915a7c3484d038d381b4d0990b51c\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/910915a7c3484d038d381b4d0990b51c~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 ### 假如你是一一个开发者一一防御
 
@@ -207,7 +207,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
     * if 请求来自合法页面
     * then 服务器接受过页面请求
     * then 服务器可以标识
-* ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c328ef733885407e87d34d6cbf369a6f\~tplv-k3u1fbpfcp-watermark.image?)
+* <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c328ef733885407e87d34d6cbf369a6f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * iframe攻击：限制Origin是吧，那我同源请求
 *   避免GET + POST一起请求，攻击者一石二鸟！
 
@@ -231,10 +231,10 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
         >
         > `Set-Cookie: SameSite=None; Secure ;`
 
-    ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/229b150da1cc42faae95e8e03b5d9d82\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/229b150da1cc42faae95e8e03b5d9d82~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 *   SameSite vs CORS（跨站资源共享）
 
-    ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8617447577294e10a51366ec5fffa691\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8617447577294e10a51366ec5fffa691~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 以上这么多防御CSRF的方法，那么什么是防御CSRF的正确姿势呢？写一个中间件，专门生成这方面的防御。
 
@@ -282,7 +282,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
   * CA：Certificate Authority 证书机构
   *   数字签名，浏览器内置CA公钥
 
-      ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b365d8c14274b89ac46232184765713\~tplv-k3u1fbpfcp-watermark.image?)
+      <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b365d8c14274b89ac46232184765713~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e477a3d38294c1a900b170673b124d2\~tplv-k3u1fbpfcp-watermark.image?)
 

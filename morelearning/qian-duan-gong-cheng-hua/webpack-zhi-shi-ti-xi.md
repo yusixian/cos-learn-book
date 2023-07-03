@@ -50,7 +50,7 @@ Web本质上是一种前端资源**编译**、**打包**工具
     npm i -D webpack webpack-cli
     ```
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e51b8a1d34ef475b80cc4d6306ad835c\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e51b8a1d34ef475b80cc4d6306ad835c~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 2.  编辑配置文件webpack.config.js
 
     ```
@@ -115,7 +115,7 @@ ps：官网文档确实，看不太懂（）
 * module/plugins
   *   如图，比如我这个项目需要加载less文件，需要导入以下loader等
 
-      ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d690d2590a604b43b0cd5a1be79684e2\~tplv-k3u1fbpfcp-watermark.image?)
+      <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d690d2590a604b43b0cd5a1be79684e2~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 * mode
 * watch/devServer/devtool
 
@@ -184,7 +184,7 @@ ps：官网文档确实，看不太懂（）
 参考资料：
 
 * [Babel-loader](https://webpack.js.org/loaders/babel-loader/)
-* [Babel官网](https://babeljs.io)
+* [Babel官网](https://babeljs.io/)
 * [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
 * [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
 * [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)
@@ -398,7 +398,7 @@ class SomePlugin {
 2. 上下文：通过tapable提供的回调机制，以**参数方式传递上下文**信息;
 3.  交互：在上下文参数对象中附带了很多存在side effect的交互接口，插件可以通过这些接口改变
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1acd0b48add4b4d8bb32ce5342aa905\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1acd0b48add4b4d8bb32ce5342aa905~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
     时机：compier.hooks.compilation
 
@@ -451,6 +451,6 @@ A：网上很多面试主要围绕三种主题
 * 插件有什么用？怎么写插件？编译原理？
 * Bundle、chunk、module分别是什么含义？
 
-一些资源：[深入浅出 Webpack](https://webpack.wuhaolin.cn)
+一些资源：[深入浅出 Webpack](https://webpack.wuhaolin.cn/)
 
 > 本文引用的大部分内容来自范文杰老师的课，欢迎关注老师的公众号：**Tecvan**

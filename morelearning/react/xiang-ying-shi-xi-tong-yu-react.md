@@ -235,10 +235,10 @@ const element = React.createElement(
 
 **将状态抽离到UI外部进行统一管理**，但是这是会降低组件的复用性，所以这一般出现在业务代码中。以下几种框架，用哪个都行
 
-* [Redux中文文档](https://www.redux.org.cn)
-* [XState - JavaScript State Machines and Statecharts](https://xstate.js.org)
-* [MobX 介绍 · MobX 中文文档](https://cn.mobx.js.org)
-* [Recoil 中文文档 | Recoil 中文网 (recoiljs.cn)](https://www.recoiljs.cn)
+* [Redux中文文档](https://www.redux.org.cn/)
+* [XState - JavaScript State Machines and Statecharts](https://xstate.js.org/)
+* [MobX 介绍 · MobX 中文文档](https://cn.mobx.js.org/)
+* [Recoil 中文文档 | Recoil 中文网 (recoiljs.cn)](https://www.recoiljs.cn/)
 
 #### 状态机
 
@@ -252,8 +252,8 @@ const element = React.createElement(
 
 React本身是没有提供足够多的工程能力，如路由、页面配置等等。
 
-* [Next.js - React 应用开发框架](https://www.nextjs.cn) 硅谷明星创业公司Vercel的 React开发框架,稳定,开发体验好，支持Unbundled Dev,sWC等,其同样有Serverless一键部署平台帮助开发者快速完成部署。口号是"Let's Make Web Faster"
-* [Modern.js - 现代 Web 工程体系 (modernjs.dev)](https://modernjs.dev) 字节跳动Web Infra团队研发的全栈开发框架,内瓷了很多开箱即用的能力与最佳实践，可以减少很多调研选择工具的时间。
+* [Next.js - React 应用开发框架](https://www.nextjs.cn/) 硅谷明星创业公司Vercel的 React开发框架,稳定,开发体验好，支持Unbundled Dev,sWC等,其同样有Serverless一键部署平台帮助开发者快速完成部署。口号是"Let's Make Web Faster"
+* [Modern.js - 现代 Web 工程体系 (modernjs.dev)](https://modernjs.dev/) 字节跳动Web Infra团队研发的全栈开发框架,内瓷了很多开箱即用的能力与最佳实践，可以减少很多调研选择工具的时间。
 * [Get Started with Blitz (blitzjs.com)](https://blitzjs.com/docs/get-started)无API思想的全栈开发框架,开发过程中无需写API 调用与CRUD逻辑,适合前后端紧密小团队项目。
 
 ### 总结感想

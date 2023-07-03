@@ -4,6 +4,10 @@ description: React、Vue、Webpack……
 
 # React
 
+新版 React 文档
+
+{% embed url="https://react.dev/" %}
+
 ## 学习进度
 
 ### React基础

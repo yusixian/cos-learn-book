@@ -59,7 +59,7 @@ Web技术的变迁：
 * [Webpack CLI](https://webpack.docschina.org/api/cli/)
 * [Babel CLI](https://www.babeljs.cn/docs/babel-cli)
 * [Vue CLI](https://cli.vuejs.org/zh/guide/)
-* [React CLI](https://create-react-app.dev)
+* [React CLI](https://create-react-app.dev/)
 
 **桌面跨端**
 
@@ -104,21 +104,21 @@ Web技术的变迁：
 
 ### 关于Web标准
 
-* [W3C](https://www.w3.org): World Wide Web Consortium （通常意义上的Web标准）
-  * 官网：[https://www.w3.org/](https://www.w3.org)
+* [W3C](https://www.w3.org/): World Wide Web Consortium （通常意义上的Web标准）
+  * 官网：[https://www.w3.org/](https://www.w3.org/)
   * Github：[https://github.com/w3c](https://github.com/w3c)
   * 规范查询：[All Standards and Drafts - W3C](https://www.w3.org/TR/)
-* [Ecma](https://www.ecma-international.org): Ecma International（ECMAScript标准化规范）
-  * Ecma TC39官网：[Home - Ecma International (ecma-international.org)](https://www.ecma-international.org)
-  * TC39：[TC39 – Specifying JavaScript.](https://tc39.es)
+* [Ecma](https://www.ecma-international.org/): Ecma International（ECMAScript标准化规范）
+  * Ecma TC39官网：[Home - Ecma International (ecma-international.org)](https://www.ecma-international.org/)
+  * TC39：[TC39 – Specifying JavaScript.](https://tc39.es/)
   * Github：[Ecma TC39 (github.com)](https://github.com/tc39)
-  * Discourse（讨论组）：[TC39 - Specifying JavaScript (es.discourse.group)](https://es.discourse.group)
-* [WHATWG](https://whatwg.org): Web Hypertext Application Technology Working Group
-  * 官网：[Web Hypertext Application Technology Working Group (WHATWG)](https://whatwg.org)
+  * Discourse（讨论组）：[TC39 - Specifying JavaScript (es.discourse.group)](https://es.discourse.group/)
+* [WHATWG](https://whatwg.org/): Web Hypertext Application Technology Working Group
+  * 官网：[Web Hypertext Application Technology Working Group (WHATWG)](https://whatwg.org/)
   * Github：[WHATWG (github.com)](https://github.com/whatwg)
-  * 规范查询：[Standards — WHATWG](https://spec.whatwg.org)
-* [IETF](https://www.ietf.org): Internet Engineering Task Force
-  * 官网：[IETF | Internet Engineering Task Force](https://www.ietf.org)
+  * 规范查询：[Standards — WHATWG](https://spec.whatwg.org/)
+* [IETF](https://www.ietf.org/): Internet Engineering Task Force
+  * 官网：[IETF | Internet Engineering Task Force](https://www.ietf.org/)
   * Github：[Internet Engineering Task Force (IETF) (github.com)](https://github.com/ietf)
 
 #### W3C及Ecma会员

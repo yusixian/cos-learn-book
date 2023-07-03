@@ -232,9 +232,9 @@ const store = createStore(counter);
 >
 > **参数**
 >
-> 1. **`reducer`  **_**(Function)**_**:** 接收两个参数，分别是**当前的 state 树和要处理的** [**action**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#action)，**返回新的** [**state 树**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#state)**。**
+> 1. **`reducer`** _**(Function)**_**:** 接收两个参数，分别是**当前的 state 树和要处理的** [**action**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#action)，**返回新的** [**state 树**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#state)**。**
 > 2. **\[`preloadedState`] **_**(any)**_**: 初始时的 state**。 在同构应用中，你可以决定是否把服务端传来的 state 水合（hydrate）后传给它，或者从之前保存的用户会话中恢复一个传给它。如果你使用 [`combineReducers`](https://cn.redux.js.org/api/combinereducers) 创建 `reducer`，它必须是一个普通对象，与传入的 keys 保持同样的结构。否则，你可以自由传入任何 `reducer` 可理解的内容。
-> 3. **`enhancer`  **_**(Function)**_**: Store enhancer**，可选。可以用第三方第能力如中间价、时间旅行、持久化来增强 store。是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。Redux 中唯一内置的 store enhander 是 [`applyMiddleware()`](https://cn.redux.js.org/api/applymiddleware)。
+> 3. **`enhancer`** _**(Function)**_**: Store enhancer**，可选。可以用第三方第能力如中间价、时间旅行、持久化来增强 store。是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。Redux 中唯一内置的 store enhander 是 [`applyMiddleware()`](https://cn.redux.js.org/api/applymiddleware)。
 >
 > **返回值**
 >

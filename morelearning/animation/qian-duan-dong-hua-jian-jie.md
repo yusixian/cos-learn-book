@@ -287,7 +287,7 @@ animation-play-state: unset;
 
     *   [`scale`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#scale)（缩放）注意其中心为 [`transform-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)（缩放）注意其中心为 [`transform-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)
 
-        ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93f99f7d68214535ac4eaf6ab1f33ff3\~tplv-k3u1fbpfcp-watermark.image?)
+        <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93f99f7d68214535ac4eaf6ab1f33ff3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
         ```css
         // 沿x轴缩小为50%
@@ -297,7 +297,7 @@ animation-play-state: unset;
         ```
     *   [`rotate`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#rotate)（旋转） 将元素在不变形的情况下旋转到原点周围(如 [`transform-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin) 属性所指定) 。 移动量由指定角度定义;如果为**正值**，则运动将为**顺时针**，如果为负值，则为逆时针 。 180°的旋转称为点反射 (_point reflection_)。
 
-        ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/592ec860492c4406b2178959b0cf4320\~tplv-k3u1fbpfcp-watermark.image?)
+        <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/592ec860492c4406b2178959b0cf4320~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
         ```css
         transform: rotate(30deg);
@@ -405,7 +405,7 @@ body  >div {
 
 css动画的优点：简单、高效、声明式的。不依赖于主线程，采用硬件加速（GPU），通过简单的控制keyframe animation播放和暂停。
 
-缺点：不能**动态修改或定义动画**，内容不同的动画**无法实现同步**，**多个动画彼此无法堆叠**。 适用场景：简单的h5活动/宣传页。 推荐库:[Animate.css](https://animate.style)、[CSShake](https://elrumordelaluz.github.io/csshake/)等。
+缺点：不能**动态修改或定义动画**，内容不同的动画**无法实现同步**，**多个动画彼此无法堆叠**。 适用场景：简单的h5活动/宣传页。 推荐库:[Animate.css](https://animate.style/)、[CSShake](https://elrumordelaluz.github.io/csshake/)等。
 
 #### svg实现动画
 
@@ -676,7 +676,7 @@ const horizontalMotion = () => {
     };
     ```
 
-    ![5.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8596a1014d81410e8fbf91ec0a03a3fc\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8596a1014d81410e8fbf91ec0a03a3fc~tplv-k3u1fbpfcp-watermark.image?" alt="5.gif" data-size="original">
 *   拉弓（x轴匀速，y轴初始速度为负的匀加速）
 
     ```js
@@ -708,7 +708,7 @@ const horizontalMotion = () => {
 
     * ps：讲到这里开始逐渐硬核起来了，tql
 
-    ![10.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abef976de60e4f549becd34b269408de\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abef976de60e4f549becd34b269408de~tplv-k3u1fbpfcp-watermark.image?" alt="10.gif" data-size="original">
 
     ```js
     // 贝塞尔
@@ -735,7 +735,7 @@ const horizontalMotion = () => {
     }
     ```
 
-    ![11.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f2c703e2dd427ea0013d78d30f1f41\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f2c703e2dd427ea0013d78d30f1f41~tplv-k3u1fbpfcp-watermark.image?" alt="11.gif" data-size="original">
 
 #### 复杂动画
 
@@ -743,7 +743,7 @@ const horizontalMotion = () => {
 
     * 直接去看老师的例子：[JS封装动画函数 (codepen.io)](https://codepen.io/jiangxiang/pen/rNmgVKK?editors=0010)，自动衰减这里填了之前的一个坑：为什么要使用Promise，在每次执行完毕是，会将句柄再交给上面的函数判断是否有速度的衰减，直到速度为0的时候会自动结束。
 
-    ![7.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fe64ea4171e49f1bf4dd1c4b6b06dc4\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fe64ea4171e49f1bf4dd1c4b6b06dc4~tplv-k3u1fbpfcp-watermark.image?" alt="7.gif" data-size="original">
 
 自动衰减：更加复杂
 
@@ -782,7 +782,7 @@ const horizontalMotion = () => {
 
 设计网站：
 
-* [Dribbble - Discover the World’s Top Designers & Creative Professionals](https://dribbble.com)
+* [Dribbble - Discover the World’s Top Designers & Creative Professionals](https://dribbble.com/)
 * 我自己推荐一手figma：[Figma](https://www.figma.com/files/recent?fuid=1037355984934938497)
 
 动画制作工具(一般都是UE、UI同学使用):
@@ -848,7 +848,7 @@ canvas:
 >
 > 其中，**Layout(重排)和Paint(重绘)是整个环节中最为耗时的两环**，所以我们尽量避免这两个环节。从性能方面考虑，**最理想的渲染流水线是没有布局和绘制环节**的，**只需要做渲染层的合并**即可。
 
-* 通过[CSS Triggers](https://csstriggers.com)可以查询CSS属性及其影响的环节
+* 通过[CSS Triggers](https://csstriggers.com/)可以查询CSS属性及其影响的环节
 
 #### 建议
 

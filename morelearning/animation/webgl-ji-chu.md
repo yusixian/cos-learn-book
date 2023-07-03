@@ -310,12 +310,12 @@ const triangles = earcut(points)
 
 ## Read more
 
-1. [The Book of Shaders](https://thebookofshaders.com) （介绍片元着色器，非常好玩的）
+1. [The Book of Shaders](https://thebookofshaders.com/) （介绍片元着色器，非常好玩的）
 2. [Mesh.js](https://github.com/mesh-js/mesh.js) （底层库，欸嘿）
-3. [Glsl Doodle](https://doodle.webgl.group) （片元着色器的一个轻量库，有很多小demo）
+3. [Glsl Doodle](https://doodle.webgl.group/) （片元着色器的一个轻量库，有很多小demo）
 4. [SpriteJS](http://spritejs.com/#/) （月影老师写的开源库orz）
-5. [Three.js](https://threejs.org)（很多有意思的~~游戏~~项目）
-6. [Shadertoy BETA](https://www.shadertoy.com)（很多有意思的项目）
+5. [Three.js](https://threejs.org/)（很多有意思的~~游戏~~项目）
+6. [Shadertoy BETA](https://www.shadertoy.com/)（很多有意思的项目）
 
 ## 总结感想
 

@@ -286,7 +286,7 @@ position:absolute
 
 ## 建议及感想
 
-> * 充分利用[MDN](https://developer.mozilla.org/zh-CN/) 和 [World Wide Web Consortium (W3C)](https://www.w3.org) CSS规范
+> * 充分利用[MDN](https://developer.mozilla.org/zh-CN/) 和 [World Wide Web Consortium (W3C)](https://www.w3.org/) CSS规范
 > * 保持好奇心，善用浏览器的开发者工具
 > * 持续学习，CSS新特性还在不断出现
 

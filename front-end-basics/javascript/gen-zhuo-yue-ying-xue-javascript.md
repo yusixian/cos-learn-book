@@ -80,7 +80,7 @@ btn.addEventListener('click', (e) => {
 * 将控制元素抽取成一个个插件（左右小箭头、底下的四个小圆点）等等![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de521e581e4c4e82d9f6a312d2c638\~tplv-k3u1fbpfcp-watermark.image?)
 *   插件与组件之间通过依赖注入方式建立联系、
 
-    ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d148965ec0654ec3914515d835445368\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d148965ec0654ec3914515d835445368~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 这样的好处？组件的构造器做的工作就只是将组件们一一注册了，日后复用的时候不需要的组件直接将构造器注释掉即，无需关注其他的。
 
@@ -135,7 +135,7 @@ class Component{
 * 处理局部细节控制的一些方法
 *   函数式编程思想的基础应用
 
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/948dc7f6553a40c5b6fa717ce9fafaf4\~tplv-k3u1fbpfcp-watermark.image?)
+    <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/948dc7f6553a40c5b6fa717ce9fafaf4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" data-size="original">
 
 #### 应用：操作次数限制
 
