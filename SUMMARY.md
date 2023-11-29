@@ -113,6 +113,8 @@
   * [前端动画简介](morelearning/animation/qian-duan-dong-hua-jian-jie.md)
   * [Floating UI 使用经验分享 - Popover](morelearning/animation/floating-ui-shi-yong-jing-yan-fen-xiang-popover.md)
   * [Floating UI 使用经验分享 - Dialog](morelearning/animation/floating-ui-shi-yong-jing-yan-fen-xiang-dialog.md)
+  * [Three.js 学习](morelearning/animation/three.js-xue-xi/README.md)
+    * [资源记录](morelearning/animation/three.js-xue-xi/zi-yuan-ji-lu.md)
 * [前端性能优化](morelearning/performance-optimization.md)
 * [跨端](morelearning/kua-duan/README.md)
   * [RN 学习小记之使用 Expo 创建项目](morelearning/kua-duan/rn-xue-xi-xiao-ji-zhi-shi-yong-expo-chuang-jian-xiang-mu.md)
