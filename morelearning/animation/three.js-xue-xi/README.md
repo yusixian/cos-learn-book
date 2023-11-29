@@ -9,11 +9,11 @@
 
 
 * [x] [Three.js 之 1 Animation 动画](https://juejin.cn/post/7095621578976657421)
-* [ ] [Three.js 之 2 Camera 相机](https://juejin.cn/post/7101207231382683655)
-* [ ] [Three.js 之 3 画布与全屏](https://juejin.cn/post/7101207945387442212)
-* [ ] [Three.js 之 4 Geometry 几何体](https://juejin.cn/post/7101208474775715876)
-* [ ] [Three.js 之 5 debug UI](https://juejin.cn/post/7101209060753539109)
-* [ ] [Three.js 之 6 Texture 纹理](https://juejin.cn/post/7101209181822124069)
+* [x] [Three.js 之 2 Camera 相机](https://juejin.cn/post/7101207231382683655)
+* [x] [Three.js 之 3 画布与全屏](https://juejin.cn/post/7101207945387442212)
+* [x] [Three.js 之 4 Geometry 几何体](https://juejin.cn/post/7101208474775715876)
+* [x] [Three.js 之 5 debug UI](https://juejin.cn/post/7101209060753539109)
+* [x] [Three.js 之 6 Texture 纹理](https://juejin.cn/post/7101209181822124069)
 * [ ] [Three.js 之 7 Materials 材质](https://juejin.cn/post/7103191619373006885/)
 * [ ] [Three.js 之 8 炫酷的 3D Text](https://juejin.cn/post/7104817223444725774)
 * [ ] [Three.js 之 9 Light 光](https://juejin.cn/post/7107886009253101599/)
@@ -30,6 +30,3 @@
 > 链接：https://juejin.cn/post/7095621578976657421\
 > 来源：稀土掘金\
 > 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-* [ ] ddd
-*

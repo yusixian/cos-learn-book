@@ -6,11 +6,11 @@ description: 学习HTML，从MDN开始！HTML是网页的基本骨架
 
 ## 学习进度
 
-* [ ] HTML基础介绍
-* [ ] HTML标签概览
-* [ ] HTML多媒体与嵌入
-* [ ] HTML5新特性
-* [ ] HTML表格与表单
+* [x] HTML基础介绍
+* [x] HTML标签概览
+* [x] HTML多媒体与嵌入
+* [x] HTML5新特性
+* [x] HTML表格与表单
 
 ## 学习资料
 

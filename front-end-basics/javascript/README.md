@@ -17,7 +17,7 @@ description: JavaScript操控网页的行为，让其不再是静态的
 * [x] 期约（Promise）与异步函数
 * [x] BOM与DOM
 * [x] 事件与事件循环
-* [ ] 手写题
+* [x] 手写题
 
 ## 学习资料
 
