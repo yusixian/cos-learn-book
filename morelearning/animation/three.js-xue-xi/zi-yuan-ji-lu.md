@@ -6,33 +6,49 @@ description: 记录一些用到的插件/api/资源
 
 ## 资源网站
 
-### Textures 资源
+### Textures
+
+[Poliigon](https://www.poliigon.com/) 是一个提供高质量3D资源的网站，旨在帮助艺术家和设计师创建更加真实的3D渲染作品。该网站提供成千上万的纹理、模型和高动态范围图像（HDRIs），这些资源都经过专业设计，适用于建筑可视化、产品渲染、游戏设计、视觉特效和动画制作。用户可以找到各种材质纹理，如砖块、混凝土、木材、金属等，以及各类模型和环境HDRIs​​。
 
 {% embed url="https://www.poliigon.com/" %}
 [https://www.poliigon.com/](https://www.poliigon.com/)
 {% endembed %}
 
+[3D Textures](https://3dtextures.me/) 提供免费的无缝PBR（物理基于渲染）纹理，包括漫反射、法线、位移、环境遮挡和粗糙度贴图。这些纹理适用于3D模型和场景的渲染，可帮助增强作品的真实感和视觉效果。网站上的纹理多样，适用于各种3D渲染项目​​。
+
 {% embed url="https://3dtextures.me/" %}
 [https://3dtextures.me/](https://3dtextures.me/)
 {% endembed %}
+
+[Arroway Textures ](https://www.arroway-textures.ch/) 是一家专门生产高质量数字纹理的公司，这些纹理适用于3D渲染和实时使用。他们坚信最好的纹理来源于现实物理世界，因此开发了自己的定制硬件和软件，以捕捉自然材料比单纯颜色更多的信息。Arroway Textures 提供的纹理对于提高3D作品的真实感和细节表现至关重要​​。
 
 {% embed url="https://www.arroway-textures.ch/" %}
 [https://www.arroway-textures.ch/](https://www.arroway-textures.ch/)
 {% endembed %}
 
+[Poly Haven](https://polyhaven.com/hdris) 是一个公共3D资源库。它提供一系列资源，包括 HDRI（高动态范围图像）、纹理和模型。这些资源通常用于 3D 建模、渲染和图形设计。 Poly Haven 根据免费使用许可提供这些资产，使其成为数字艺术家和设计师的宝贵资源​​。
 
+{% embed url="https://polyhaven.com/hdris" %}
+[https://polyhaven.com/hdris](https://polyhaven.com/hdris)
+{% endembed %}
 
 ## vscode 插件
 
 ### WebGL GLSL Editor
 
+[WebGL GLSL Editor](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor) 是一个用于Visual Studio Code的扩展，它提供了对WebGL GLSL着色器的语言支持。这个扩展支持GLSL ES 100（WebGL 1 和 OpenGL ES 1.00）和GLSL ES 300（WebGL 2 和 OpenGL ES 3.00），以及所有兼容WebGL的GLSL扩展。它支持大多数众所周知的VS Code语言功能，如语法高亮、智能提示等。这个扩展是为使用WebGL进行3D图形开发的开发者设计的，可以极大地提高编写和调试GLSL着色器的效率​​。
+
 {% embed url="https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor" %}
+[https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor)
+{% endembed %}
 
 ### Shader languages support for VS Code
 
+[Shader languages support for VS Code](https://marketplace.visualstudio.com/items?itemName=slevesque.shader) 是另一个Visual Studio Code扩展，它提供了对多种着色器语言的支持。该扩展支持的着色器语言包括HLSL（High-Level Shading Language）、GLSL（OpenGL Shading Language）和Cg（C for Graphics）。这个扩展的主要特点是为这些着色器语言提供语法高亮功能。它对于游戏开发、图形设计和3D渲染等领域中使用着色器语言的开发者来说非常有用，可以帮助他们更轻松地编写和管理着色器代码
+
 {% embed url="https://marketplace.visualstudio.com/items?itemName=slevesque.shader" %}
-
-
+[https://marketplace.visualstudio.com/items?itemName=slevesque.shader](https://marketplace.visualstudio.com/items?itemName=slevesque.shader)
+{% endembed %}
 
 ## API
 
