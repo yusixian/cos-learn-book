@@ -114,6 +114,7 @@
   * [Floating UI 使用经验分享 - Popover](morelearning/animation/floating-ui-shi-yong-jing-yan-fen-xiang-popover.md)
   * [Floating UI 使用经验分享 - Dialog](morelearning/animation/floating-ui-shi-yong-jing-yan-fen-xiang-dialog.md)
   * [Three.js 学习](morelearning/animation/three.js-xue-xi/README.md)
+    * [学习记录](morelearning/animation/three.js-xue-xi/xue-xi-ji-lu.md)
     * [资源记录](morelearning/animation/three.js-xue-xi/zi-yuan-ji-lu.md)
 * [前端性能优化](morelearning/performance-optimization.md)
 * [跨端](morelearning/kua-duan/README.md)
