@@ -70,14 +70,15 @@ React主要的是看官网文档学习+自己多练：[React官网文档](https:
 
 React官网的入门教程就很有意思：[入门教程: 认识 React](https://react.docschina.org/tutorial/tutorial.html)
 
-| [性能优化](https://github.com/brickspert/blog/issues/36)       |
-| ---------------------------------------------------------- |
-| [fiber](https://zhuanlan.zhihu.com/p/57346388)             |
-| [错误处理](https://github.com/HuJiaoHJ/blog/issues/12)         |
-| [高阶组件](https://zhuanlan.zhihu.com/p/24776678)              |
-| [合成事件](https://juejin.cn/post/6844903988794671117)         |
-| [virtual dom](https://segmentfault.com/a/1190000019994425) |
-| [setState过程](https://juejin.cn/post/6844903781813993486)   |
+| [性能优化](https://github.com/brickspert/blog/issues/36)         |
+| ------------------------------------------------------------ |
+| [fiber](https://zhuanlan.zhihu.com/p/57346388)               |
+| [错误处理](https://github.com/HuJiaoHJ/blog/issues/12)           |
+| [高阶组件](https://zhuanlan.zhihu.com/p/24776678)                |
+| [合成事件](https://juejin.cn/post/6844903988794671117)           |
+| [virtual dom](https://segmentfault.com/a/1190000019994425)   |
+| [setState过程](https://juejin.cn/post/6844903781813993486)     |
+| [https://react.iamkasong.com/](https://react.iamkasong.com/) |
 
 ### Redux
 
