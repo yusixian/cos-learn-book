@@ -119,6 +119,7 @@
 * [前端性能优化](morelearning/performance-optimization.md)
 * [跨端](morelearning/kua-duan/README.md)
   * [RN 学习小记之使用 Expo 创建项目](morelearning/kua-duan/rn-xue-xi-xiao-ji-zhi-shi-yong-expo-chuang-jian-xiang-mu.md)
+* [开源](morelearning/kai-yuan.md)
 
 ## 笔面试记录 <a href="#interview-record" id="interview-record"></a>
 
