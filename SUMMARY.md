@@ -116,6 +116,8 @@
   * [Three.js 学习](morelearning/animation/three.js-xue-xi/README.md)
     * [学习记录](morelearning/animation/three.js-xue-xi/xue-xi-ji-lu.md)
     * [资源记录](morelearning/animation/three.js-xue-xi/zi-yuan-ji-lu.md)
+  * [GSAP](morelearning/animation/gsap/README.md)
+    * [GSAP 中的 contextSafe 详细解析](morelearning/animation/gsap/gsap-zhong-de-contextsafe-xiang-xi-jie-xi.md)
 * [前端性能优化](morelearning/performance-optimization.md)
 * [跨端](morelearning/kua-duan/README.md)
   * [RN 学习小记之使用 Expo 创建项目](morelearning/kua-duan/rn-xue-xi-xiao-ji-zhi-shi-yong-expo-chuang-jian-xiang-mu.md)
