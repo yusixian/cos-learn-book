@@ -4,13 +4,13 @@
 
 > **不要仅仅因为有人说过应该使用 Redux 而使用，而是应该花一些时间来了解使用它的潜在好处和取舍**。
 
-开新坑……记录一下学习使用Redux的历程，主要来自[Redux 中文官网](https://cn.redux.js.org/introduction/getting-started)、[Redux入门系列视频](https://app.egghead.io/courses/getting-started-with-redux)及其里面的教程里的[笔记和转录](https://github.com/tayiorbeii/egghead.io\_redux\_course\_notes)。
+开新坑……记录一下学习使用Redux的历程，主要来自[Redux 中文官网](https://cn.redux.js.org/introduction/getting-started)、[Redux入门系列视频](https://app.egghead.io/courses/getting-started-with-redux)及其里面的教程里的[笔记和转录](https://github.com/tayiorbeii/egghead.io_redux_course_notes)。
 
 这篇文章是下面这个教学视频里的1-8期视频，阐述了Redux三原则和Redux中的Reducer、（getState、dispatch、subscribe）以及createStore的原理及实现，并且实现了一个简易的计数器。看完基本上对Redux就有了一个大致的了解
 
 为什么学捏，主要是因为最近看的项目或多或少都有Redux的使用，~~不学压根看不懂~~
 
-> **Redux 入门 —— 系列视频** Redux 的创建者 Dan Abramov 在 30 个短片（2-5 分钟）中展示了各种概念。链接的 Github 仓库包含视频的笔记和转录。 [Redux入门系列视频](https://app.egghead.io/courses/getting-started-with-redux) [笔记和转录](https://github.com/tayiorbeii/egghead.io\_redux\_course\_notes)
+> **Redux 入门 —— 系列视频** Redux 的创建者 Dan Abramov 在 30 个短片（2-5 分钟）中展示了各种概念。链接的 Github 仓库包含视频的笔记和转录。 [Redux入门系列视频](https://app.egghead.io/courses/getting-started-with-redux) [笔记和转录](https://github.com/tayiorbeii/egghead.io_redux_course_notes)
 
 ## 简介
 
@@ -139,23 +139,23 @@ function squareAll(items) {
 
 初始state中，todos为空，过滤器为显示全部
 
-![请添加图片描述](https://img-blog.csdnimg.cn/f822113c342e41ab9cd838fdc131528e.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_20,color\_FFFFFF,t\_70,g\_se,x\_16)
+![请添加图片描述](https://img-blog.csdnimg.cn/f822113c342e41ab9cd838fdc131528e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 **添加Todo**
 
 变化如图： 一开始的state中，todos没有内容，过滤器为显示全部。发起action之后的state中todos多了个todo，过滤视图未变化
 
-![请添加图片描述](https://img-blog.csdnimg.cn/4a14f3babf634389b4e04739d2a0c6a3.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_20,color\_FFFFFF,t\_70,g\_se,x\_16)
+![请添加图片描述](https://img-blog.csdnimg.cn/4a14f3babf634389b4e04739d2a0c6a3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 **完成Todo**
 
-点击一个todo将其置为完成，可以看到发起这个action的时候，todos的文本没有变化，状态complete被置为完成了…… ![请添加图片描述](https://img-blog.csdnimg.cn/54b8c98b25bc437e8ba0ada524b49667.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_20,color\_FFFFFF,t\_70,g\_se,x\_16)
+点击一个todo将其置为完成，可以看到发起这个action的时候，todos的文本没有变化，状态complete被置为完成了…… ![请添加图片描述](https://img-blog.csdnimg.cn/54b8c98b25bc437e8ba0ada524b49667.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 **更改过滤视图**
 
 再添加一个todo后点击过滤器Active，观察前后state，可以发现，只是visibilityFilter状态由"SHOW\_ALL"改变为"SHOW\_ACTIVE"了，todos的内容还是没有变化的（abcd并没有被删掉）
 
-![请添加图片描述](https://img-blog.csdnimg.cn/49e77e2ac6974684b4952b259a39f803.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_20,color\_FFFFFF,t\_70,g\_se,x\_16)
+![请添加图片描述](https://img-blog.csdnimg.cn/49e77e2ac6974684b4952b259a39f803.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ## 编写一个带有测试的计数器Reducer
 
@@ -233,7 +233,7 @@ const store = createStore(counter);
 > **参数**
 >
 > 1. **`reducer`** _**(Function)**_**:** 接收两个参数，分别是**当前的 state 树和要处理的** [**action**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#action)，**返回新的** [**state 树**](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#state)**。**
-> 2. **\[`preloadedState`] **_**(any)**_**: 初始时的 state**。 在同构应用中，你可以决定是否把服务端传来的 state 水合（hydrate）后传给它，或者从之前保存的用户会话中恢复一个传给它。如果你使用 [`combineReducers`](https://cn.redux.js.org/api/combinereducers) 创建 `reducer`，它必须是一个普通对象，与传入的 keys 保持同样的结构。否则，你可以自由传入任何 `reducer` 可理解的内容。
+> 2. **\[`preloadedState`]&#x20;**_**(any)**_**: 初始时的 state**。 在同构应用中，你可以决定是否把服务端传来的 state 水合（hydrate）后传给它，或者从之前保存的用户会话中恢复一个传给它。如果你使用 [`combineReducers`](https://cn.redux.js.org/api/combinereducers) 创建 `reducer`，它必须是一个普通对象，与传入的 keys 保持同样的结构。否则，你可以自由传入任何 `reducer` 可理解的内容。
 > 3. **`enhancer`** _**(Function)**_**: Store enhancer**，可选。可以用第三方第能力如中间价、时间旅行、持久化来增强 store。是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。Redux 中唯一内置的 store enhander 是 [`applyMiddleware()`](https://cn.redux.js.org/api/applymiddleware)。
 >
 > **返回值**
@@ -313,7 +313,7 @@ document.addEventListener('click', () => {
 * `createStore`函数创建出来的store需要拥有这三个方法：`getState`，`dispatch`和`subscribe`
   * `getState` 方法返回当前state
   * `dispatch` 函数是更改内部state的唯一方法，它传入一个action，通过将内部的当前state和action传入`reducer`函数（createStore的入参）来计算新的state。更新后，我们通知每个变化监听器（通过调用它们） dispatch
-  * `subscribe` 传入一个listener函数作为参数，将其放入内部的listener数组，为了取消订阅事件监听器，`subscribe`需要返回一个函数， **调用这个返回的函数就可以取消监听**，这个函数内部通过[`filter()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Array/filter)将listeners数组赋值为一个新的监听器数组（去除了与当前监听相同引用后返回的新监听器数组）。`subscribe`
+  * `subscribe` 传入一个listener函数作为参数，将其放入内部的listener数组，为了取消订阅事件监听器，`subscribe`需要返回一个函数， **调用这个返回的函数就可以取消监听**，这个函数内部通过[`filter()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)将listeners数组赋值为一个新的监听器数组（去除了与当前监听相同引用后返回的新监听器数组）。`subscribe`
   * 在返回`store`时，我们需要要填充初始状态。我们要分派一个假的 `action` 来让 `reducer` 返回初始值。
 
 ```js
@@ -430,17 +430,17 @@ reducer指定如何根据当前state和传入的action计算下一个state。 �
 
 一开始什么都不做，可以看到createStore的时候就进行了一次dispatch，通过reducer（即counter函数）将state置为初始值0后进行了一次渲染。（注意）
 
-![请添加图片描述](https://img-blog.csdnimg.cn/9b113a7febad4ad2bb8341e8223b1ec2.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_14,color\_FFFFFF,t\_70,g\_se,x\_16)
+![请添加图片描述](https://img-blog.csdnimg.cn/9b113a7febad4ad2bb8341e8223b1ec2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_14,color_FFFFFF,t_70,g_se,x_16)
 
 #### 增加计数
 
 点一下+，发现又调用了一次render
 
-![请添加图片描述](https://img-blog.csdnimg.cn/5c0284c69db64293870f69de2bf01b12.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_19,color\_FFFFFF,t\_70,g\_se,x\_16)
+![请添加图片描述](https://img-blog.csdnimg.cn/5c0284c69db64293870f69de2bf01b12.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_19,color_FFFFFF,t_70,g_se,x_16)
 
 #### else
 
-点了好几次else之后，发现每次都会重新渲染，但是state的值看起来似乎没变，而且组件表面上看也没有变化 ![请添加图片描述](https://img-blog.csdnimg.cn/1b350d01bf9849cface43da5551098a4.png?x-oss-process=image/watermark,type\_d3F5LXplbmhlaQ,shadow\_50,text\_Q1NETiBA5L2ZY29z,size\_16,color\_FFFFFF,t\_70,g\_se,x\_16)
+点了好几次else之后，发现每次都会重新渲染，但是state的值看起来似乎没变，而且组件表面上看也没有变化 ![请添加图片描述](https://img-blog.csdnimg.cn/1b350d01bf9849cface43da5551098a4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_16,color_FFFFFF,t_70,g_se,x_16)
 
 ## 总结
 
@@ -464,5 +464,5 @@ Redux三原则：
 * `createStore`函数创建出来的store还需要拥有这三个方法：`getState`，`dispatch` 和`subscribe`
   * `getState` 方法返回当前state
   * `dispatch` 函数传入一个action，通过将内部的当前state和action传入`reducer`函数（createStore的入参）来计算新的state。更新后，我们通知每个变化监听器（通过调用它们） dispatch
-  * `subscribe` 传入一个listener函数作为参数，将其放入内部的listener数组，为了取消订阅事件监听器，`subscribe`需要返回一个函数， **调用这个返回的函数就可以取消监听**，这个函数内部通过[`filter()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Array/filter)将listeners数组赋值为一个新的监听器数组（去除了与当前监听相同引用后返回的新监听器数组）。`subscribe`
+  * `subscribe` 传入一个listener函数作为参数，将其放入内部的listener数组，为了取消订阅事件监听器，`subscribe`需要返回一个函数， **调用这个返回的函数就可以取消监听**，这个函数内部通过[`filter()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)将listeners数组赋值为一个新的监听器数组（去除了与当前监听相同引用后返回的新监听器数组）。`subscribe`
   * 在返回`store`时，我们需要要填充初始状态。我们要分派一个假的 `action` 来让 `reducer` 返回初始值。

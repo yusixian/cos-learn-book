@@ -14,11 +14,11 @@ description: 关于 SEO 你需要知道的
 
 {% embed url="https://robolly.com/metadata-checker/?url=metatags.io" %}
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://metatags.io/?url=https%3A%2F%2Fmetatags.io%2F" %}
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 结构化数据
 

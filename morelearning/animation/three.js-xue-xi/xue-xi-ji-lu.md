@@ -50,7 +50,7 @@ PerspectiveCamera(fov : Number, aspect : Number, near : Number, far : Number)
 
 这些参数一起定义了摄像机的 viewing frustum（视锥体）。
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 透视图中，灰色的部分是视锥体，是可能被渲染的物体所在的区域。fov 是视锥体竖直方向上的张角（是角度制而非弧度制），如侧视图所示。
 
@@ -557,7 +557,7 @@ Mipmapping 是一种优化技术，用于处理纹理在远离摄像机或小尺
 
 {% embed url="https://juejin.cn/post/7101209181822124069#heading-11" %}
 
-这里的文章里的图片很形象，如下 [小贴图为](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86c7494d5c89489d964f9f66813c3530\~tplv-k3u1fbpfcp-zoom-1.image) ![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+这里的文章里的图片很形象，如下 [小贴图为](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86c7494d5c89489d964f9f66813c3530~tplv-k3u1fbpfcp-zoom-1.image) ![](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 | magFilter 为 LinearFilter (默认)                                                                                                                      | magFilter 为 NearestFilter                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -598,7 +598,7 @@ scene.add(cube);
 * 使用 Mipmapping 可以提高性能，特别是在处理大场景和多个纹理时。
 * 纹理的分辨率最好是2的幂（如256x256，512x512等），以确保最佳的 Mipmapping 效果和兼容性。
 
-> mipmapping 的操作是不断的将图片缩小一倍，直到 1_1 像素，可理解为不停地除以2，所以建议使用 2 的 n 次幂的宽高尺寸图片，如 512_512、1024_1024、512_2048 等，如果不是这样的尺寸，ThreeJs 也会帮你优化，但可能会带来额外的性能损耗或渲染问题。
+> mipmapping 的操作是不断的将图片缩小一倍，直到 &#x31;_&#x31; 像素，可理解为不停地除以2，所以建议使用 2 的 n 次幂的宽高尺寸图片，如 51&#x32;_&#x35;12、102&#x34;_&#x31;024、51&#x32;_&#x32;048 等，如果不是这样的尺寸，ThreeJs 也会帮你优化，但可能会带来额外的性能损耗或渲染问题。
 
 
 
@@ -830,4 +830,4 @@ scene.add(matcapMesh);
 scene.add(depthMesh);
 ```
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>

@@ -17,7 +17,7 @@ description: 【第二届青训营-寒假前端场】- 「TypeScript入门」笔
 
 ### 为什么是TypeScript
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab0c1101077f402f8afd8be753442b84\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab0c1101077f402f8afd8be753442b84~tplv-k3u1fbpfcp-watermark.image?)
 
 **动态类型**在**执行过程中**进行类型的匹配，js的弱类型会在执行时进行隐式类型转换，而在静态类型中则不然
 
@@ -38,7 +38,7 @@ TypeScript是**JS的超集**
 
 js ==> ts
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ae63f86172341e893293665ce701678\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ae63f86172341e893293665ce701678~tplv-k3u1fbpfcp-watermark.image?)
 
 可以看到，ts的类型定义方式：`let 变量名: 类型 = 值;`
 
@@ -238,7 +238,7 @@ getRepeatArr('123');
 >
 > 有时候你会遇到这样的情况，你会比TypeScript更了解某个值的详细信息。 通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。
 >
-> 通过_类型断言_ 这种方式可以**告诉编译器，“相信我，我知道自己在干什么”**。 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 TypeScript会假设你，程序员，已经进行了必须的检查。
+> 通&#x8FC7;_&#x7C7B;型断言_ 这种方式可以**告诉编译器，“相信我，我知道自己在干什么”**。 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 TypeScript会假设你，程序员，已经进行了必须的检查。
 >
 > ```typescript
 > let someValue: any = "this is a string";
@@ -267,7 +267,7 @@ function keyBy<T extends IObjArr>(objArr: Array<T>) {
 
 上述代码，中有几个点需注意：
 
-> [reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Array/Reduce) 函数对数组中的每个元素执行一个由您提供的**reducer**函数(升序执行)，将其结果汇总为单个返回值。
+> [reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) 函数对数组中的每个元素执行一个由您提供的**reducer**函数(升序执行)，将其结果汇总为单个返回值。
 >
 > 语法：`arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])`
 
@@ -524,7 +524,7 @@ type IReturnType<T extends (...args: any) => any> = T extends(...args: any ) => 
 3. 使用npm安装tsc
 4. 使用tsc运行编译得到js文件
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56049af605644fb9907feedd9ee14fae\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56049af605644fb9907feedd9ee14fae~tplv-k3u1fbpfcp-watermark.image?)
 
 ## 总结感想
 

@@ -7,9 +7,9 @@ description: 【第二届青训营-寒假前端场】-  「CSS布局」
 ## 布局（layout）
 
 * 确定内容的大小和位置的算法
-* 依据元素、容器、兄弟节点和内容等信息来计算 [CSS 基础框盒模型介绍 - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Box\_Model/Introduction\_to\_the\_CSS\_box\_model)
+* 依据元素、容器、兄弟节点和内容等信息来计算 [CSS 基础框盒模型介绍 - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 
-> 当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 **CSS 基础框盒模型**（**CSS basic box model**），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。 每个盒子由四个部分（或称_区域_）组成，其效用由它们各自的边界（Edge）所定义（原文：defined by their respective edges，可能意指容纳、包含、限制等）。如图，与盒子的四个组成区域相对应，每个盒子有四个边界：_内容边界_ _Content edge_、_内边距边界_ _Padding Edge_、_边框边界_ _Border Edge_、_外边框边界_ _Margin Edge_。
+> 当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 **CSS 基础框盒模型**（**CSS basic box model**），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。 每个盒子由四个部分（或&#x79F0;_&#x533A;域_）组成，其效用由它们各自的边界（Edge）所定义（原文：defined by their respective edges，可能意指容纳、包含、限制等）。如图，与盒子的四个组成区域相对应，每个盒子有四个边界：_内容边界_ _Content edge_、_内边距边界_ _Padding Edge_、_边框边界_ _Border Edge_、_外边框边界_ _Margin Edge_。
 
 ### width
 
@@ -26,7 +26,7 @@ description: 【第二届青训营-寒假前端场】-  「CSS布局」
 * 当只指定**一个**值时，该值会统一应用到**全部四个边**的内边距上。
 * 指定**两个**值时，第一个值会应用于**上边和下边**的内边距，第二个值应用于**左边和右边**。
 * 指定**三个**值时，第一个值应用于**上边**，第二个值应用于**右边和左边**，第三个则应用于**下边**的内边距。
-* 指定**四个**值时，依次（顺时针方向）作为**上边**，**右边**，**下边**，和**左边**的内边距。 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e8ae436fdf407182f4831a9092759a\~tplv-k3u1fbpfcp-watermark.image?)
+* 指定**四个**值时，依次（顺时针方向）作为**上边**，**右边**，**下边**，和**左边**的内边距。 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e8ae436fdf407182f4831a9092759a~tplv-k3u1fbpfcp-watermark.image?)
 
 ### margin
 
@@ -35,22 +35,22 @@ description: 【第二届青训营-寒假前端场】-  「CSS布局」
 * 当只指定**一个**值时，该值会统一应用到**全部四个边**的外边距上。
 * 指定**两个**值时，第一个值会应用于**上边和下边**的外边距，第二个值应用于**左边和右边**。
 * 指定**三个**值时，第一个值应用于**上边**，第二个值应用于**右边和左边**，第三个则应用于**下边**的外边距。
-* 指定**四个**值时，依次（顺时针方向）作为**上边**，**右边**，**下边**，和**左边**的外边距。 margin collapse：[外边距重叠 - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Box\_Model/Mastering\_margin\_collapsing)。相邻的两个元素之间的外边距重叠，会在垂直方向上发生边界折叠，挑选最大边界范围留下。
+* 指定**四个**值时，依次（顺时针方向）作为**上边**，**右边**，**下边**，和**左边**的外边距。 margin collapse：[外边距重叠 - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)。相邻的两个元素之间的外边距重叠，会在垂直方向上发生边界折叠，挑选最大边界范围留下。
 
 ### border
 
 指定边框，border-width指定宽度、border-style指定类型（实线/虚线）、border-color指定边框颜色。通常直接将三者结合简写为 border ,MDN描述见[border - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border)
 
 * border巧用：制作三角形
-  * 首先四个边框设置了不同的颜色。可以发现边角是由斜线切开的。 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e30527c58ae4a09b158bd1a888961d7\~tplv-k3u1fbpfcp-watermark.image?)
-  * 那么当容器高度和宽度为0的时候，可以看到如图 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51749d92b6bd4a1f8b7c8cac57c551e8\~tplv-k3u1fbpfcp-watermark.image?)
-  * 那如果将其他的边框颜色设为透明（transport）可以发现，制造了一个红色的三角形出来。 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b3c7bf5d0084c5bb48c827cd23e73e6\~tplv-k3u1fbpfcp-watermark.image?)
+  * 首先四个边框设置了不同的颜色。可以发现边角是由斜线切开的。 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e30527c58ae4a09b158bd1a888961d7~tplv-k3u1fbpfcp-watermark.image?)
+  * 那么当容器高度和宽度为0的时候，可以看到如图 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51749d92b6bd4a1f8b7c8cac57c551e8~tplv-k3u1fbpfcp-watermark.image?)
+  * 那如果将其他的边框颜色设为透明（transport）可以发现，制造了一个红色的三角形出来。 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b3c7bf5d0084c5bb48c827cd23e73e6~tplv-k3u1fbpfcp-watermark.image?)
 
 ### box-sizing
 
 [box-sizing - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)
 
-> 在 [CSS 盒子模型](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Box\_Model/Introduction\_to\_the\_CSS\_box\_model)的默认定义里，对一个元素所设置的 [`width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width) 与 [`height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/height) 只会应用到这个元素的内容区。如果这个元素有任何的 [`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border) 或 [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding) ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。
+> 在 [CSS 盒子模型](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)的默认定义里，对一个元素所设置的 [`width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width) 与 [`height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/height) 只会应用到这个元素的内容区。如果这个元素有任何的 [`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border) 或 [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding) ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。
 
 box-sizing 属性可以被用来调整这些表现:
 
@@ -61,13 +61,13 @@ box-sizing 属性可以被用来调整这些表现:
 
 [overflow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow)
 
-> CSS属性 **overflow** 定义当一个元素的内容太大而无法适应 [块级格式化上下文](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context) 时候该做什么。它是 [`overflow-x`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-x) 和[`overflow-y`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-y)的 [简写属性 ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand\_properties)。
+> CSS属性 **overflow** 定义当一个元素的内容太大而无法适应 [块级格式化上下文](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context) 时候该做什么。它是 [`overflow-x`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-x) 和[`overflow-y`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-y)的 [简写属性 ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties)。
 
 将其设置为auto，则当内容过多的时候会显示滚动条，否则不显示。而为使 `overflow` 有效果，块级容器必须有一个指定的高度（`height`或者`max-height`）或者将`white-space`设置为`nowrap`。
 
 ### 块级元素
 
-[块级元素 - HTML（超文本标记语言） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level\_elements#block-level\_example)
+[块级元素 - HTML（超文本标记语言） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements#block-level_example)
 
 > 块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，通常浏览器会在块级元素前后另起一个新行。
 
@@ -76,7 +76,7 @@ box-sizing 属性可以被用来调整这些表现:
 
 ### 行级元素
 
-[行内元素 - HTML（超文本标记语言） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline\_elements)
+[行内元素 - HTML（超文本标记语言） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elements)
 
 > 一个行内元素只占据它对应标签的边框所包含的空间 行级元素和其他行级元素一起，不使用盒模型中的width、height属性
 
@@ -85,7 +85,7 @@ box-sizing 属性可以被用来调整这些表现:
 
 说到display属性，其说明[display - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display)：
 
-> **`display`** 属性可以设置元素的内部和外部显示类型 _display types_。元素的外部显示类型 _outer display types_ 将决定该元素在[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout)中的表现（[块级或内联元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout)）；元素的内部显示类型 _inner display types_ 可以控制其子元素的布局（例如：[flow layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout)，[grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Grid\_Layout) 或 [flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout)）。
+> **`display`** 属性可以设置元素的内部和外部显示类型 _display types_。元素的外部显示类型 _outer display types_ 将决定该元素在[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)中的表现（[块级或内联元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)）；元素的内部显示类型 _inner display types_ 可以控制其子元素的布局（例如：[flow layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)，[grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）。
 
 * block 块级盒子
 * inline 行级盒子
@@ -99,28 +99,28 @@ box-sizing 属性可以被用来调整这些表现:
 
 #### 行内格式化上下文（Inline formatting context）
 
-[行内格式化上下文（Inline formatting context） - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Inline\_formatting\_context)
+[行内格式化上下文（Inline formatting context） - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Inline_formatting_context)
 
 > 行内格式化上下文是一个网页的渲染结果的一部分。其中，各行内框（inline boxes）一个接一个地排列，其排列顺序根据书写模式（writing-mode）的设置来决定：
 >
 > * 对于水平书写模式，各个框从左边开始水平地排列
 > * 对于垂直书写模式，各个框从顶部开始水平地排列
 >
-> 在下面给出的例子中，带黑色边框的两个([`<div>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div))元素组成了一个[块级格式化上下文（block formatting context）](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
+> 在下面给出的例子中，带黑色边框的两个([`<div>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div))元素组成了一个[块级格式化上下文（block formatting context）](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
 
 * 只包含行级盒子的容器会创建一个IFC，IFC中排版规则如下
   * 盒子在一行内水平摆放，当一行放不下时会换行显示。
   * `text-align` 决定一行内盒子的**水平对齐**
   * `vertical-align` 决定一个盒子在行内的**垂直对齐**
-  * 避开 [浮动](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS\_layout/Floats) 元素
+  * 避开 [浮动](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 元素
 * 一个段落实际上是一系列行框的集合，这些行框在块的方向上排列。
 * 一个行内框（inline box）被分割到多行中时， margins, borders, 以及 padding 的设定均不会在断裂处生效。 下例中有一个 ([`<span>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span)) 元素，它包裹了一系列单词，占据了两行。可以看见在断裂处，`<span>` 的 border 同样发生了断裂。
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae65b47548d540e4ac46b9e9ddb2e6d3\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae65b47548d540e4ac46b9e9ddb2e6d3~tplv-k3u1fbpfcp-watermark.image?)
 
 #### 块级格式化上下文（Block Formatting Context）
 
-[块格式化上下文 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context)
+[块格式化上下文 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
 
 * Block Formatting Context（BFC）
 * 盒子从上到下摆放
@@ -130,7 +130,7 @@ box-sizing 属性可以被用来调整这些表现:
 
 ### FlexBox
 
-[flex 布局的基本概念 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox)
+[flex 布局的基本概念 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
 * 一种新的排版上下文
 * 可以控制子级盒子的：
@@ -141,9 +141,9 @@ box-sizing 属性可以被用来调整这些表现:
     * `column-reverse`：由下到上↑
   * 摆放顺序
   * 盒子高度和宽度
-  * 水平与垂直方向的对齐（严格来说，主轴和交叉轴方向上的对齐，见[`justify-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)和 [`align-items` ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#align-items)）
+  * 水平与垂直方向的对齐（严格来说，主轴和交叉轴方向上的对齐，见[`justify-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)和 [`align-items` ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#align-items)）
   * 是否允许折行（`wrap` 、`nowrap` 、`wrap-reverse`）
-  * 其他还有[ flex 元素上的属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E4%B8%8A%E7%9A%84%E5%B1%9E%E6%80%A7)（[`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)、[`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis)）等
+  * 其他还有[ flex 元素上的属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#flex_%E5%85%83%E7%B4%A0%E4%B8%8A%E7%9A%84%E5%B1%9E%E6%80%A7)（[`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)、[`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis)）等
 * flex子项会创建一个BFC
 
 重点再讲一下主轴和交叉轴的对齐，以默认的由右往左排列（row），其主轴为水平轴，交叉轴为垂直轴。其中主轴（justify-content）的对齐方式有以下几种（初始值为flex-start ）：
@@ -153,7 +153,7 @@ box-sizing 属性可以被用来调整这些表现:
 * center 在主轴上居中对齐
 * space-between 在主轴上两端对齐，中间穿插空间
 * space-around 在主轴上两边也加上空白，保持元素占用大小不变
-* space-evenly 两边与中间的空白大小相同 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8774e61bcdd34fa4802aeaaa87f311f5\~tplv-k3u1fbpfcp-watermark.image?)
+* space-evenly 两边与中间的空白大小相同 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8774e61bcdd34fa4802aeaaa87f311f5~tplv-k3u1fbpfcp-watermark.image?)
 
 交叉轴的对齐方式如下（初始值为stretch）：
 
@@ -162,26 +162,26 @@ box-sizing 属性可以被用来调整这些表现:
 * center：在交叉轴上居中对齐
 * stretch：在交叉轴上，拉伸元素以适应容器
 * baseline：两边与中间的空白大小相同
-* ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b54bd7d27d403e883c75633d8f8c91\~tplv-k3u1fbpfcp-watermark.image?)
+* ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b54bd7d27d403e883c75633d8f8c91~tplv-k3u1fbpfcp-watermark.image?)
 
 如果想给flex中的某个元素搞特殊，那么可以给他设置一个align-self属性，如图
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c8cde0097674919bb6007fd308536bf\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c8cde0097674919bb6007fd308536bf~tplv-k3u1fbpfcp-watermark.image?)
 
 [order](https://developer.mozilla.org/zh-CN/docs/Web/CSS/order) 可以设置元素们在布局时的顺序
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/486de4617acc4684b76d89c45bc1b083\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/486de4617acc4684b76d89c45bc1b083~tplv-k3u1fbpfcp-watermark.image?)
 
 那如果网页拉伸或者缩小，flex容器中的内容会如何变呢？
 
 * 可以通过设置flex-grow在有剩余空间的时候控制伸展能力，flex-shrink在剩余空间不足的时候控制收缩。
-* [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-grow) 属性可以按比例分配空间。如果第一个元素 `flex-grow` 值为2， 其他元素值为1，则第一个元素将占有2/4, 另外两个元素各占有1/4。
-* [`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9A\_flex-shrink) 与 `flex-grow` 属性一样，可以赋予不同的值来控制flex元素收缩的程度 —— 给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
-* [`flex-basis` ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-basis)没有伸展或者收缩时的基础长度
+* [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#flex_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-grow) 属性可以按比例分配空间。如果第一个元素 `flex-grow` 值为2， 其他元素值为1，则第一个元素将占有2/4, 另外两个元素各占有1/4。
+* [`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#flex_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9A_flex-shrink) 与 `flex-grow` 属性一样，可以赋予不同的值来控制flex元素收缩的程度 —— 给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
+* [`flex-basis` ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#flex_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-basis)没有伸展或者收缩时的基础长度
 
 关于flex布局，之前在codepen看到过一个演示项目，可以了解其每个属性的相应作用，强烈推荐自己多试试：[Flexbox playground (codepen.io)](https://codepen.io/enxaneta/details/adLPwv)
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5df5c8648ad432e84b600cef93fc53a\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5df5c8648ad432e84b600cef93fc53a~tplv-k3u1fbpfcp-watermark.image?)
 
 ### Grid布局
 
@@ -189,8 +189,8 @@ box-sizing 属性可以被用来调整这些表现:
 
 * display：grid会使元素生成一个块级的Grid容器
 * 可以使用grid-template相关属性将容器划分为网格
-  * [`grid-template-rows`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-rows) 基于 [网格行](https://developer.mozilla.org/zh-CN/docs/Glossary/Grid\_Rows) 的维度，去定义网格线的名称和网格轨道的尺寸大小
-  * [`grid-template-columns`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-columns) 该属性是基于 [网格列](https://developer.mozilla.org/zh-CN/docs/Glossary/Grid\_Column).的维度，去定义网格线的名称和网格轨道的尺寸大小
+  * [`grid-template-rows`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-rows) 基于 [网格行](https://developer.mozilla.org/zh-CN/docs/Glossary/Grid_Rows) 的维度，去定义网格线的名称和网格轨道的尺寸大小
+  * [`grid-template-columns`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-columns) 该属性是基于 [网格列](https://developer.mozilla.org/zh-CN/docs/Glossary/Grid_Column).的维度，去定义网格线的名称和网格轨道的尺寸大小
   * 可以定义[`minmax(min, max)`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/minmax\(\)) ，这是一个来定义大小范围的属性，大于等于min值，并且小于等于max值。如果max值小于min值，则该值会被视为min值。最大值可以设置为网格轨道系数值 `fr` ，但最小值则不行
   * 也可以用单位 `fr` 来定义上述网格轨道大小的弹性系数。 每个定义了 `fr` 的网格轨道会按比例分配剩余的可用空间。当外层用一个 `minmax()` 表示时，它将是一个自动最小值(即 `minmax(auto, <flex>)` )
   * 想要元素跨越多行/多列？
@@ -212,7 +212,7 @@ box-sizing 属性可以被用来调整这些表现:
 }
 ```
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f01af69e4f69457489dc8e5b800379b0\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f01af69e4f69457489dc8e5b800379b0~tplv-k3u1fbpfcp-watermark.image?)
 
 * 然后将A这个元素,设置从第1个网格行线开始到第3个网格行线,即占两行,列同理占两列,如图
 
@@ -233,7 +233,7 @@ box-sizing 属性可以被用来调整这些表现:
 }
 ```
 
-如图,可以发现A占据了两行两列 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f58bea121bf0411b99891ab77bd81c80\~tplv-k3u1fbpfcp-watermark.image?)
+如图,可以发现A占据了两行两列 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f58bea121bf0411b99891ab77bd81c80~tplv-k3u1fbpfcp-watermark.image?)
 
 * 那么再进行一些更改,将a改为2-4行/列即占据了第2、3行/列,b改为1-3行/列即占据了第1、2行/列
 
@@ -246,7 +246,7 @@ box-sizing 属性可以被用来调整这些表现:
 }
 ```
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dab65647e3cf4901a04a51c506ef36dc\~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dab65647e3cf4901a04a51c506ef36dc~tplv-k3u1fbpfcp-watermark.image?)
 
 ### 浮动（float）
 

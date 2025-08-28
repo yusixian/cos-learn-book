@@ -11,7 +11,7 @@
 * 二叉搜索树 O(h) h为二叉查找树的高度
 * 平衡二叉树 O(log~~2~~N)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200827214251878.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200827214251878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **问题：如何快速搜索到需要的关键词？若关键词不方便比较怎么办？**
 
@@ -36,7 +36,7 @@
 * 以关键字**key**为自变量，通过一个确定的函数h **（散列函数）**，计算出对应的函数值h(key)，作为数据对象的存储地址
 * 可能不同的关键字会映射到同一个散列地址上，即h(key~~i~~) = h(key~~j~~) (当key~~i~~ ≠ key~~j~~)，称为 **“冲突(Collision)”** 。——需要某种冲突解决策略
 
-不冲突的情况下，查找只需要根据散列函数算出地址查找 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828191922255.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+不冲突的情况下，查找只需要根据散列函数算出地址查找 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828191922255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **装填因子**
 
@@ -63,25 +63,25 @@
 
 **① 直接定址法**
 
-取关键词的某个线性函数值为散列地址，即**h(key) = a ×key + b** (a、b为常数) ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082819270697.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+取关键词的某个线性函数值为散列地址，即**h(key) = a ×key + b** (a、b为常数) ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082819270697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **② 除留余数法（常用）**
 
-散列函数为：**h(key) = key mod p** eg：h(key) = key %17 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828192839490.png#pic\_center) 一般为了尽可能使关键词对应的地址空间分布均匀，**p取素数**
+散列函数为：**h(key) = key mod p** eg：h(key) = key %17 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828192839490.png#pic_center) 一般为了尽可能使关键词对应的地址空间分布均匀，**p取素数**
 
 **③ 数字分析法**
 
 通过分析数字关键字在各位上的变化情况，取**比较随机的位**作为散列地址
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828193252877.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828193252877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **④ 折叠法**
 
-把关键词分割成位数相同的几个部分，然后叠加 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828193330243.png#pic\_center)
+把关键词分割成位数相同的几个部分，然后叠加 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200828193330243.png#pic_center)
 
 **⑤ 平方取中法**
 
-![把关键词分割成位数相同的几个部分，然后叠加](https://img-blog.csdnimg.cn/20200828193356416.png#pic\_center)
+![把关键词分割成位数相同的几个部分，然后叠加](https://img-blog.csdnimg.cn/20200828193356416.png#pic_center)
 
 **字符关键词的散列函数构造**
 
@@ -123,17 +123,17 @@ Index Hash(string Key, int TableSize) {
 开放定址法(Open Addressing)，一旦产生了**冲突**（该位置已有其他元素），则按某种规则去**寻找另一空地址**。其优点是散列表是一个数组，存储效率高，随机查找，缺点是散列表有“聚集”现象。在开放地址散列法中删除操作需要很小心，只能“懒惰删除”，即需要增加一个删除标记而不是真正的删除，以便查找时不会“断链”。其空间可以在下次插入时重用。
 
 * 若发生了**第 i 次冲突**，试探的下一个地址将**增加d**~~**i**~~，基本公式是：**h**~~**i**~~**(key) = (h(key) + d**~~**i**~~**) mode TableSize(1 ≤ i < TableSize)**
-* **d**~~**i**~~ 为多少决定了不同的解决冲突方案：**线性探测(d**~~**i**~~** = i)、平方探测(d**~~**i**~~** = ± i^2^)、双散列(d**~~**i**~~** = i\*h**~~**2**~~**(key))。**
+* **d**~~**i**~~ 为多少决定了不同的解决冲突方案：**线性探测(d**~~**i**~~**&#x20;= i)、平方探测(d**~~**i**~~**&#x20;= ± i^2^)、双散列(d**~~**i**~~**&#x20;= i\*h**~~**2**~~**(key))。**
 
 **① 线性探测法**
 
 以增量序列1，2，……，（TableSize - 1）循环试探下一个存储地址。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133500317.png#pic\_center) ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829132925837.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133500317.png#pic_center) ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829132925837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **② 平方探测法（二次探测）**
 
-以增量序列1^2^，-1^2^，2^2^，-2^2^，……，q^2^，-q^2^且q ≤ | TableSize/2 |循环试探下一个存储地址。 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133548833.png#pic\_center) ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133557287.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center) 平方探测是否能找得到所有空间？有定理如下：
+以增量序列1^2^，-1^2^，2^2^，-2^2^，……，q^2^，-q^2^且q ≤ | TableSize/2 |循环试探下一个存储地址。 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133548833.png#pic_center) ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829133557287.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center) 平方探测是否能找得到所有空间？有定理如下：
 
 * 如果散列表长度TableSize是某个**4k+3**（k是正整数）形式的**素数**时，**平方探测法就可以探查到整个散列表空间**
 
@@ -169,7 +169,7 @@ Index Find(ptrHash H, DataType Key) {
 
 **分离链接法**
 
-分离链接法(Separate Chaining)，将相应位置上冲突的所有关键词**存储在一个单链表中**。优点是关键字的删除不需要“懒惰删除法”从而没有存储垃圾，缺点是链表部分的存储效率和查找效率都比较低。链表长度的不均匀会导致时间效率的严重下降 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082913474499.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+分离链接法(Separate Chaining)，将相应位置上冲突的所有关键词**存储在一个单链表中**。优点是关键字的删除不需要“懒惰删除法”从而没有存储垃圾，缺点是链表部分的存储效率和查找效率都比较低。链表长度的不均匀会导致时间效率的严重下降 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082913474499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 #### （4）散列查找的操作集（代码）
 
@@ -298,7 +298,7 @@ bool Insert(ptrHash H, DataType Key) {
 
 以线性探测法中的例题为例分析如下这个散列表的性能
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829135055857.png#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829135055857.png#pic_center)
 
 * 其**ASLs**为查找表中关键词的**平均查找比较次数（即其冲突次数加1）** ASLs = （1+7+1+1+2+1+4+2+4）/ 9 = 23 / 9 ≈ 2.56
 * 其**ASLu**为不在散列表中的关键词的平均查找比较次数（不成功） 一般方法：将不在散列表中的关键词分若干类，如按其H(key)值分类的话，此处的H(key) = key mod 11，分11类分析，ASLu如下 ASLu = （3+2+1+2+1+1+1+9+8+7+6）/ 11 = 41 / 11 ≈ 3.73
@@ -311,15 +311,15 @@ bool Insert(ptrHash H, DataType Key) {
 
 **① 线性探测法的查找性能**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829140548842.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829140548842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **② 平方探测法和双散列探测法的查找性能**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829140637993.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center) 当装填因子α<0.5时，各种探测法的期望探测次数都不大，也比较接近，随着α的增大，线性探测法的期望探测次数增加较快，不成功查找和插入操作的期望探测次数要比成功查找的期望探测次数要大。所以，**合理的最大装入因子应该不超过0.85**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829140637993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center) 当装填因子α<0.5时，各种探测法的期望探测次数都不大，也比较接近，随着α的增大，线性探测法的期望探测次数增加较快，不成功查找和插入操作的期望探测次数要比成功查找的期望探测次数要大。所以，**合理的最大装入因子应该不超过0.85**
 
 **③ 分离链接法的查找性能**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829142249188.png?x-oss-process=image/watermark,type\_ZmFuZ3poZW5naGVpdGk,shadow\_10,text\_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size\_16,color\_FFFFFF,t\_70#pic\_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200829142249188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70#pic_center)
 
 **总结**
 
