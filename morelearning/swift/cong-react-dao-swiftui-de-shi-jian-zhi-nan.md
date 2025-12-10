@@ -267,29 +267,25 @@ MVC
 >
 > * 核心：以 ViewModel 作为 View 与 Model 的中介，承载展示与转换逻辑。
 > * 最佳实践：使用 Combine 或 RxSwift 数据绑定；业务逻辑不进 View；以单元测试验证 ViewModel。
-> * 目录要点：Model / ViewModel / View 三层清晰，配套网络与数据抓取组件。\
->
+> * 目录要点：Model / ViewModel / View 三层清晰，配套网络与数据抓取组件。<br>
 >
 > 3. Clean Architecture（洁净架构）
 >
 > * 分层：Entities（领域模型）、Use Cases/Interactors（业务用例）、Interface Adapters（适配与 ViewModel/Presenter）、Frameworks & Drivers（UI/网络/数据库）。
 > * 最佳实践：严格分层与依赖方向控制；业务层可测试、与 UI 解耦；使用依赖注入（DI）。
-> * 目录要点：实体、用例、适配器、外层框架与数据仓库分离。\
->
+> * 目录要点：实体、用例、适配器、外层框架与数据仓库分离。<br>
 >
 > 4. VIPER
 >
 > * 组件：View、Interactor、Presenter、Entity、Router 五部分，高内聚低耦合。
 > * 最佳实践：导航交给 Router；Presenter 专注业务与格式化；各组件易于独立测试。
-> * 目录要点：按角色模块化，服务与数据层独立。\
->
+> * 目录要点：按角色模块化，服务与数据层独立。<br>
 >
 > 5. Redux / TCA（The Composable Architecture）
 >
 > * 核心概念：State、Action、Reducer、Store，单向数据流，状态不可变。
 > * 最佳实践：逻辑可组合复用；通过对 Action/Reducer 的单元测试保证可预测性。
-> * 目录要点：State/Action/Reducer/View/Store/Services 分层清晰。\
->
+> * 目录要点：State/Action/Reducer/View/Store/Services 分层清晰。<br>
 >
 > 6. 模型-视图-控制器（MVC）
 >
@@ -302,8 +298,7 @@ MVC
 > 7. 响应式编程（RxSwift / Combine）
 >
 > * 价值：以声明式流处理用户输入、网络与异步事件。
-> * 最佳实践：用 Observables（RxSwift）或 Publishers（Combine）绑定；UI 与业务职责分离；重视内存管理与订阅释放。\
->
+> * 最佳实践：用 Observables（RxSwift）或 Publishers（Combine）绑定；UI 与业务职责分离；重视内存管理与订阅释放。<br>
 >
 > 8. 选型指南
 >
@@ -526,7 +521,9 @@ Swift 社区存在多个被广泛认可的编码风格指南，其中最具影�
 * 自动代码格式化
 * 统一团队代码风格
 
-[SwiftLint](https://github.com/realm/SwiftLint) 是一个强制执行 Swift 编码风格和约定的强大工具。它能够自动检查代码中不符合规范的地方，如过长的行、强制解包等。通过将 SwiftLint 集成到 Xcode 的 `Build Phase` 中，开发者可以在每次构建时获得即时反馈，就像收到编译错误或警告一样。团队可以通过项目根目录下的 `.swiftlint.yml` 文件来统一配置规则，禁用或启用特定的检查，并为某些规则设置不同的严重级别（警告或错误）。https://medium.com/@husnainali593/getting-started-with-swiftlint-installation-and-usage-guide-for-cleaner-swift-code-386fee117fbb一个通用的 .swiftlint.yml 配置示例：
+[SwiftLint](https://github.com/realm/SwiftLint) 是一个强制执行 Swift 编码风格和约定的强大工具。它能够自动检查代码中不符合规范的地方，如过长的行、强制解包等。通过将 SwiftLint 集成到 Xcode 的 `Build Phase` 中，开发者可以在每次构建时获得即时反馈，就像收到编译错误或警告一样。团队可以通过项目根目录下的 `.swiftlint.yml` 文件来统一配置规则，禁用或启用特定的检查，并为某些规则设置不同的严重级别（警告或错误）。
+
+一个通用的 .swiftlint.yml 配置示例：
 
 ```yaml
 disabled_rules:
@@ -618,4 +615,4 @@ jobs:
 * [Apple 开发者论坛](https://developer.apple.com/forums/)
 * [SwiftUI by Example](https://www.hackingwithswift.com/quick-start/swiftui)
 * [GitHub - jogendra/example-ios-apps:  A curated list of Open Source example iOS apps developed in Swift. An amazing list for people who are beginners and learning ios development and for ios developers who need any example app or feature.](https://github.com/jogendra/example-ios-apps)
-* [GitHub - vsouza/awesome-ios: A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects](https://github.com/vsouza/awesome-ios)\
+* [GitHub - vsouza/awesome-ios: A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects](https://github.com/vsouza/awesome-ios)<br>
